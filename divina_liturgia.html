@@ -1,0 +1,3279 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Divina Liturgia de São João Crisóstomo</title>
+  
+  <!-- Fontes Tipográficas: Cardo (Títulos), Cormorant Garamond / Cormorant (Texto Latino), EB Garamond / GFS Didot (Texto Grego) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=GFS+Didot&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       PALETA LITÚRGICA BIZANTINA E VARIÁVEIS TIPOGRÁFICAS
+       ========================================================================== */
+    :root {
+      --bg-page: #FFFDF9;
+      --text-main: #1A1816;
+      --text-translit: #3A3530;
+      --rubric-crimson: #7A0C0C;
+      --rubric-deep: #8B1E1E;
+      --gold-accent: #A68A56;
+      --gold-bright: #D4AF37;
+      --gold-subtle: rgba(166, 138, 86, 0.12);
+      --banner-bg: #F7F3EB;
+      --border-outer: #7A0C0C;
+      --border-inner: #A68A56;
+    }
+
+    /* ==========================================================================
+       ARQUITETURA DE PAGINAÇÃO E CSS PAGED MEDIA (@page)
+       ========================================================================== */
+    @page {
+      size: A4 portrait;
+      margin: 20mm 15mm 20mm 15mm;
+      @top-center {
+        font-family: 'Cardo', serif;
+        font-size: 8pt;
+        letter-spacing: 0.15em;
+        color: #7A0C0C;
+        content: "Η ΘΕΙΑ ΛΕΙΤΟΥΡΓΙΑ ΤΟΥ ΑΓΙΟΥ ΙΩΑΝΝΟΥ ΤΟΥ ΧΡΥΣΟΣΤΟΜΟΥ";
+      }
+      @bottom-center {
+        font-family: 'EB Garamond', serif;
+        font-size: 9pt;
+        color: #7A0C0C;
+        content: counter(page);
+      }
+    }
+
+    @page :first {
+      @top-center { content: normal; }
+      @bottom-center { content: normal; }
+    }
+
+    /* ==========================================================================
+       RESETS E CONFIGURAÇÕES GERAIS DE VISUALIZAÇÃO E IMPRESSÃO
+       ========================================================================== */
+    * {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #EFECE6;
+      font-family: 'Cormorant Garamond', 'Cormorant', Georgia, serif;
+      font-size: 11.5pt;
+      color: var(--text-main);
+      font-size: 11pt;
+      line-height: 1.5;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Contentor com cercadura clássica maximalista */
+    .page-frame {
+      max-width: 960px;
+      margin: 25px auto;
+      background-color: var(--bg-page);
+      padding: 35px 42px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.10), 0 1px 4px rgba(0, 0, 0, 0.06);
+      border: 3px double var(--border-outer);
+      outline: 1px solid var(--border-inner);
+      outline-offset: -7px;
+      position: relative;
+    }
+
+    @media print {
+      body {
+        background-color: var(--bg-page);
+        margin: 0;
+        padding: 0;
+      }
+      .page-frame {
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+      }
+    }
+
+    /* ==========================================================================
+       ELEMENTOS DECORATIVOS E SEPARADORES ORNAMENTAIS
+       ========================================================================== */
+    .byzantine-divider {
+      text-align: center;
+      margin: 22px 0;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .byzantine-divider svg {
+      display: inline-block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* ==========================================================================
+       CAPITULARES (DROP CAPS) E PARÁGRAFOS CONTÍNUOS
+       ========================================================================== */
+    .drop-cap::first-letter {
+      font-family: 'Cardo', serif;
+      font-weight: 700;
+      color: var(--rubric-crimson);
+      float: left;
+      font-size: 3.5em;
+      line-height: 0.8;
+      margin-right: 0.12em;
+      margin-top: 0.05em;
+      initial-letter: 3;
+      text-shadow: 1px 1px 0px rgba(166, 138, 86, 0.35);
+    }
+
+    .full-width-section {
+      margin: 20px 0;
+      break-inside: auto;
+    }
+
+    .full-width-section p {
+      text-align: justify;
+      text-indent: 1.5em;
+      margin: 6px 0;
+      line-height: 1.55;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+    }
+
+    /* ==========================================================================
+       FRONTISPÍCIO E CAPA LITÚRGICA
+       ========================================================================== */
+    .cover-section {
+      text-align: center;
+      margin-bottom: 30px;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .cover-cross {
+      font-size: 26pt;
+      color: var(--rubric-crimson);
+      margin-bottom: 8px;
+    }
+
+    .main-title-greek {
+      font-family: 'Cardo', 'EB Garamond', serif;
+      font-size: 17pt;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--rubric-crimson);
+      margin: 4px 0 8px 0;
+      line-height: 1.3;
+      break-after: avoid;
+    }
+
+    .main-title-pt {
+      font-family: 'Cardo', serif;
+      font-size: 15pt;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--text-main);
+      margin: 0 0 10px 0;
+      line-height: 1.3;
+      break-after: avoid;
+    }
+
+    .liturgy-meta {
+      font-family: 'Cormorant Garamond', 'Cormorant', serif;
+      font-style: italic;
+      font-size: 12pt;
+      color: var(--gold-accent);
+      letter-spacing: 0.05em;
+      margin: 6px 0 16px 0;
+    }
+
+    .parish-card {
+      display: inline-block;
+      border: 1px solid var(--gold-accent);
+      background-color: var(--gold-subtle);
+      padding: 12px 24px;
+      margin: 12px auto;
+      border-radius: 2px;
+      max-width: 650px;
+    }
+
+    .parish-title {
+      font-family: 'Cardo', serif;
+      font-size: 10.5pt;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--rubric-crimson);
+      margin-bottom: 4px;
+    }
+
+    .parish-address, .parish-social {
+      font-family: 'Cormorant Garamond', 'Cormorant', serif;
+      font-size: 11pt;
+      color: var(--text-main);
+      line-height: 1.4;
+    }
+
+    .church-notice {
+      font-family: 'Cardo', serif;
+      font-size: 8.5pt;
+      letter-spacing: 0.12em;
+      font-weight: 600;
+      color: var(--rubric-crimson);
+      margin-top: 12px;
+      text-transform: uppercase;
+    }
+
+    /* ==========================================================================
+       TÍTULOS E SUBTÍTULOS DAS SECÇÕES
+       ========================================================================== */
+    .section-title {
+      font-family: 'Cardo', serif;
+      font-size: 13.5pt;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--rubric-crimson);
+      text-align: center;
+      margin: 22px 0 12px 0;
+      text-transform: uppercase;
+      break-after: avoid;
+      page-break-after: avoid;
+    }
+
+    .section-subtitle {
+      font-family: 'Cardo', serif;
+      font-size: 11.5pt;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--rubric-crimson);
+      text-align: center;
+      margin: 16px 0 8px 0;
+      break-after: avoid;
+      page-break-after: avoid;
+    }
+
+    .rubric {
+      font-style: italic;
+      color: var(--rubric-crimson);
+      font-family: 'Cormorant Garamond', 'Cormorant', serif;
+    }
+
+    .rubric-block {
+      text-indent: 0 !important;
+      text-align: justify;
+      margin: 10px 0;
+      padding-left: 12px;
+      border-left: 2px solid var(--rubric-crimson);
+    }
+
+    .rubric-feast {
+      font-family: 'Cardo', serif;
+      font-size: 9pt;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--rubric-crimson);
+    }
+
+    /* ==========================================================================
+       GRANDE DOXOLOGIA E ORAÇÕES EM VERSÍCULOS
+       ========================================================================== */
+    .doxology-container {
+      margin: 14px 0;
+    }
+
+    .doxology-verse {
+      margin: 7px 0;
+      line-height: 1.5;
+      text-align: justify;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .verse-num {
+      font-family: 'Cardo', serif;
+      font-weight: 700;
+      font-size: 9.5pt;
+      color: var(--rubric-crimson);
+      margin-right: 6px;
+    }
+
+    /* ==========================================================================
+       ORAÇÕES SECRETAS DO SACERDOTE (EM VOZ BAIXA)
+       ========================================================================== */
+    .secret-prayer-box {
+      background-color: #FAF7F0;
+      border-left: 3px solid var(--rubric-crimson);
+      border-right: 1px solid var(--gold-accent);
+      border-top: 1px solid var(--gold-accent);
+      border-bottom: 1px solid var(--gold-accent);
+      padding: 14px 18px;
+      margin: 16px 0;
+      border-radius: 2px;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .secret-prayer-title {
+      font-family: 'Cardo', serif;
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: var(--rubric-crimson);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .secret-prayer-text {
+      font-family: 'Cormorant Garamond', 'Cormorant', serif;
+      font-size: 11.5pt;
+      line-height: 1.5;
+      color: var(--text-main);
+      text-align: justify;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+    }
+
+    .antiphon-variations {
+      margin: 12px 0;
+      line-height: 1.5;
+    }
+
+    .antiphon-variations p {
+      text-indent: 0 !important;
+      margin: 5px 0;
+      text-align: justify;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .solemn-words {
+      font-family: 'Cardo', serif;
+      font-weight: 700;
+      font-size: 11pt;
+      letter-spacing: 0.08em;
+      color: var(--rubric-crimson);
+      text-align: center;
+      margin: 12px 0;
+      text-indent: 0 !important;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .editorial-note {
+      font-style: italic;
+      font-family: 'Cormorant Garamond', 'Cormorant', serif;
+      color: var(--rubric-crimson);
+      text-align: center;
+      font-size: 10.5pt;
+      margin: 12px 0;
+      padding: 6px 12px;
+      background-color: var(--gold-subtle);
+      border: 1px dashed var(--gold-accent);
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    /* ==========================================================================
+       TABELA LITÚRGICA A TRÊS COLUNAS (PARALELISMO RIGOROSO)
+       ========================================================================== */
+    .table-wrapper {
+      width: 100%;
+      margin: 16px 0;
+      break-inside: auto;
+    }
+
+    .liturgy-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      page-break-inside: auto;
+    }
+
+    .liturgy-table col.col-greek { width: 33%; }
+    .liturgy-table col.col-translit { width: 33%; }
+    .liturgy-table col.col-portuguese { width: 34%; }
+
+    .liturgy-table thead {
+      display: table-header-group;
+    }
+
+    .liturgy-table thead th {
+      font-family: 'Cardo', serif;
+      font-size: 9pt;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--rubric-crimson);
+      background-color: #F8F4EB;
+      border-top: 1.5px solid var(--gold-accent);
+      border-bottom: 1.5px solid var(--gold-accent);
+      padding: 7px 8px;
+      text-align: left;
+    }
+
+    .liturgy-table tbody tr {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .liturgy-table tbody td {
+      padding: 4px 8px;
+      vertical-align: top;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    /* Coluna 1: Grego Original */
+    .liturgy-table td.col-greek {
+      font-family: 'EB Garamond', 'GFS Didot', serif;
+      font-size: 10.5pt;
+      line-height: 1.45;
+      color: var(--text-main);
+      text-align: left;
+    }
+
+    /* Coluna 2: Transliteração Fonética */
+    .liturgy-table td.col-translit {
+      font-family: 'Cormorant Garamond', 'Cormorant', serif;
+      font-style: italic;
+      font-size: 10.5pt;
+      line-height: 1.45;
+      color: var(--text-translit);
+      text-align: left;
+    }
+
+    /* Coluna 3: Tradução em Português */
+    .liturgy-table td.col-portuguese {
+      font-family: 'Cormorant Garamond', 'Cormorant', serif;
+      font-style: normal;
+      font-size: 11pt;
+      line-height: 1.45;
+      color: var(--text-main);
+      text-align: left;
+    }
+
+    /* Linhas divisórias subtis entre versículos */
+    .liturgy-table tr.liturgy-row td {
+      border-bottom: 1px solid rgba(166, 138, 86, 0.18);
+    }
+
+    /* Linhas de anúncio do papel litúrgico (Sacerdote, Diácono, Coro) */
+    .liturgy-table tr.actor-row {
+      break-after: avoid;
+      page-break-after: avoid;
+    }
+
+    .liturgy-table tr.actor-row td {
+      padding-top: 8px;
+      padding-bottom: 1px;
+      border-bottom: none;
+    }
+
+    /* Papéis Litúrgicos: caixa alta (small-caps), negrito, vermelho litúrgico */
+    .actor-tag {
+      font-family: 'Cardo', serif;
+      font-variant: small-caps;
+      font-weight: 700;
+      color: var(--rubric-crimson);
+      letter-spacing: 0.05em;
+      font-size: 1.05em;
+      display: inline-block;
+    }
+
+    .liturgy-strong {
+      font-family: 'Cardo', serif;
+      font-weight: 700;
+      color: var(--rubric-crimson);
+      letter-spacing: 0.04em;
+    }
+
+    /* Banners e Títulos de Secção dentro da Tabela */
+    .liturgy-table tr.section-banner-row td {
+      background: linear-gradient(90deg, rgba(166,138,86,0.12) 0%, rgba(122,12,12,0.10) 50%, rgba(166,138,86,0.12) 100%);
+      border-top: 1.5px solid var(--gold-accent);
+      border-bottom: 1.5px solid var(--gold-accent);
+      padding: 9px 8px;
+      text-align: center;
+      font-family: 'Cardo', serif;
+      font-weight: 700;
+      font-size: 10.5pt;
+      letter-spacing: 0.08em;
+      color: var(--rubric-crimson);
+      break-after: avoid;
+      page-break-after: avoid;
+    }
+
+    /* Evitar quebras orfãs em títulos */
+    h1, h2, h3, h4, .section-title, .section-subtitle {
+      break-after: avoid;
+      page-break-after: avoid;
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-frame">
+
+  <!-- ==========================================================================
+       CAPA LITÚRGICA E IDENTIFICAÇÃO DA PARÓQUIA (PÁGINA 1)
+       ========================================================================== -->
+  <header class="cover-section">
+    <div class="cover-cross" aria-hidden="true">☩</div>
+    <h1 class="main-title-greek" lang="el">Η ΘΕΙΑ ΛΕΙΤΟΥΡΓΙΑ<br><span style="font-size: 0.85em;">ΤΟΥ ΑΓΙΟΥ ΙΩΑΝΝΟΥ ΤΟΥ ΧΡΥΣΟΣΤΟΜΟΥ</span></h1>
+    <h2 class="main-title-pt">A DIVINA LITURGIA DE SÃO JOÃO CRISÓSTOMO</h2>
+    <div class="liturgy-meta">Texto litúrgico para o fiel &bull; Setembro, 2026</div>
+
+    <div class="parish-card">
+      <div class="parish-title">PARÓQUIA DA SANTA DORMIÇÃO DA MÃE DE DEUS</div>
+      <div class="parish-address">Rua Albuquerque Maranhão, 211 - Cambuci - São Paulo - SP</div>
+      <div class="parish-social">Instagram: @paroquiaortodoxa.cambuci</div>
+    </div>
+
+    <div class="church-notice">☩ APÓS A DIVINA LITURGIA, FAVOR DEIXAR ESTE LIVRO NO BANCO ☩</div>
+  </header>
+
+  <div class="byzantine-divider" aria-hidden="true">
+  <svg width="340" height="26" viewBox="0 0 340 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 13h135M195 13h135" stroke="#A68A56" stroke-width="1.2" stroke-linecap="round"/>
+    <circle cx="20" cy="13" r="2.5" fill="#7A0C0C"/>
+    <circle cx="135" cy="13" r="2" fill="#A68A56"/>
+    <circle cx="205" cy="13" r="2" fill="#A68A56"/>
+    <circle cx="320" cy="13" r="2.5" fill="#7A0C0C"/>
+    <!-- Central Byzantine Cross -->
+    <path d="M170 2v22M158 9h24M162 19h16" stroke="#7A0C0C" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="170" cy="2" r="2" fill="#A68A56"/>
+    <circle cx="170" cy="24" r="2" fill="#A68A56"/>
+    <circle cx="158" cy="9" r="1.8" fill="#A68A56"/>
+    <circle cx="182" cy="9" r="1.8" fill="#A68A56"/>
+  </svg>
+</div>
+
+  <!-- ==========================================================================
+       PRÓLOGO (PÁGINA 1)
+       ========================================================================== -->
+  <section class="full-width-section prologue-section">
+    <h3 class="section-title">PRÓLOGO</h3>
+    <p class="drop-cap">A Santa Liturgia é o centro dos Santos Mistérios da Igreja fundada por Deus.</p>
+    <p>A Santa Missa é o Mistério que nosso Senhor Jesus Cristo ofereceu a seus discipulos na véspera de sua morte na Cruz. quando lhes disse: Quando desejei comer, convosco esta Páscoa antes que padeça (Lucas 22-15). Em seguida e após orar. agradecer e abençoa-lhes deu o Pão e o vinho. como seu próprio Corpo e Sangue e continuou: "Continuai fazendo isto em minha memoria.</p>
+    <p>Este grande mistério do sacrifício incruento que celebra a Igreja. cumprindo o mandato do Senhor. para que todos nós seus fiéis membros. recordemos sua paixão salvadora da Cruz vivificante, sua morte durante três dias, sua gloriosa Ressurreição. sua ascensão aos Céus, seu assento à direita de Deus Pai e seu glorioso e termível juízo final.</p>
+    <p>O sincero arrependimento nos conduz a Santa Confissão de nossos pecados e. purificadas nossas almas, cheguemos com temor de Deus, com fé e amor. Santa Eucaristia, unindo-nos com ele.</p>
+    <p>Assistindo a Santa Liturgia. logramos concentração. devoção e devido respeito e ordem.</p>
+    <p>Com estas virtudes nos fazemos dignos de herdar o Reino dos Céus. que Deus. desde a criação do mundo, preparou para os que convivem de acordo com o Evangelho de nosso Senhor Jesus Cristo. Amém.</p>
+  </section>
+
+  <div class="byzantine-divider" aria-hidden="true">
+  <svg width="340" height="26" viewBox="0 0 340 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 13h135M195 13h135" stroke="#A68A56" stroke-width="1.2" stroke-linecap="round"/>
+    <circle cx="20" cy="13" r="2.5" fill="#7A0C0C"/>
+    <circle cx="135" cy="13" r="2" fill="#A68A56"/>
+    <circle cx="205" cy="13" r="2" fill="#A68A56"/>
+    <circle cx="320" cy="13" r="2.5" fill="#7A0C0C"/>
+    <!-- Central Byzantine Cross -->
+    <path d="M170 2v22M158 9h24M162 19h16" stroke="#7A0C0C" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="170" cy="2" r="2" fill="#A68A56"/>
+    <circle cx="170" cy="24" r="2" fill="#A68A56"/>
+    <circle cx="158" cy="9" r="1.8" fill="#A68A56"/>
+    <circle cx="182" cy="9" r="1.8" fill="#A68A56"/>
+  </svg>
+</div>
+
+  <!-- ==========================================================================
+       OFÍCIO MATUTINO E GRANDE DOXOLOGIA (PÁGINA 2)
+       ========================================================================== -->
+  <section class="full-width-section orthros-section">
+    <h3 class="section-title">OFÍCIO MATUTINO</h3>
+    <p class="rubric rubric-block">Terminada a Prótese (preparação do pão e do vinho que, pela força inacessivel do Espirito Santo, serão transformados no Corpo e Sangue de Cristo), o coro recita o oficio matutino(orthros), começa imediatamente o hino da grande doxologia.</p>
+    
+    <h3 class="section-title">GRANDE DOXOLOGIA</h3>
+    <div class="doxology-container">
+      <div class="doxology-verse"><span class="verse-num">1.</span> Glória a ti que nos fizeste ver a verdadeira Luz.</div>
+      <div class="doxology-verse"><span class="verse-num">2.</span> Glória a Deus no mais alto dos Céus e Paz na terra aos homens a quem ele ama.</div>
+      <div class="doxology-verse"><span class="verse-num">3.</span> Nós te cantamos, nós te bendizemos, nós te adoramos, nós te glorifica mos, nós te damos graças pela tua imensa Glória.</div>
+      <div class="doxology-verse"><span class="verse-num">4.</span> Senhor Deus, Rei dos Céus, Pai Todo Poderoso, Senhor Filho Único Jesus Cristo e Espirito Santo.</div>
+      <div class="doxology-verse"><span class="verse-num">5.</span> Senhor Deus, Cordeiro de Deus, Filho de Deus Pai. Tu que tiras o pecado do mundo, tem piedade de nós, Tu que tiras o pecado do mundo.</div>
+      <div class="doxology-verse"><span class="verse-num">6.</span> Acolhe a nossa súplica, Tu que estás sentado à direita do Pai, tende piedade de nós.</div>
+      <div class="doxology-verse"><span class="verse-num">7.</span> Amém.</div>
+      <div class="doxology-verse"><span class="verse-num">8.</span> Só tu és o Santo, só tu és o Senhor, Jesus Cristo, para a Glória de Deus Pai.</div>
+      <div class="doxology-verse"><span class="verse-num">9.</span> Cada dia te bendirei e cantarei eternamente o teu nome glorioso.</div>
+      <div class="doxology-verse"><span class="verse-num">10.</span> Tu és bendito, Senhor, Deus dos nossos Pais, digno de louvor e glória eternamente. Amém.</div>
+      <div class="doxology-verse"><span class="verse-num">11.</span> Senhor, que a Tua misericórdia esteja sobre nós, segundo a esperança que desde sempre, depositamos em ti.</div>
+      <div class="doxology-verse"><span class="verse-num">12.</span> Tu és bendito, Senhor Ensina-nos pelos teus mandamentos (três vezes).</div>
+      <div class="doxology-verse"><span class="verse-num">13.</span> Senhor, nosso Deus, que és o nosso refugio, ensina-nos a fazer a tua vontade; Pois em ti está a fonte de vida e é na tua Luz que vemos a Luz Concede-nos a tua misericórdia aqueles que te conhecem.</div>
+      <div class="doxology-verse"><span class="verse-num">14.</span> Senhor, tu que és o nosso refugio de geração em geração, cura as nossas almas e tem piedade de nós que pecamos contra ti.</div>
+      <div class="doxology-verse"><span class="verse-num">15.</span> Concede a tua misericórdia àqueles que te conhecem. Tu és Santo, Oh Deus, tu és Santo, Oh Forte, tu és Santo, Oh Imortal, tem piedade de nós (três vezes). Glória ao Pai, ao Filho e ao Espirito Santo, eternamente, agora e sempre e pelos séculos dos séculos Amém. Tu és Santo, Oh Deus, tu és Santo. Oh Forte tu és Santo, Oh mortal tem piedade.</div>
+    </div>
+  </section>
+
+  <div class="byzantine-divider" aria-hidden="true">
+  <svg width="340" height="26" viewBox="0 0 340 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 13h135M195 13h135" stroke="#A68A56" stroke-width="1.2" stroke-linecap="round"/>
+    <circle cx="20" cy="13" r="2.5" fill="#7A0C0C"/>
+    <circle cx="135" cy="13" r="2" fill="#A68A56"/>
+    <circle cx="205" cy="13" r="2" fill="#A68A56"/>
+    <circle cx="320" cy="13" r="2.5" fill="#7A0C0C"/>
+    <!-- Central Byzantine Cross -->
+    <path d="M170 2v22M158 9h24M162 19h16" stroke="#7A0C0C" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="170" cy="2" r="2" fill="#A68A56"/>
+    <circle cx="170" cy="24" r="2" fill="#A68A56"/>
+    <circle cx="158" cy="9" r="1.8" fill="#A68A56"/>
+    <circle cx="182" cy="9" r="1.8" fill="#A68A56"/>
+  </svg>
+</div>
+
+  <!-- ==========================================================================
+       TABELA 1: ENÁRXIS E LITANIA DA PAZ (PÁGINA 3)
+       ========================================================================== -->
+  <div class="table-wrapper">
+  <table class="liturgy-table">
+    <colgroup>
+      <col class="col-greek">
+      <col class="col-translit">
+      <col class="col-portuguese">
+    </colgroup>
+    <thead>
+      <tr>
+        <th class="col-greek" lang="el">Grego Original</th>
+        <th class="col-translit">Transliteração Fonética</th>
+        <th class="col-portuguese">Tradução em Português</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="section-banner-row">
+        <td class="col-greek" lang="el"><strong class="liturgy-strong">Η ΘΕΙΑ ΛΕΙΤΟΥΡΓΙΑ</strong></td>
+        <td class="col-translit"><strong class="liturgy-strong">H THÌA LITURGHÍA</strong></td>
+        <td class="col-portuguese"><strong class="liturgy-strong">A DIVINA LITURGIA</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Ευλόγησον, δέσποτα</td>
+        <td class="col-translit">Evlöghison, despota</td>
+        <td class="col-portuguese">Abençoa, Senhor</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ο ιερέυς (Ι):</strong></td>
+        <td class="col-translit"><strong class="actor-tag">O ieréfs (I):</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">O Sacerdote (S):</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Ευλογημένη η βασιλεία του Πατρός και του Υιού και του Αγίου Πνεύματος, νυν και αει και εις τους αιώνας των αιώνων.</td>
+        <td class="col-translit">Evloghimeni i vasilía tu Patrös ke tu Iú ke tu Aghíu Pneúmatos, nin ke aí ke is tus eônas ton eônon.</td>
+        <td class="col-portuguese">Bendito seja o Reino do Pai, do Filho e do Espirito Santo, agora e sempre, pelos séculos dos séculos.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ο λαός (Λ):</strong></td>
+        <td class="col-translit"><strong class="actor-tag">O laós (L):</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">O Coro (C):</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Αμήν.</td>
+        <td class="col-translit">Amín.</td>
+        <td class="col-portuguese">Amém.</td>
+      </tr>
+      <tr class="section-banner-row">
+        <td class="col-greek" lang="el"><strong class="liturgy-strong">ΕΙΡΗΝΙΚΑ</strong></td>
+        <td class="col-translit"><strong class="liturgy-strong">IRINIKÁ</strong></td>
+        <td class="col-portuguese"><strong class="liturgy-strong">LITANIA DA PAZ</strong></td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ο διάκονος (Δ):</strong></td>
+        <td class="col-translit"><strong class="actor-tag">O diákonos (D):</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">O Diácono (D) <span class="rubric">(sentados)</span>:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Εν ειρήνη του Κυρίου δεηθώμεν.</td>
+        <td class="col-translit">En iríni tu Kiríu deithômen.</td>
+        <td class="col-portuguese">Em paz, oremos ao Senhor.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Κύριε ελέησον.</td>
+        <td class="col-translit">Kírie eléison.</td>
+        <td class="col-portuguese">Senhor, tende piedade.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Υπέρ της άνωθεν ειρήνης και της σωτηρίας των ψυχών ημών, του Κυρίου δεηθώμεν.</td>
+        <td class="col-translit">Ipër tis anóthen irínis ke tis sotirías ton psixôn imôn, tu Kiríu deithômen.</td>
+        <td class="col-portuguese">Pela excelsa paz e salvação de nossas almas, oremos ao Senhor.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Κύριε ελέησον.</td>
+        <td class="col-translit">Kírie eléison.</td>
+        <td class="col-portuguese">Senhor, tende piedade.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Υπέρ της ειρήνης του σύμπαντος κόσμου, ευσταθείας των αγίων του Θεού Εκκλησιών και της των πάντων ενώσεως, του Κυρίου δεηθώμεν.</td>
+        <td class="col-translit">Ipêr tis irínis tu símbandos kósmu, efstathías ton aghíon tu Theú ekklisión ke tis ton pándon enôseos, tu Kiríu deithômen.</td>
+        <td class="col-portuguese">Pela paz do mundo inteiro, pela estabilidade das Santas Igrejas de Deus e pela união de todas elas, oremos ao Senhor.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Κύριε ελέησον.</td>
+        <td class="col-translit">Kírie eléison.</td>
+        <td class="col-portuguese">Senhor, tende piedade.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Υπέρ του αγίου οίκου τούτου και των μετά πίστεως, ευλαβείας και φόβου Θεού εισιόντων εν αυτώ, του Κυρίου δεηθώμεν.</td>
+        <td class="col-translit">Ipêr tu aghíu íku tútu ke ton metá písteos, evlavías ke fóvu Theú isióndon en aftô, tu Kiríu deithõmen.</td>
+        <td class="col-portuguese">Por esta Casa Santa e por aqueles que nela entram com fé, devoção e temor de Deus, oremos ao Senhor.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Κύριε ελέησον.</td>
+        <td class="col-translit">Kírie eléison.</td>
+        <td class="col-portuguese">Senhor, tende piedade.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Υπέρ του Αρχιεπισκόπου ημών <span class="rubric">(του δείνος)</span>, του τιμίου πρεσβυτερίου, της εν Χριστώ διακονίας, παντός του κλήρου και του λαού, του Κυρίου δεηθώμεν.</td>
+        <td class="col-translit">Ipêr tu Arxiepiskópu imôn <span class="rubric">(tu dínos)</span>, tu timíu presviteríu, tis en Xristô diakonías, pandös tu klíru ke tu laú, tu Kiríu deithōmen.</td>
+        <td class="col-portuguese">Pelo nosso Pai e Arcebispo (...), pelo venerável Prebisterio e Diaconato em Cristo, por todo o Clero e o Povo, oremos ao Senhor.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Κύριε ελέησον.</td>
+        <td class="col-translit">Kírie eléison.</td>
+        <td class="col-portuguese">Senhor, tende piedade.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Υπέρ της πόλεως (η της αγίας Μονής, η της χώρας, η της νήσου) ταύτης, πάσης πόλεως χώρας και των πίστει οικούντων εν αυταίς, του Κυρίου δεηθώμεν.</td>
+        <td class="col-translit">Ipêr tis póleos (i tis aghías Monís, i tis xôras, i tis nísu) táftis, pásis póleos xõras kai ton písti ikúndon en aftês, tu Kiríu deithōmen.</td>
+        <td class="col-portuguese">Por esta cidade, por toda cidade e País, e por aqueles que as habitam com fé, oremos ao Senhor.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Κύριε ελέησον.</td>
+        <td class="col-translit">Kírie eléison.</td>
+        <td class="col-portuguese">Senhor, tende piedade.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Υπέρ ευκρασίας αέρων, ευφορίας των καρπών της γης και καιρών ειρηνικών, του Κυρίου δεηθώμεν.</td>
+        <td class="col-translit">Ipêr efkrasías aëron, eforías ton karpôn tis ghis ke kerôn irinikôn, tu Kiríu deithômen.</td>
+        <td class="col-portuguese">Pela salubridade dos ares, pela abundância dos frutos da terra e por tempos pacificos, eremos ao Senhor.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  <!-- ==========================================================================
+       15. SÚPLICAS (SENTADOS) E ORAÇÃO DA PRIMEIRA ANTÍFONA (PÁGINA 4)
+       ========================================================================== -->
+  <section class="full-width-section">
+    <h4 class="section-subtitle">15. SÚPLICAS (SENTADOS)</h4>
+    <p class="rubric">Enquanto o Diácono recita a Grande Ladainha, o Sacerdote reza em voz baixa a oração da Primeira Antífona:</p>
+    <div class="secret-prayer-box">
+      <div class="secret-prayer-title">☩ Oração da Primeira Antífona (em voz baixa) ☩</div>
+      <div class="secret-prayer-text drop-cap">NOSSO DEUS, CUJO PODER É INEXPRIMÍVEL E A GLÓRIA INCOMPREENSÍVEL, CUJA BONDADE É INDIZÍVEL E O AMOR PELOS HOMENS INEFÁVEL, VOLVEI O VOSSO OLHAR SOBRE NÓS E SOBRE ESTA SANTA IGREJA, E CONCEDE-NOS A NÓS E AQUELES QUE REZAM CONOSCO OS DONS INFINITOS DA TUA MISERICÓRDIA.</div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       TABELA 2: LITANIA CONTINUADA, PRIMEIRA ANTÍFONA E PEQUENA LADAINHA (PÁGINA 4)
+       ========================================================================== -->
+  <div class="table-wrapper">
+  <table class="liturgy-table">
+    <colgroup>
+      <col class="col-greek">
+      <col class="col-translit">
+      <col class="col-portuguese">
+    </colgroup>
+    <thead>
+      <tr>
+        <th class="col-greek" lang="el">Grego Original</th>
+        <th class="col-translit">Transliteração Fonética</th>
+        <th class="col-portuguese">Tradução em Português</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Κύριε ελέησον.</td>
+        <td class="col-translit">Kírie eléison.</td>
+        <td class="col-portuguese">Senhor, tende piedade.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Υπέρ πλεόντων, οδοιπορούντων, νοσούντων, καμνόντων, αιχμαλώτων και της σωτηρίας αυτών, του Κυρίου δεηθώμεν.</td>
+        <td class="col-translit">Ipër pleóndon, odiporúndon, nosúndon, kamnóndon, exmalôton ke tis sotirías aftôn, tu Kiríu deithömen.</td>
+        <td class="col-portuguese">Pelos navegantes, viajantes, enfermos, aflitos, cativos, e pela sua salvação, oremos ao Senhor.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Κύριε ελέησον.</td>
+        <td class="col-translit">Kírie eléison.</td>
+        <td class="col-portuguese">Senhor, tende piedade.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Υπέρ του ρυσθήναι ημάς από πάσης θλίψεως, οργής, κινδύνου και ανάγκης, του Κυρίου δεηθώμεν.</td>
+        <td class="col-translit">Ipër tu risthíne imás apő pásis thlípseos, orghís, kindínu ke anáguis, tu Kiríu deithōmen.</td>
+        <td class="col-portuguese">Para livrar-nos de toda tribulação, ira, perigo e necessidade, oremos ao Senhor.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Κύριε ελέησον.</td>
+        <td class="col-translit">Kírie eléison.</td>
+        <td class="col-portuguese">Senhor, tende piedade.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Αντιλαβού, σώσον, ελέησον και διαφύλαξον ημάς ο Θεός τη ση χάριτι.</td>
+        <td class="col-translit">Andilavú, sôson, eléison ke diafílakson imás o Theôs ti si xáriti.</td>
+        <td class="col-portuguese">Ampara-nos, salva-nos, tende piedade de nós e guarda-nos, ó Deus, pela Tua graça.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Κύριε ελέησον.</td>
+        <td class="col-translit">Kírie eléison.</td>
+        <td class="col-portuguese">Senhor, tende piedade.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Της Παναγίας, αχράντου, υπερευλογημένης, ενδόξου, δεσποίνης ημών Θεοτόκου και αειπαρθένου Μαρίας, μετά πάντων των αγίων μνημονεύσαντες, εαυτούς και αλλήλους και πάσαν την ζωήν ημών Χριστώ τω Θεώ παραθώμεθα.</td>
+        <td class="col-translit">Tis Panaghías, axrándu, iperevloghimênis, endõksu, despínis imôn Theotóku ke aiparthênu Marías, metá pândon ton aghíon mnimonefsantes, eaftús ke alílus ke pásan tin zoín imôn Xristô to Theô parathômetha.</td>
+        <td class="col-portuguese">Comemorando a Santíssima, Puríssima, Bendita, e Gloriosa Senhora nossa, Mãe de Deus, e sempre Virgem Maria, com todos os Santos encomendemo-nos mutuamente, uns aos outros e toda nossa vida, a Cristo Deus.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Σοι Κύριε.</td>
+        <td class="col-translit">Si Kírie.</td>
+        <td class="col-portuguese">A Ti, Senhor.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el"><span class="rubric">(Εκφώνως)</span> 'Ότι πρέπει σοι πάσα δόξα, τιμή και προσκύνησις, τω Πατρί και τω Υιώ και τω Αγίω Πνεύματι, νυν και αει και εις τους αιώνας των αιώνων.</td>
+        <td class="col-translit"><span class="rubric">(Ekfōnos)</span> Óti prépi si pása dôksa, timí ke proskínisis, to Patrí ke to Iô ke to Aghío Pneúmati, nin ke aí ke is tus eõnas ton eônon.</td>
+        <td class="col-portuguese"><span class="rubric">(Em voz alta)</span> Porque a Ti se deve toda glória, honra e adoração, Pai, Filho e Espirito Santo, agora e sempre, pelos séculos dos séculos.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Αμήν.</td>
+        <td class="col-translit">Amín.</td>
+        <td class="col-portuguese">Amém.</td>
+      </tr>
+      <tr class="section-banner-row">
+        <td class="col-greek" lang="el"><strong class="liturgy-strong">PRIMEIRA ANTÍFONA</strong></td>
+        <td class="col-translit"><strong class="liturgy-strong">PRIMEIRA ANTÍFONA</strong></td>
+        <td class="col-portuguese"><strong class="liturgy-strong">PRIMEIRA ANTÍFONA</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Ταίς πρεσβείαις της Θεοτόκου, Σώτερ, σώσον ημάς <span class="rubric">(τρις)</span>.</td>
+        <td class="col-translit">Tês presvíes tis Theotóku, Sõter, sõson imás <span class="rubric">(tris)</span>.</td>
+        <td class="col-portuguese">Pelas intercessões da Mãe de Deus, ó Salvador, salva-nos <span class="rubric">(3x)</span>.</td>
+      </tr>
+      <tr class="section-banner-row">
+        <td class="col-greek" lang="el"><strong class="liturgy-strong">PEQUENA LADAINHA</strong></td>
+        <td class="col-translit"><strong class="liturgy-strong">PEQUENA LADAINHA</strong></td>
+        <td class="col-portuguese"><strong class="liturgy-strong">PEQUENA LADAINHA</strong></td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Έτι και έτι εν ειρήνη του Κυρίου δεηθώμεν.</td>
+        <td class="col-translit">Êti ke êti en iríni tu Kiríu deithõmen.</td>
+        <td class="col-portuguese">Ainda e ainda, em paz, oremos ao Senhor.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Κύριε ελέησον.</td>
+        <td class="col-translit">Kírie eléison.</td>
+        <td class="col-portuguese">Senhor, tende piedade.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Αντιλαβού, σώσον, ελέησον και διαφύλαξον ημάς ο Θεός τη ση χάριτι.</td>
+        <td class="col-translit">Andilavú, sõson, elēison ke diafílakson imás o Theôs ti si xáriti.</td>
+        <td class="col-portuguese">Ampara-nos, salva-nos, tende piedade de nós, e guarda-nos, ó Deus, pela Tua graça.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Κύριε ελέησον.</td>
+        <td class="col-translit">Kírie eléison.</td>
+        <td class="col-portuguese">Senhor, tende piedade.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  <!-- ==========================================================================
+       ORAÇÃO DA SEGUNDA ANTÍFONA E 18. SEGUNDA ANTÍFONA COM HINOS FESTIVOS (PÁGINA 5)
+       ========================================================================== -->
+  <section class="full-width-section">
+    <p class="rubric">O sacerdote, entretanto, diz em voz baixa a oração da Segunda Antífona:</p>
+    <div class="secret-prayer-box">
+      <div class="secret-prayer-title">☩ Oração da Segunda Antífona (em voz baixa) ☩</div>
+      <div class="secret-prayer-text drop-cap">SENHOR, DEUS NOSSO, SALVA O TEU POVO, ABENÇOA A TUA HERANÇA, GUARDA A TUA IGREJA, SANTIFICA AOS QUE AMAM O ESPLENDOR DE TUA CASA. GLORIFICA-OS, EM TROCA, COM O TEU DIVINO PODER, E NÃO NOS ABANDONES, A NÓS QUE CONFIAMOS EM TI.</div>
+    </div>
+
+    <h4 class="section-subtitle">18. SEGUNDA ANTÍFONA</h4>
+    <div class="antiphon-variations">
+      <p><strong class="actor-tag">CORO:</strong> Aos Domingos e no dia de Páscoa: Salva-nos, ó Filho de Deus, que ressurgiste dos mortos, a nós que a ti salmodiamos, aleluia! (3x).</p>
+      <p>Durante a semana e nas festas principais: Salva-nos, ó Filho de Deus, admirável em teus santos, a nós que a ti salmodiamos, aleluia!</p>
+      <p><strong class="rubric-feast">NATAL:</strong>... que nasceste da Virgem, a nós que a ti salmodiamos, aleluia!</p>
+      <p><strong class="rubric-feast">CIRCUNCISÃO:</strong>...que fostes circuncidado na carne, a nós que a ti salmodiamos, aleluia!</p>
+      <p><strong class="rubric-feast">EPIFANIA:</strong>...que fostes batizado por João no Jordão, a nós que a ti salmodiamos, aleluia!</p>
+      <p><strong class="rubric-feast">HYPAPANTE:</strong>...que foste carregado nos braços do justo Simeão, a nós que a ti salmodiamos, aleluia!</p>
+      <p><strong class="rubric-feast">ANUNCIAÇÃO:</strong>...que te encarnaste por nós, a nós que a ti salmodiamos, aleluia!</p>
+      <p><strong class="rubric-feast">RAMOS:</strong>...que montaste num jumentinho, a nós que a ti salmodiamos, aleluia!</p>
+      <p><strong class="rubric-feast">ASCENSÃO:</strong>...que subiste dentre nós com glória para os céus, a nós que a ti salmodiamos, aleluia!</p>
+      <p><strong class="rubric-feast">PENTECOSTES:</strong> Salva-nos, ó Consolador bondoso, a nós que a ti salmodiamos, aleluia!</p>
+      <p><strong class="rubric-feast">TRANSFIGURAÇÃO:</strong>.. que te transfiguraste sobre o monte Tabor, a nós que a ti salmodiamos, aleluia!</p>
+      <p><strong class="rubric-feast">EXALTAÇÃO DA SANTA CRUZ:</strong>...que foste crucificado na carne, a nós que a ti salmodiamos, aleluia!</p>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       TABELA 3: PEQUENA LADAINHA, TERCEIRA ANTÍFONA, ENTRADA DO EVANGELHO,
+       TRISÁGIO, LEITURAS SAGRADAS E SANTO EVANGELHO (PÁGINAS 6 A 9)
+       ========================================================================== -->
+  <div class="table-wrapper">
+  <table class="liturgy-table">
+    <colgroup>
+      <col class="col-greek">
+      <col class="col-translit">
+      <col class="col-portuguese">
+    </colgroup>
+    <thead>
+      <tr>
+        <th class="col-greek" lang="el">Grego Original</th>
+        <th class="col-translit">Transliteração Fonética</th>
+        <th class="col-portuguese">Tradução em Português</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Της Παναγίας, αχράντου, υπερευλογημένης, ενδόξου, δεσποίνης ημών Θεοτόκου και αειπαρθένου Μαρίας, μετά πάντων των αγίων μνημονεύσαντες, εαυτούς και αλλήλους και πάσαν την ζωήν ημών Χριστώ τω Θεώ παραθώμεθα.</td>
+        <td class="col-translit">Tis Panaghías, axrántu, iperevloghimēnis, endõksu, despínis imôn Theotóku ke aiparthénu Marías, metá pândon ton aghíon mnimonefsantes, eaftús ke alílus ke pâsan tin zoín imôn Xristô to Theô parathômetha.</td>
+        <td class="col-portuguese">Comemorando a Santíssima, Puríssima, Bendita e Gloriosa Senhora nossa, Mãe de Deus, e sempre Virgem Maria, com todos os Santos, encomendemo-nos mutuamente, uns aos outros e toda nossa vida, a Cristo Deus.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Σοι Κύριε.</td>
+        <td class="col-translit">Si Kírie.</td>
+        <td class="col-portuguese">A Ti, Senhor.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el"><span class="rubric">(Εκφώνως)</span> Ότι σον το κράτος και σου έστιν η βασιλεία και η δύναμις και η δόξα, του Πατρός και του Υιού και του Αγίου Πνεύματος, νυν και αει και εις τους αιώνας των αιώνων.</td>
+        <td class="col-translit">(Ekfônos) Óti son to krátos ke su ēstin i vasilía ke i dínamis ke i dôksa, tu Patrős ke tu Iú ke tu Aghíu Pneúmatos, nin ke ai ke is tus eõnas ton eõnon.</td>
+        <td class="col-portuguese">Pois a Ti pertencem o poder, o reino, a força e a glória, ó Pai, Filho e Espírito Santo, agora e sempre, pelos séculos dos séculos.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Αμήν.</td>
+        <td class="col-translit">Amín.</td>
+        <td class="col-portuguese">Amém.</td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el"><strong class="liturgy-strong">SEGUNDA ANTÍFONA</strong></td>
+        <td class="col-translit"><strong class="liturgy-strong">SEGUNDA ANTÍFONA</strong></td>
+        <td class="col-portuguese"><strong class="liturgy-strong">SEGUNDA ANTÍFONA</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Σώσον ημάς, Υιέ Θεού, ο αναστάς εκ νεκρών, ψάλλοντάς Σοι αλληλούϊα <span class="rubric">(τρις)</span>.</td>
+        <td class="col-translit">Sôson imás, Iê Theú, o anastás ek nekrőn, psállondás Si allilúia <span class="rubric">(tris)</span>.</td>
+        <td class="col-portuguese">Salva-nos, ó Filho de Deus, que ressuscitastes dos mortos, a nós que Salmodiamos, Aleluia!</td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Δόξα Πατρί και Υιώ και Αγίω Πνεύματι.</td>
+        <td class="col-translit">Dôksa Patrí ke Iô ke Aghío Pneúmati.</td>
+        <td class="col-portuguese">Glória ao Pai, ao Filho e ao Espírito Santo.</td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Και νυν και αει και εις τους αιώνας των αιώνων. Αμήν.</td>
+        <td class="col-translit">Ke nin ke ai ke is tus eõnas ton eõnon. Amín.</td>
+        <td class="col-portuguese">Agora e sempre, pelos séculos dos séculos. Amém.</td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Μονογενής Υιός και Λόγος του Θεού, αθάνατος υπάρχων και καταδεξάμενος διά την ημετέραν σωτηρίαν σαρκωθήναι εκ της αγίας Θεοτόκου και αειπαρθένου Μαρίας, ατρέπτως ενανθρωπήσας, σταυρωθείς τε Χριστέ ο Θεός, θανάτω θάνατον πατήσας, εις ων της Αγίας Τριάδος, συνδοξαζόμενος τω Πατρί και τω αγίω Πνεύματι, σώσον ημάς.</td>
+        <td class="col-translit">O Monoghenís Iôs ke Lôgos tu Theú, athánatos ipárxon ke katadeksámenos diâ tin imetêran sotirían sarkothíne ek tis aghías Theotóku ke aiparthênu Marías, atréptos enanthropísas, stavrotheís te Xristě o Theôs, thanáto thánaton patísas, is on tis Aghías Triádos, sindoksazōmenos to Patrí ke to Aghío Pneúmati, sôson ímás.</td>
+        <td class="col-portuguese">Ó Filho Unigênito e Verbo de Deus sempre imortal, que quisestes para a nossa salvação encarnar-te da Santa Mãe de Deus e sempre Virgem Maria, e fazendo-te homem imutavelmente tendo sido crucificado Cristo, nosso Deus, vencendo a morte com a morte; sendo um da Santíssima Trindade, glorificado com o Pai e o Espírito Santo, salva-nos.</td>
+      </tr>
+      <tr class="section-banner-row">
+        <td class="col-greek" lang="el"><strong class="liturgy-strong">PEQUENA LADAINHA</strong></td>
+        <td class="col-translit"><strong class="liturgy-strong">PEQUENA LADAINHA</strong></td>
+        <td class="col-portuguese"><strong class="liturgy-strong">PEQUENA LADAINHA</strong></td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Έτι και έτι εν ειρήνη του Κυρίου δεηθώμεν.</td>
+        <td class="col-translit">Éti ke ēti en iríni tu Kiríu deithőmen.</td>
+        <td class="col-portuguese">Ainda e ainda, em paz, oremos ao Senhor.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Αμήν.</td>
+        <td class="col-translit">Amín.</td>
+        <td class="col-portuguese">Amém.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Αντιλαβού, σώσον, ελέησον και διαφύλαξον ημάς ο Θεός τη σή χάριτι.</td>
+        <td class="col-translit">Andilavú, sõson, eléison ke diafílakson imás o Theôs ti si xáriti.</td>
+        <td class="col-portuguese">Ampara-nos, salva-nos, tende piedade de nós, e guarda-nos, ó Deus, pela Tua graça.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Αμήν.</td>
+        <td class="col-translit">Amín.</td>
+        <td class="col-portuguese">Amém.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Της Παναγίας, αχράντου, υπερευλογημένης, ενδόξου, δεσποίνης ημών Θεοτόκου και αειπαρθένου Μαρίας, μετά πάντων των αγίων μνημονεύσαντες, εαυτούς και αλλήλους και πάσαν την ζωήν ημών Χριστώ τω Θεώ παραθώμεθα.</td>
+        <td class="col-translit">Tis Panaghías, axrántu, iperevloghimēnis, endõksu, despínis imõn Theotóku ke aiparthēnu Marías, metá pãndon ton aghíon mnimonefsantes, eaftús ke alílus ke pásan tin zoín imôn Xristô to Theô parathômetha.</td>
+        <td class="col-portuguese">Comemorando a Santíssima, Puríssima, Bendita e Gloriosa Senhora Nossa Mãe de Deus e sempre Virgem Maria, encomendemo-nos mutuamente, uns aos outros, e toda a nossa vida, a Cristo Deus.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Αμήν.</td>
+        <td class="col-translit">Amín.</td>
+        <td class="col-portuguese">Amém.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el"><span class="rubric">(Εκφώνως)</span> Ότι αγαθός και φιλάνθρωπος Θεός υπάρχεις και σοι την δόξαν αναπέμπομεν, τω Πατρί και τω Υιώ και τω Αγίω Πνεύματι, νυν και αει και εις τους αιώνας των αιώνων.</td>
+        <td class="col-translit">(Ekfônos:) Óti aghathós ke filánthropos Theôs ipárxeis ke si tin dõksan anapêmbomen, to Patrí ke to Iô ke to Aghío Pnêvmati, nin ke aí ke is tus eõnas ton eõnon.</td>
+        <td class="col-portuguese">Porque sois Deus, bom e misericordioso, a vós rendemos glória, Pai, Filho e Espírito Santo, agora e sempre, pelos séculos dos séculos.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Αμήν.</td>
+        <td class="col-translit">Amín.</td>
+        <td class="col-portuguese">Amém.</td>
+      </tr>
+      <tr class="section-banner-row">
+        <td class="col-greek" lang="el"><strong class="liturgy-strong">TERCEIRA ANTÍFONA</strong></td>
+        <td class="col-translit"><strong class="liturgy-strong">TERCEIRA ANTÍFONA</strong></td>
+        <td class="col-portuguese"><strong class="liturgy-strong">TROPÁRIO DA RESSURREIÇÃO</strong> <span class="rubric">(varia de acordo com calendário litúrgico)</span></td>
+      </tr>
+      <tr class="section-banner-row">
+        <td class="col-greek" lang="el"><strong class="liturgy-strong">APOLITIKION OU TROPARION</strong></td>
+        <td class="col-translit"><strong class="liturgy-strong">APOLITIKION OU TROPARION</strong></td>
+        <td class="col-portuguese"></td>
+      </tr>
+      <tr class="section-banner-row">
+        <td class="col-greek" lang="el"><strong class="liturgy-strong">PROCISSÃO DO SANTO EVANGELHO</strong></td>
+        <td class="col-translit"><strong class="liturgy-strong">PROCISSÃO DO SANTO EVANGELHO</strong></td>
+        <td class="col-portuguese"><strong class="liturgy-strong">PROCISSÃO DO SANTO EVANGELHO</strong></td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Σοφία ορθοί.</td>
+        <td class="col-translit">Sofía orthí. <span class="rubric">(em pé)</span></td>
+        <td class="col-portuguese">Sapiência de Pé.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Δεύτε προσκυνήσωμεν και προσπέσωμεν Χριστώ.</td>
+        <td class="col-translit">Dêfte proskinísomen kai prospêsomen Xristô.</td>
+        <td class="col-portuguese">Vinde, adoremos e prostremo-nos diante de Cristo.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Σώσον ημάς Υιέ Θεού, ο αναστάς εκ νεκρών (...), ψάλλοντας σοι Αλληλούϊα.</td>
+        <td class="col-translit">Sôson imás Iê Theú, o anastás ek nekrôn (...), psállonstás si Allilúia.</td>
+        <td class="col-portuguese">Salva-nos, oh Filho de Deus, que ressuscitaste dentre os mortos. Nós Te Salmodiamos: Aleluia!</td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit"></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong> <span class="rubric">(Repete o apolitikion de domingo)</span></td>
+      </tr>
+      <tr class="section-banner-row">
+        <td class="col-greek" lang="el"><strong class="liturgy-strong">ΕΙΣΟΔΟΣ ΤΟΥ ΕΥΑΓΓΕΛΙΟΥ ΚΑΙ ΙΕΡΑ ΑΝΑΓΝΩΣΜΑΤΑ</strong></td>
+        <td class="col-translit"><strong class="liturgy-strong">ISODOS TU EVANGUELIU KE IERA ANAGHNOSMATA</strong></td>
+        <td class="col-portuguese"><strong class="liturgy-strong">PROCISSÃO DO EVANGELHO E LEITURAS SAGRADAS</strong></td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Του Κυρίου δεηθώμεν.</td>
+        <td class="col-translit">Tu Kiríu deithömen.</td>
+        <td class="col-portuguese">Oremos ao Senhor.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Κύριε ελέησον.</td>
+        <td class="col-translit">Kírie eléison.</td>
+        <td class="col-portuguese">Senhor, tende piedade.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Ότι άγιος ει ο Θεός ημών και σοι την δόξαν αναπέμπομεν, τω Πατρί και τω Υιώ και τω Αγίω Πνεύματι, νυν και αει και εις τους αιώνας των αιώνων.</td>
+        <td class="col-translit">Óti ághios i o Theós imön ke si tin dõksan anapėmbomen, to Patrí ke to Iô ke to Aghío Pneúmati, nin ke aì ke is tus eõnas ton eónon.</td>
+        <td class="col-portuguese">Porque Tu és santo, ó Deus nosso, a Ti rendemos glória, Pai, Filho e Espírito Santo, agora e sempre.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit"></td>
+        <td class="col-portuguese">E pelos séculos dos séculos.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Αμήν.</td>
+        <td class="col-translit">Amín.</td>
+        <td class="col-portuguese">Amém.</td>
+      </tr>
+      <tr class="section-banner-row">
+        <td class="col-greek" lang="el"><strong class="liturgy-strong">Τρισάγιος</strong></td>
+        <td class="col-translit"><strong class="liturgy-strong">Trisághios</strong></td>
+        <td class="col-portuguese"></td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Άγιος ο Θεός, άγιος ισχυρός, άγιος αθάνατος, ελέησον ημάς <span class="rubric">(τρις)</span>.</td>
+        <td class="col-translit">Ághios o Theós, ághios isxirós, ághios athánatos, eléison imás <span class="rubric">(tris)</span>.</td>
+        <td class="col-portuguese">Santo Deus, Santo Poderoso, Santo Imortal, tende piedade de nós <span class="rubric">(3x)</span>.</td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Ο α χορός: Δόξα Πατρί και Υιώ και Αγίω Πνεύματι.</td>
+        <td class="col-translit">O a xorós: Dôksa Patrí ke Iô ke Aghío Pneúmati.</td>
+        <td class="col-portuguese">Glória ao Pai, ao Filho e ao Espírito Santo,</td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Ο α χορός: Και νυν και αει και εις τους αιώνας των αιώνων,</td>
+        <td class="col-translit">O a xorós: Ke nin ke aì ke is tus eõnas ton eõnon,</td>
+        <td class="col-portuguese">agora e sempre, pelos séculos dos séculos.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Αμήν. Ο β χορός: Άγιος αθάνατος, ελέησον ημάς. Δ: Δύναμις. Ο α χορός: Άγιος ο Θεός, άγιος ισχυρός άγιος αθάνατος, ελέησον ημάς.</td>
+        <td class="col-translit">Amín. O b xorós: Ághios athánatos, eléison imás. D: Dínamis. O a xorós: Ághios o Theôs, ághios isxirôs, ághios athánatos, eléison imás.</td>
+        <td class="col-portuguese">Santo Imortal, tende piedade de nós. Santo Deus, Santo Poderoso, Santo Imortal, tende piedade de nós. Amém.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Πρόσχωμεν.</td>
+        <td class="col-translit">Prôsxomen.</td>
+        <td class="col-portuguese">Estejamos atentos.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Σοφία.</td>
+        <td class="col-translit">Sofía.</td>
+        <td class="col-portuguese">Sabedoria.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Πρόσχωμεν.</td>
+        <td class="col-translit">Prósxomen.</td>
+        <td class="col-portuguese">Estejamos atentos.</td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">Leitor:</strong> <span class="rubric">(Leitura da Epístola + do Apóstolo São.....)</span></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Ειρήνη σοι τω αναγινώσκοντι.</td>
+        <td class="col-translit">Iríni si to anaghinõskonti.</td>
+        <td class="col-portuguese">A paz esteja contigo leitor e a todo povo.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Αλληλούϊα <span class="rubric">(τρις)</span>.</td>
+        <td class="col-translit">Allilúia <span class="rubric">(tris)</span>.</td>
+        <td class="col-portuguese">Aleluia. Aleluia. Aleluia.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Σοφία Ορθοί, ακούσωμεν του αγίου Ευαγγελίου.</td>
+        <td class="col-translit">Sofía. Orthí, akúsomen tu aghíu Evanguelíu.</td>
+        <td class="col-portuguese"><span class="rubric">(em pé)</span> Levantemo-nos para ouvir, com sabedoria, o Santo Evangelho.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Ειρήνη πάσι.</td>
+        <td class="col-translit">Iríni pási.</td>
+        <td class="col-portuguese">A paz esteja convosco.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Και τω πνεύματί σου.</td>
+        <td class="col-translit">Ke to pneúmatí su.</td>
+        <td class="col-portuguese">E com o teu espírito.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Εκ του κατά (δείνα) αγίου Ευαγγελίου το ανάγνωσμα.</td>
+        <td class="col-translit">Ek tu katá (dína) aghíu Evanguelíu to anághnosma.</td>
+        <td class="col-portuguese">Leitura do Santo Evangelho, segundo o Evangelista São (...).</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Πρόσχωμεν.</td>
+        <td class="col-translit">Prósxomen.</td>
+        <td class="col-portuguese">Estejamos atentos.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Δόξα Σοι Κύριε δόξα Σοι.</td>
+        <td class="col-translit">Dõksa Si. Kírie dõksa Si.</td>
+        <td class="col-portuguese">Glória a Ti, Senhor glória a Ti.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  <!-- ==========================================================================
+       NOTA EDITORIAL E TABELA 4: LITANIA PELA IGREJA, GRANDE ENTRADA,
+       OFERTÓRIO, CREDO, SANTA ANÁFORA E INSTITUIÇÃO (PÁGINAS 10 A 23)
+       ========================================================================== -->
+  <div class="editorial-note">
+    *(Nota: O trecho em grego correspondente a esta página não consta na digitalização original, sendo preservadas apenas a transliteração e a tradução conforme a regra de fidelidade ao documento)*
+  </div>
+
+  <div class="table-wrapper">
+  <table class="liturgy-table">
+    <colgroup>
+      <col class="col-greek">
+      <col class="col-translit">
+      <col class="col-portuguese">
+    </colgroup>
+    <thead>
+      <tr>
+        <th class="col-greek" lang="el">Grego Original</th>
+        <th class="col-translit">Transliteração Fonética</th>
+        <th class="col-portuguese">Tradução em Português</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit"><strong class="actor-tag">S:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit">Ípomen pántes ex ólis tis psihís, que ex ólis tis dianías imôn ípomen.</td>
+        <td class="col-portuguese">Digamos com toda a nossa alma e com todo nosso espírito.</td>
+      </tr>
+      <tr class="section-banner-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit"><strong class="liturgy-strong">LITANIA PELA IGREJA</strong></td>
+        <td class="col-portuguese"><strong class="liturgy-strong">LITANIA PELA IGREJA</strong></td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit"><strong class="actor-tag">S:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit">Kýrie, eléison!</td>
+        <td class="col-portuguese">Senhor todo poderoso Deus dos nossos Pais, nós te pedimos escuta-nos e tem piedade de nós.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit"><strong class="actor-tag">C:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit">Kýrie, eléison!</td>
+        <td class="col-portuguese">Kýrie, eléison!</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit"><strong class="actor-tag">S:</strong></td>
+        <td class="col-portuguese"></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit">Kírie, Pantokrátor. Theós ton Patéron imôn, deómethá sou, epákuson que eléison.</td>
+        <td class="col-portuguese"></td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit"><strong class="actor-tag">C:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit">Kýrie, eléison!</td>
+        <td class="col-portuguese">Kýrie, eléison!</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit"><strong class="actor-tag">S:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit">Éti deómetha ypér ton efsevôn que orthodóxon christianôn.</td>
+        <td class="col-portuguese">Oremos, também pelos devotos cristãos ortodoxos.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit"><strong class="actor-tag">C:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit">Kýrie, eléison!</td>
+        <td class="col-portuguese">Kýrie, eléison!</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit"><strong class="actor-tag">S:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit">Éti deómetha ypér tu Arhiepiscópu imôn... Tu Episcópu...</td>
+        <td class="col-portuguese">Oremos também por nosso Arcebispo e nosso Bispo.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit"><strong class="actor-tag">C:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit">Éti deómetha ypér ton adelfôn imôn, ton Ieréon, Ieromonáhon, Ierodiakónon que Monahôn, que pásis tis en Hristó imô adelfótitos.</td>
+        <td class="col-portuguese">Oremos pela venerável ordem dos Presbíteros e diáconos em Cristo, pelos monges e por todos os fiéis Ortodoxos.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit"><strong class="actor-tag">S:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit">Éti deómetha ypér eléus, zois, irínis, igías, sotirías, episképseos, sinhoríseos que aféseos ton amartión ton dúlon tu Theú, pánton ton efsevôn que orthodóxon christianôn ton katikúnton que parikúnton en ti póli...que enoría táfti, ton epitrópon que sindromitôn tis ierás Ekklisías táftis, sin ginexí que teknís aftôn. Ke ton dúlon aftú.</td>
+        <td class="col-portuguese">Kýrie, eléison!</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit"></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit"></td>
+        <td class="col-portuguese">Peçamos, também, misericórdia, vida, paz, saúde e salvação para os servos de Deus os cristãos ortodoxos que habitam nesta cidade, aos com-tribuintes e benfeitores desta Santa Igreja.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit"><strong class="actor-tag">C:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit">Kýrie, eléison!</td>
+        <td class="col-portuguese">Kýrie, eléison!</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit"><strong class="actor-tag">S:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit">Éti deómetha ypér ton karpoforúnton que kaliergúnton en to agío que pansépto náo túto, kopiónton, psallónton que ypér ton periestótos laú tu apekdehómenu to pará su méga que plúsion éleos.</td>
+        <td class="col-portuguese">Oremos ainda por aqueles que oferecem os seus dons e os seus bens a esta santa e venerável Igreja, por todos aqueles que nela desempenham uma função, por todos aqueles que nela cantam, e por todo o Povo presente que confia na Tua imensa misericórdia.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit"><strong class="actor-tag">C:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit">Kýrie, eléison!</td>
+        <td class="col-portuguese">Kýrie, eléison!</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit"><strong class="actor-tag">S:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit">Éti deómetha ypér ton makárion que aimníston ktitóron tis agías Ekklisías táftis, que ypér pánton ton proanapafsaménon Patéron que adelfôn imôn, ton entháde efsevós kiménon, que apantahú orthodóxon. Ke ton dúlon aftú.</td>
+        <td class="col-portuguese">Oremos também, pelos fundadores desta Santa Casa, por todos os nossos pais e irmãos ortodoxos já falecidos.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit"><strong class="actor-tag">C:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit">Kýrie, eléison!</td>
+        <td class="col-portuguese">Kýrie, eléison!</td>
+      </tr>
+      <tr class="section-banner-row">
+        <td class="col-greek" lang="el"><strong class="liturgy-strong">ΕΚΤΕΝΗΣ ΚΑΙ ΜΕΓΑΛΗ ΕΙΣΟΔΟΣ</strong></td>
+        <td class="col-translit"><strong class="liturgy-strong">EKTENIS KE MEGALI ISODOS</strong></td>
+        <td class="col-portuguese"><strong class="liturgy-strong">SUPLICA E GRANDE ENTRADA</strong></td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Όπως υπό του κράτους Σου πάντοτε φυλαττόμενοι Σοι δόξαν αναπέμπωμεν, τω Πατρί και τω Υιώ και τω Αγίω Πνευματι, νυν και αει και εις τους αιώνας των αιώνων</td>
+        <td class="col-translit">Õpos, ipo tu kratus Su pándote filatomeni. Si dõksan anapėmbomen to Patri ke to lo ke to Aghio Pnevmati, nin ke ai ke is tus eónas ton eonon.</td>
+        <td class="col-portuguese">Para que sendo sempre guardados pelo Teu poder, a Ti rendemos glória, ó Pai. Filho e Espirito Santo, agora e sempre, pelos séculos dos séculos.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Αμήν</td>
+        <td class="col-translit">Amin</td>
+        <td class="col-portuguese">Amém</td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Οι τα Χερουβείμ μυστικώς εικονίζοντες, και τη ζωοποιώ Τριάδι τον τρισάγιον ύμνον προσάδοντες, πάσαν την βιοτικήν αποθώμεθα μέρωναν, ως τον Βασιλέα των όλων υποδεξόμενοι ταις αγγελικαίς αοράτως δορυφορούμενον τάξεσιν.</td>
+        <td class="col-translit">Oi ta Xeruvim mistikōs ikonizontes, ke ti zoopió Triadi ton trisághion imnon prosádontes, påsan tin viotikin apothometha mérimnan, os ton Basilea ton ôlon ipodeksõmeni, tes anguelikes aorátos doriforumenon täksesin.</td>
+        <td class="col-portuguese">Nós, que misticamente representamos os Querubins, e que caritamos o hino três vezes santo à Trindade vivificadora, afastemos todo o mundanismo, a fim de acolhermos o Rei de todos.</td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Αλληλούϊα</td>
+        <td class="col-translit">Alilúia</td>
+        <td class="col-portuguese">Aleluia.</td>
+      </tr>
+      <tr class="section-banner-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit"></td>
+        <td class="col-portuguese"><strong class="liturgy-strong">PROCISSÃO DAS OFERENDAS</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit"></td>
+        <td class="col-portuguese"><span class="rubric">(em pé)</span></td>
+      </tr>
+      <tr class="section-banner-row">
+        <td class="col-greek" lang="el"><strong class="liturgy-strong">Μεγαλη Είσοδος:</strong></td>
+        <td class="col-translit"><strong class="liturgy-strong">Megháli Isodos:</strong></td>
+        <td class="col-portuguese"><strong class="liturgy-strong">Grande Entrada</strong></td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Πάντων υμών, (και πάντων των ευσεβών και ορθοδόξων χριστιανών), μνησθείη Κύριος ο Θεός εν τη βασιλεία αυτού πάντοτε νυν και αει και εις τους αιώνας των αιώνων.</td>
+        <td class="col-translit">Påndon imôn, ke pandon ton evsevõn ke orthodokson xristianôn, mnisthii Kirios o Theōs en ti basilia aftú pandote nin ke ai ke is tus cônas ton eonon.</td>
+        <td class="col-portuguese">De todos nós lembre-se oh Senhor Deus em Teu Reino, agora e sempre, pelos séculos dos séculos.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Αμήν</td>
+        <td class="col-translit">Amin</td>
+        <td class="col-portuguese">Amem</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Ο Ιερεύς μνημονεύει ουτώ</td>
+        <td class="col-translit">O ierêfs mnimonėvi úto:</td>
+        <td class="col-portuguese"></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Του αρχιεπισκόπου ημών.</td>
+        <td class="col-translit">Tu arxiepiskopu imôn...</td>
+        <td class="col-portuguese">Do nosso Pai Arcebispo...</td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Ταις αγγελικαίς αοράτως δορυφορούμενον τάξεσιν</td>
+        <td class="col-translit">Tës anguelikës aorátos doriforimenon táksesin.</td>
+        <td class="col-portuguese">Escoltados invisivelmente pelas legiões angélicas.</td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Αλληλούια</td>
+        <td class="col-translit">Aliluia</td>
+        <td class="col-portuguese">Aleluia.</td>
+      </tr>
+      <tr class="section-banner-row">
+        <td class="col-greek" lang="el"><strong class="liturgy-strong">ΕΚΤΕΝΗΣ ΤΗΣ ΠΡΟΣΚΟΜΙΔΗΣ ΚΑΙ ΤO ΣΥΜΒΟΛΟ ΤΗΣ ΠΙΣΤΕΩΣ</strong></td>
+        <td class="col-translit"><strong class="liturgy-strong">EKTENIS TIS PROSKOMIDIS KE TO SİMVOLO TIS PÍSTEOS</strong></td>
+        <td class="col-portuguese"><strong class="liturgy-strong">SUPLICA DO OFERTORIO E PROFISSÃO DE FE <span class="rubric">(sentados)</span></strong></td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Πληρώσωμεν την δέησιν ημών τω Κυρίω.</td>
+        <td class="col-translit">Plirõsomen tin deisin imon to Kirio.</td>
+        <td class="col-portuguese">Completemos a nossa súplica ao Senhor</td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Υπέρ των προτεθέντων τιμίων Δώρων, του Κυρίου δεηθώμεν.</td>
+        <td class="col-translit">Ipër ton protethëndon timion Doron, tu Kiriu deithömen.</td>
+        <td class="col-portuguese">Pelos dons preciosos aqui postos, oremos ao Senhor</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Κύριε ελέησον</td>
+        <td class="col-translit">Kirie eleison.</td>
+        <td class="col-portuguese">Tende piedade. Senhor</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Υπέρ του αγίου οίκου τούτου και των μετά πιστεως, ευλαβείας και φόβου Θεού εισιόντων εν αυτώ, του Κυρίου δεηθώμεν.</td>
+        <td class="col-translit">Ipër tu aghiu iku tútu ke ton meta pisteos, evlabias ke fovu Theu isiondon en afió, tu Kiriu deithömen.</td>
+        <td class="col-portuguese">Por esta Casa Santa e pelos que nela entram com fe, devoção e temor de Deus, oremos ao Senhor.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Κύριε ελέησον</td>
+        <td class="col-translit">Kirie eleison.</td>
+        <td class="col-portuguese">Tende piedade. Senhor</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Υπέρ του ρυσθήναι ημάς από πάσης θλίψεως, οργής, κινδύνου και ανάγκης, του Κυρίου δεηθώμεν.</td>
+        <td class="col-translit">Ipër tu risthine imas apo pasis thlipseos, orghis. kindinu ke anaguis, tu Kiriu deithōmen.</td>
+        <td class="col-portuguese">Para livrar-nos de toda tribulação, ira, perigo e necessidade, oremos ao Senhor.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Κύριε ελέησον.</td>
+        <td class="col-translit">Kirie eleison.</td>
+        <td class="col-portuguese">Tende piedade. Senhor.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Αντιλαβού, σώσον, ελέησον και διαφύλαξον ημάς ο Θεός τη ση χάριτι</td>
+        <td class="col-translit">Andilavu, sõson, eleison ke diafilakson imás o Theōs ti si xáriti.</td>
+        <td class="col-portuguese">Ampara-nos, salva-nos, tende piedade de nos e guarda-nos ó Deus, pela Tua graça.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Κύριε ελέησον.</td>
+        <td class="col-translit">Kirie eleison.</td>
+        <td class="col-portuguese">Tende piedade, Senhor.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Την ημέραν πάσαν, τελείαν, αγίαν, ειρηνικήν και αναμάρτητον, παρά του Κυρίου απησώμεθα</td>
+        <td class="col-translit">Tin iméran pasan, telian, aghian, irinikin ke anamartiton, pará tu Kiriu etisômetha.</td>
+        <td class="col-portuguese">Para que seja um dia perfeito, sagrado, pacífico e sem pecado, peçamos ao Senhor.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Παράσχου Κύριε.</td>
+        <td class="col-translit">Parásxu Kirie.</td>
+        <td class="col-portuguese">Atende o Senhor</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Άγγελον ειρήνης, πιστόν οδηγόν, φύλακα των ψυχών και των σωμάτων ημών, παρά του Κυρίου αιτησώμεθα</td>
+        <td class="col-translit">Anguelon irinis, piston odighön, filaka ton psixon ke ton somaton imôn, pará tu Kiriu etisõmetha.</td>
+        <td class="col-portuguese">Anjo de paz, fiel guia, guarda de nossas almas e de nossos corpos, peçamos ao Senhor.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Παράσχου Κύριε.</td>
+        <td class="col-translit">Parásxu Kirie.</td>
+        <td class="col-portuguese">Atende o Senhor.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Συγγνώμην και άφεσιν των αμαρτιών και των πλημμελημάτων ημών, παρά του Κυρίου αιτησώμεθα</td>
+        <td class="col-translit">Sighnômin ke afesin ton amartion ke ton plimelimáton imôn, pará tu Kiriu etisõmetha.</td>
+        <td class="col-portuguese">O perdão e a remissão dos nossos pecados e imperfeições, peçamos ao Senhor.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Παράσχου Κύριε.</td>
+        <td class="col-translit">Parásxu Kirie.</td>
+        <td class="col-portuguese">Atende o Senhor.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Τα καλά και συμφέροντα τους ψυχαίς ημών, και ειρήνην τω κόσμω, παρά του Κυρίου αιτησώμεθα</td>
+        <td class="col-translit">Tá kalá ke simferonta tes psyxés imôn, ke irinin to kōsmo, para tu Kiriu etisómetha.</td>
+        <td class="col-portuguese">Os bens proveitosos para as nossas almas e a paz para o mundo, peçamos ao Senhor</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Παράσχου Κύριε.</td>
+        <td class="col-translit">Parasxu Kirie.</td>
+        <td class="col-portuguese">Atende o Senhor.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Τον υπόλοιπον χρόνον της ζωης ημών, εν ειρήνη και μετανοία εκτελέσαι παρά του Κυρίου αιτησώμεθα</td>
+        <td class="col-translit">Ton ipolipon xrônon tis zois imón, en irini ke metania ektelėse, pará tu Kiriu etisõmetha</td>
+        <td class="col-portuguese">Para que passemos o restante da nossa vida em paz e penitencia, peçamos ao Senhor</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Παράσχου Κυριε</td>
+        <td class="col-translit">P'arasxu Kine</td>
+        <td class="col-portuguese">Atende o Senhor</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Χριστιανα τα τέλη της ζωής ημών, ανώδυνα ανεπαισχυντα ειρηνικά, και καλην απολογίαν την επι του φοβερού βήματος του Χρίστου αιτήσωμεθα</td>
+        <td class="col-translit">Xristiana ta teli tis zois imón, anodina. anepēsxinda, irinika, ke kalin apologhian tin epi tu foveri vimatos tu Xristů, erisőmetha.</td>
+        <td class="col-portuguese">Que o fim de nossa vida seja cristão, livre de dores e humilhações, pacifico e de boa defesa diante do tribunal temivel de Cristo. peçamos ao Senhor</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Παράσχου Κύριε</td>
+        <td class="col-translit">P'arásxu Kirie.</td>
+        <td class="col-portuguese">Atende o Senhor</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Της Παναγίας, αχράντου, υπερευλογημένης, ενδόξου δεσποίνης ημών Θεοτόκου και αειπαρθένου Μαρίας, μετά πάντων των Αγίων μνημονεύσαντες, εαυτούς και αλλήλους και πάσαν την ζωήν ημών Χριστώ τω Θεώ παραθώμεθα.</td>
+        <td class="col-translit">Tis Panaghias, axrandu. iperevloghimēnis, endõksu despinis imôn Theotoku ke iparthenu Marias, metà pandon ton Aghion mnimonefsandes, eaftús ke alilus ke pásan tin zoin imon Xristo to Theo parathometha</td>
+        <td class="col-portuguese">Comemorando a Santissima, Purissima. Bendita e Gloriosa Senhora nossa, Mãe de Deus e sempre Virgem Maria, com todos os Santos, encomendemo-nos mutuarnente, uns aos outros e toda nossa vida, a Cristo Deus.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Σοι Κύριε.</td>
+        <td class="col-translit">Si Kirie.</td>
+        <td class="col-portuguese">A Ti, Senhor.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el"><span class="rubric">(Εκφώνως)</span> Διά των οικτιρμών του μονογενούς σου Υιού, μεθ' ου ευλογητός ει συν τω παναγίω και αγαθώ και ζωοποιώ σου Πνεύματι, νυν και αει και εις τους αιώνας των αιώνων.</td>
+        <td class="col-translit"><span class="rubric">(Ekfonos)</span> Diá ton iktirmôn tu monoghenús su Iú, meth' u evloghitos i, sin to panaghio ke agatho ke zoopió su Pnevmati, nin ke ai ke is tus eõnas ton cônon</td>
+        <td class="col-portuguese">Pelas misericordias do Teu Filho unigenito, com o qual es bendito, com o Teu santissimo, bom e vivificante Espirito; agora e sempre, pelos séculos dos séculos.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Αμην</td>
+        <td class="col-translit">Amin</td>
+        <td class="col-portuguese">Amém</td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit"></td>
+        <td class="col-portuguese">(em pe)</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Ειρήνη πάσι</td>
+        <td class="col-translit">Irini pási.</td>
+        <td class="col-portuguese">A paz esteja com todos vós.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Και τω πνεύματί σου.</td>
+        <td class="col-translit">Ke to pnevmati su.</td>
+        <td class="col-portuguese">E com Teu Espirito.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Αγαπήσωμεν αλλήλους, ίνα εν ομονοία ομολογήσωμεν.</td>
+        <td class="col-translit">Aghapisomen alilus, ina en omonia omologhisomen.</td>
+        <td class="col-portuguese">Amemo-nos mutuamente, a fim de que em harmonia professemos a fé</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Πατέρα, Υιόν και Άγιον Πνεύμα, Τριάδα ομοούσιον και αχώριστον.</td>
+        <td class="col-translit">Patéra, lön ke Aghion Pnevma. Triada omousion ke axoriston.</td>
+        <td class="col-portuguese">No Pai, no Filho e no Espirito Santo, Trindade consubstancial e indivisivel.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Τας θύρας, τας θύρας. Εν σοφία πρόσχωμεν.</td>
+        <td class="col-translit">Tas thiras, tas thiras, En sofia prosxomen</td>
+        <td class="col-portuguese">As portas, as portas. Com sabedoria, estejamos atentos.</td>
+      </tr>
+      <tr class="section-banner-row">
+        <td class="col-greek" lang="el"><strong class="liturgy-strong">Πιστεύου</strong></td>
+        <td class="col-translit"><strong class="liturgy-strong">CREDO NICENO-CONSTANTINOPOLITANO</strong></td>
+        <td class="col-portuguese"><strong class="liturgy-strong">Profissão de Fe (Credo)</strong></td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Πιστεύως εις ένα Θεόν, Πατερα. Παντοκράτορα, ποιητήν ουρανού και γης. ορατών τε πάντων και αοράτων</td>
+        <td class="col-translit">Pistėvo is ena Theón, Patera, Pandokrátora, piitin uranu ke gis, oratón te pandon ke aoraton</td>
+        <td class="col-portuguese">Creio em um só Deus. Pai Onipotente, criador do ceu e da terra, de todas as coisas visiveis e invisiveis</td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Και εις ένα Κύριον Ιησουν Χριστόν, τον Υιόν του Θεού τον μονογενή, τον εκ του Πατρός γεννηθέντα πρό πάντων των αιώνων φώς εκ φωτός, Θεόν αληθινόν εκ Θεού αληθινού, γεννηθέντα ου ποιηθέντα, ομοούσιον τω Πατρί, δι' ου τα πάντα εγένετο.</td>
+        <td class="col-translit">Ke is éna Kirion Isün Xriston, ton lôn tu Theu ton monogheni, ton ek tu Patrös ghenithénda prò pandon ton cônon fös ek fotos, Theon alithinon ek Theú alithinu, ghenithenda u piithēnta, omoúsion to Patri, di' u ta panda eghéneto.</td>
+        <td class="col-portuguese">E em um só Senhor, Jesus Cristo. Filho unigênito de Deus, nascido do Pai antes de todos os séculos, Luz de luz, Deus verdadeiro de Deus verdadeiro, gerado e não criado, consubstancial ao Pai. por quem tudo foi feito.</td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Τον δι' ημάς τους ανθρώπους και διά την ημετέραν σωτηρίαν κατελθόντα εκ των ουρανών και σαρκωθέντα εκ Πνεύματος Αγίου και Μαρίας της Παρθένου και ενανθρωπήσαντα.</td>
+        <td class="col-translit">Ton di' imás tus anthrõpus ke dia tin imeteran sotirian katelthõnda ek ton uranon ke sarkothenda ek Pnevmatos Aghiu ke Marias tis Parthenu ke enanthropisanda.</td>
+        <td class="col-portuguese">O qual, por nós homens e para a nossa salvação, desceu dos céus e se encarnou pelo Espirito Santo na Virgem Maria, e se fez homem.</td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Σταυρωθέντα τε υπέρ ημών επί Ποντίου Πιλάτου, και παθόντα και ταφέντα</td>
+        <td class="col-translit">Stavrothenda te ipër imôn epi Pontiu Pilátu, ke pathonda ke tafenda</td>
+        <td class="col-portuguese">Por nós foi crucificado sob Pôncio Pilatos, padeceu e foi sepultado.</td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Και αναστάντα τη τρίτη ημέρα κατά τας Γραφάς Καιαελθόντα εις τους ουρανούς και καθεζόμενον εκ δεξιών του Πατρός</td>
+        <td class="col-translit">Ke anastánda ti triti imêra kata tas Ghrafas. Ke anelthônda is tus uranús ke kathezômenon ek deksion tu Patros.</td>
+        <td class="col-portuguese">E ressuscitou ao terceiro dia, segundo as escrituras. Subiu aos céus e sentou-se à direita do Pai.</td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Και πάλιν ερχόμενον μετά δόξης κρίναι ζώντας και νεκρούς, ου της βασιλείας ουκ έσται τέλος.</td>
+        <td class="col-translit">Ke pålin erxomenon metá döksis krine zōndas ke nekrús, u tis basilias uk este tēlos.</td>
+        <td class="col-portuguese">E novamente virá com glória para julgar os vivos e os mortos, e o seu reino não terá fim.</td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Και εις το Πνεύμα το Άγιον, το κύριον, το ζωοποιόν, το εκ του Πατρός εκπορευόμενον, το συν Πατρί και Υιώ συμπροσκυνούμενον και συνδοξαζόμενον, το λαλήσαν διά των προφητών.</td>
+        <td class="col-translit">Ke is to Pnevma to Aghion, to kirion, to zoopion, to ek tu Patros ekporevomenon, to sin Patri ke lo simbroskinúmenon ke sindoksazómenon, to lalisan dia ton profitôn.</td>
+        <td class="col-portuguese">E no Espírito Santo, Senhor vivificante, que do Pai procede e que, com o Pai e o Filho juntamente é adorado e glorificado, e que falou pelos profetas.</td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Εις μίαν, Αγίαν, Καθολικήν και Αποστολικήν Εκκλησίαν.</td>
+        <td class="col-translit">Is mian, Aghian, Katholikin ke Apostolikin Eklisian.</td>
+        <td class="col-portuguese">E na Igreja, una, Santa, Católica e Apostólica</td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Ομολογώ εν βάπτισμα εις αφεσιν αμαρτιών.</td>
+        <td class="col-translit">Omologho en váptisma is afesin amartion</td>
+        <td class="col-portuguese">Professo um só batismo, para remissão dos pecados.</td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Προσδοκώ ανάστασιν νεκρών</td>
+        <td class="col-translit">Prosdoko anastasin nekrön</td>
+        <td class="col-portuguese">Espero a ressurreição dos mortos.</td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Και ζωήν του μέλλοντος αιώνος</td>
+        <td class="col-translit">Ke zoin tu mélondos conos</td>
+        <td class="col-portuguese">E a vida no século futuro</td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Αμην</td>
+        <td class="col-translit">Amin</td>
+        <td class="col-portuguese">Amem</td>
+      </tr>
+      <tr class="section-banner-row">
+        <td class="col-greek" lang="el"><strong class="liturgy-strong">Η ΑΓΙΑ ΑΝΑΦΟΡΑ</strong></td>
+        <td class="col-translit"><strong class="liturgy-strong">HAGHIA ANAFORA</strong></td>
+        <td class="col-portuguese"><strong class="liturgy-strong">SACRIFICIO EUCARISTICO</strong></td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Στώμεν καλώς στώμεν μετα φόβου πρόσχωμεν την αγίαν Αναφοραν εν ειρήνη προσφέρειν.</td>
+        <td class="col-translit">Stómen kalős stömen meta fõvu prósxomen tin aghian Anaforan en irini prosferin</td>
+        <td class="col-portuguese">Estejamos devotadamente de pe ergamo-nos com temor. estejamos atentos, para oferecer, em paz, a santa Oblação</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Έλεον ειρήνης, θυσίαν αινέσεως</td>
+        <td class="col-translit">Lleon irinis, thisian enéseos.</td>
+        <td class="col-portuguese">misericórdia da paz. o sacrificio de louvor</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Η χάρις του Κυρίου ημών Ιησού Χριστού και η αγάπη του Θεού και Πατρός και η κοινωνία του Αγίου Πνεύματος είη μετά πάντων υμών.</td>
+        <td class="col-translit">I xaris tu Kiriu imon Isů Xristú ke i aghápi tu Theu ke Patrös ke i kinonia tu Aghiu Pnevmatos ii metá pándon imón.</td>
+        <td class="col-portuguese">A graça de nosso Senhor Jesus Cristo, o amor de Deus Pai, e a comunhão do Espirito Santo estejam com todos vos</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Και μετά του πνεύματός σου.</td>
+        <td class="col-translit">ke metá tu pnevmatos su.</td>
+        <td class="col-portuguese">E com o Teu Espirito.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Άνω σχωμεν τας καρδίας</td>
+        <td class="col-translit">Ano sxômen tas kardias.</td>
+        <td class="col-portuguese">1 enhamos no alto os corações</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Έχομεν πρός τον Κύριον.</td>
+        <td class="col-translit">Exomen prôs ton Kirion</td>
+        <td class="col-portuguese">Já os temos no Senhor.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Ευχαριστήσωμεν τω Κυρίω.</td>
+        <td class="col-translit">Efxaristisomen to Kirio.</td>
+        <td class="col-portuguese">Demos graças ao Senhor</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Άξιον και δίκαιον.</td>
+        <td class="col-translit">Aksion ke dikeon.</td>
+        <td class="col-portuguese">F. digno e justo.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el"><span class="rubric">(Εκφώνως)</span> Τον επινίκιον ύμνον άδοντα, βοώντα, κεκραγότα και λέγοντα</td>
+        <td class="col-translit"><span class="rubric">(Ekfonos)</span> Ton epinikion imnon adonda, voõnda, kekraghőta ke lêgonda.</td>
+        <td class="col-portuguese">Cantando o hino do triunfo, clamando, bradando e dizendo:</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Άγιος, άγιος, άγιος Κύριος Σαβαώθ πλήρης ο ουρανος και η γη της δόξης σου, ωσαννά εν τοις υψίστοις. Ευλογημένος ο ερχόμενος εν ονόματι Κυρίου. Ωσαννά ο εν τοις υψίστοις.</td>
+        <td class="col-translit">Aghios, ághios, ághios Kirios Savaōth pliris o uranôs ke i ghi tis dõksis su, osaná en tis ipsistis. Evloghimēnos o erxomenos en onomati Kirju. Osana o en tis ipsistis.</td>
+        <td class="col-portuguese">Santo, Santo, Santo é o Senhor de Savaó; o Céu e a Terra estão cheios de Tua glória. Hosana nas alturas. Bendito o que vem em nome do Senhor. Hosana nas alturas.</td>
+      </tr>
+      <tr class="section-banner-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit"><strong class="liturgy-strong">MEMORIAL</strong></td>
+        <td class="col-portuguese"></td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el"><span class="rubric">(Εκφώνως)</span> Λάβετε, φάγετε, τουτό μου έστη το σώμα, το υπέρ ημών κλώμενον, εις άφεσιν αμαρτιών,</td>
+        <td class="col-translit"><span class="rubric">(Ekfonos)</span> Lávete, fäghete, tuto mu esti to soma, to ipêr imön klomenon, is afesin amartion.</td>
+        <td class="col-portuguese">Tomai e comei, isto é o meu corpo, que será partido por vós, para remissão dos pecados</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Αμήν.</td>
+        <td class="col-translit">Amin</td>
+        <td class="col-portuguese">Amém</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el"><span class="rubric">(Εκφώνως)</span> Πίετε εξ αυτού πάντες, τουτό έστη το αμά μου, το της Καινής Διαθήκης, το υπέρ υμών και πόλλων εκχυνόμενον, εις αφεσιν αμαρτιών</td>
+        <td class="col-translit"><span class="rubric">(Ekfōnos)</span> Piete eks aftú pandes, tutô esti to ēma mu, to tis Kenis Diathikis, to ipër imon ke polón ekxinõmenon, is afesin amartión</td>
+        <td class="col-portuguese">Bebei dele todos isto é o meu sangue, do Novo Testamento, que será derramado por vos e por muitos, para remissão dos pecados</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Αμην</td>
+        <td class="col-translit">A min</td>
+        <td class="col-portuguese">A mem</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  <!-- ==========================================================================
+       ANAMNESE, CONSAGRAÇÃO E EPICLESIS SOLENE (PÁGINAS 24 E 25)
+       ========================================================================== -->
+  <section class="full-width-section epiclesis-section">
+    <div class="byzantine-divider" aria-hidden="true">
+  <svg width="340" height="26" viewBox="0 0 340 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 13h135M195 13h135" stroke="#A68A56" stroke-width="1.2" stroke-linecap="round"/>
+    <circle cx="20" cy="13" r="2.5" fill="#7A0C0C"/>
+    <circle cx="135" cy="13" r="2" fill="#A68A56"/>
+    <circle cx="205" cy="13" r="2" fill="#A68A56"/>
+    <circle cx="320" cy="13" r="2.5" fill="#7A0C0C"/>
+    <!-- Central Byzantine Cross -->
+    <path d="M170 2v22M158 9h24M162 19h16" stroke="#7A0C0C" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="170" cy="2" r="2" fill="#A68A56"/>
+    <circle cx="170" cy="24" r="2" fill="#A68A56"/>
+    <circle cx="158" cy="9" r="1.8" fill="#A68A56"/>
+    <circle cx="182" cy="9" r="1.8" fill="#A68A56"/>
+  </svg>
+</div>
+    <p class="rubric"><strong>SACERDOTE. continua a oração em vos b...a.</strong></p>
+    <p class="drop-cap">Lembrando-nos,pois, deste mandamento salutar e de todas as coisas que foram feitas por causa de nós: da Cruz, do Sepulcro, da Ressurreição após três dias, da Ascensão aos céus, do assento à direita do Pai e também do glorioso e segundo advento... <span class="rubric">(neste momento o diácono ou o sacerdote, pondo a mão direita sobre a esquerda, levanta um pouco, com a direita o disco e a esquerda o cálice. faz com eles o sinal da cruz dizendo):</span></p>
+    <p class="solemn-words">Os Teus dons, a Ti oferecemos, em tudo e por tudo.</p>
+    <p><strong class="actor-tag">CORO:</strong> NÓS TE LOUVAMOS, NÓS TE BENDIZEMOS, NÓS TE AGRADECEMOS, SENHOR, E TE INVOCAMOS, DEUS NOSSO.</p>
+    <p class="rubric">Depondo os santos dons novamente na santa mesa, fazem trés metânias. O sacerdote recita em voz baixa:</p>
+    <p class="secret-prayer-text">Nós vos oferecemos ainda esta adoração vocal e incruenta, nós vos invocamos, nós vos rogamos e vos suplicamos. Enviai, pois, o vosso Espírito Santo sobre nós e sobre estes dons aqui dispostos.</p>
+    <p class="rubric">De braços erguidos, o sacerdote reza o Tropário da hora "Terça":</p>
+    <p><strong class="actor-tag">S.</strong> Senhor, que à hora terceira enviaste aos Apóstolos o vosso Santo Espírito, pela vossa misericórdia não o afastes de nós e renova-nos a nós que humildemente vos apresentamos as nossas súplicas.</p>
+    <p><strong class="actor-tag">D./S.</strong> Cria em mim, ó Deus, um coração que seja puro, dá-me de novo um espírito decidido.</p>
+    <p><strong class="actor-tag">S.</strong> Senhor, que à hora terceira...</p>
+    <p><strong class="actor-tag">D./S.</strong> Não me atastes de vossa face e não retires de mim o vosso Santo Espírito.</p>
+    <p><strong class="actor-tag">S.</strong> Senhor, que à hora terceira...</p>
+    <p><strong class="actor-tag">DIÁCONO:</strong> <span class="rubric">inclinando a cabeça, aponta o seu orárion o pãn sagrado. diz em voz baixa:</span> Abençoa, senhor, o pão santo!</p>
+    <p><strong class="actor-tag">SACERDOTE:</strong> <span class="rubric">inclinando-se, abençoa três vezes com o sinal da cruz o santo pão, e diz em voz baixa, continuando a oração:</span><br>E fazei = deste pão, o Corpo Precioso de vosso Cristo.</p>
+    <p><strong class="actor-tag">DIÁCONO:</strong> Amém. <span class="rubric">E apontando o orárion para o santo cálice, diz ao sacerdote:</span> Abençoa, senhor, o Santo Cálice.</p>
+    <p><strong class="actor-tag">SACERDOTE:</strong> <span class="rubric">abençoando o cálice diz:</span><br>E quanto ao que se contém neste cálice, = o Sangue do Vosso Cristo.</p>
+    <p><strong class="actor-tag">DIÁCONO:</strong> <span class="rubric">apontando mais uma vez o orárion para ambas as espécies, diz:</span> Abençoa, senhor, ambos os dons.</p>
+    <p><strong class="actor-tag">SACERDOTE:</strong> <span class="rubric">abençoa ambos os dons, dizendo:</span><br>Transformando-os = por Vosso Espírito Santo.</p>
+    <p><strong class="actor-tag">DIÁCONO:</strong> Amém, amém, amém. <span class="rubric">Diácono e Sacerdote fazem umu profunda inclinação de adoração. O Diácono ou o Sacerdote toma o pequeno véu e o agita sobre os santos mistérios.</span></p>
+    <p><strong class="actor-tag">SACERDOTE:</strong> <span class="rubric">em voz baixa recita a seguinte oração:</span><br>Para que eles sirvam aos comungantes para o despertar da alma e a remissão dos pecados, para a comunhão com vosso Espírito Santo, para terem a plenitude do reino celeste, para terem um motivo de confiança perante Vós e não de juízo ou condenação.<br>Oferecemo-vos esta oblação racional também por aqueles que descansam na fé, pelos antepassados, pais, patriarcas, profetas, apóstolos, pregadores, evangelizadores, mártires, confessores, ascetas e por toda a alma justa que morreu na fé;</p>
+    <div class="byzantine-divider" aria-hidden="true">
+  <svg width="340" height="26" viewBox="0 0 340 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 13h135M195 13h135" stroke="#A68A56" stroke-width="1.2" stroke-linecap="round"/>
+    <circle cx="20" cy="13" r="2.5" fill="#7A0C0C"/>
+    <circle cx="135" cy="13" r="2" fill="#A68A56"/>
+    <circle cx="205" cy="13" r="2" fill="#A68A56"/>
+    <circle cx="320" cy="13" r="2.5" fill="#7A0C0C"/>
+    <!-- Central Byzantine Cross -->
+    <path d="M170 2v22M158 9h24M162 19h16" stroke="#7A0C0C" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="170" cy="2" r="2" fill="#A68A56"/>
+    <circle cx="170" cy="24" r="2" fill="#A68A56"/>
+    <circle cx="158" cy="9" r="1.8" fill="#A68A56"/>
+    <circle cx="182" cy="9" r="1.8" fill="#A68A56"/>
+  </svg>
+</div>
+  </section>
+
+  <!-- ==========================================================================
+       TABELA 5: AXION ESTIN, DÍPTICOS, ORAÇÃO DOMINICAL (PAI NOSSO)
+       E SANTA COMUNHÃO DOS FIÉIS (PÁGINAS 27 A 39)
+       ========================================================================== -->
+  <div class="table-wrapper">
+  <table class="liturgy-table">
+    <colgroup>
+      <col class="col-greek">
+      <col class="col-translit">
+      <col class="col-portuguese">
+    </colgroup>
+    <thead>
+      <tr>
+        <th class="col-greek" lang="el">Grego Original</th>
+        <th class="col-translit">Transliteração Fonética</th>
+        <th class="col-portuguese">Tradução em Português</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Έκφώνως τα σα εκ των σων σοι προσφέρομεν κατά πάντα και δια παντα</td>
+        <td class="col-translit">(Ekionos) Ta sa ek ton son si prosferomen kata panda ke dia panda</td>
+        <td class="col-portuguese">EPICLESE (INVOCAÇÃO DO ESPIRITO SANTO) ... "TRANSMUTACÃO" ... Os Teus idonsi a Ti oferecemos, en tudo e por tudo.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Σε υμνούμεν, σε ευλογούμεν, σοι ευχαριστουμεν. Κύριε, και δεόμεθά σου, ο Θεός ημών</td>
+        <td class="col-translit">Se imnumen, se evloghúmen, si efxaristumen. Kirie, ke deõmetha su o Theōs imon.</td>
+        <td class="col-portuguese">Nos Te louvamos, nos Te bendizemos, nos Te agradecemos. Senhor, e Te invocamos. Deus nosso (sentados</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el"><span class="rubric">(Εκφώνως)</span> Εξαιρέτως της Παναγίας, αχράντου, υπερευλογημένης, ενδόξου, Δεσποίνης ημών Θεοτόκου και αειπαρθένου Μαρίας.</td>
+        <td class="col-translit"><span class="rubric">(Ekfonos)</span> Ekserêtos tis Panaghias, axrandu. iperevloghimēnis, endõksu. Despinis imôn Theotoku ke iparthênu Marias.</td>
+        <td class="col-portuguese">E, especialmente, pela santissima, purissima, bendita e gloriosa. Senhora nossa, Mãe de Deus, e sempre Virgem Maria.</td>
+      </tr>
+      <tr class="section-banner-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit"><strong class="liturgy-strong">HINO SANTA MÃE DE DEUS</strong></td>
+        <td class="col-portuguese"></td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Αξιόν ἐστιν ως αληθώς μακαρίζειν σε την Θεοτόκον, την αειμακαριστον και παναμώμητον και μητέρα του Θεού ημών. Την τιμιωτέραν των Χερουβείμ και ενδοξοτέραν ασυγκρίτως των Σεραφείμ την αδιαφθόρως Θεόν Λόγον τεκούσαν, την όντως Θεοτόκον, σε μεγαλύνομεν.</td>
+        <td class="col-translit">Aksion êstin os alithos makarizin se tin Theotokon, tin aimakáriston ke panamõmiton ke mitēra tu Theu imôn. Tin timioteran ton Xeruvim ke endoksotèran asingritos ton Serafim tin adiafthoros Theon Lôghon tekusan, tirt ōndos Theotokon, se meghalinomen.</td>
+        <td class="col-portuguese">É justo em verdade glorificar-te, Mãe de Deus. sempre bem-aventurada e imaculada Mãe de nosso Deus. Mais venerável que os Querubins e mais gloriosa que os Serafins, que ilibadamente destes luz o Verbo de Deus, logo sois verdadeiramente Mãe de Deus, nós Te glorificamos.</td>
+      </tr>
+      <tr class="section-banner-row">
+        <td class="col-greek" lang="el"><strong class="liturgy-strong">ΔΙΠΤΥΧΑ ΚΑΙ ΔΕΗΣΕΙΣ</strong></td>
+        <td class="col-translit"><strong class="liturgy-strong">DIPTINA KE DEISIS</strong></td>
+        <td class="col-portuguese"><strong class="liturgy-strong">INTENCÕES E INTERCESSÕES</strong></td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el"><span class="rubric">(Εκφώνως)</span> Εν πρώτοις μνήσθητι Κύριε, του Αρχιεπισκόπου ήμων <span class="rubric">(δεινος)</span>. ον χάρισαι ταις αγίαις σου Εκκλησίαις εν ειρηνη, σώον, έντιμον, υγια μακροημερεύοντα και ορθοτομούντα τον λόγον της σης αληθείας</td>
+        <td class="col-translit"><span class="rubric">(Ekfonos)</span> In protis mnisthiti. Kirie, tu Arxiepiskopu imón (dinos). on xarise tes aghies su Eklisies en irini, soon. endimon, ighia, makroimerëvonda ke orthotomunda ton lõghon us sis alithias</td>
+        <td class="col-portuguese">Primeiramente. recorda-te o Senhor, de nosso Pai e Arcebispo (te conserva-o para as Tuas Igrejas em paz, são e salvo. honrado e com vida longa, a propagar com retidão a palavra de Tua verdade</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">και ων έκαστος κατά διάνοιαν έχει και πάντων και πασών.</td>
+        <td class="col-translit">Ke ön ékastos kata dianian exi, ke pandon ke pasón.</td>
+        <td class="col-portuguese">E daqueles que cada um tem em sua mente, e de todos e de todas.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Και πάντων και πασών.</td>
+        <td class="col-translit">Ke pandon ke pasón</td>
+        <td class="col-portuguese">E de todos e todas.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el"><span class="rubric">(Εκφώνως)</span> και δός ημιν, εν ενί στόματι και μια καρδία, δοξάζειν και ανυμνείν το πάντιμον και μεγαλοπρεπές όνομά σου, του Πατρός και του Υιού και του Αγίου Πνεύματος, νυν και αει και εις τους αιώνας των αιώνων.</td>
+        <td class="col-translit"><span class="rubric">(Ekfonos)</span> Ke dos imin, en eni stomati ke mia kardia, doksázin ke animnın to pándimon ke meghaloprepés onoma su, tu Patrös ke tu lú ke tu Aghiu Pnevmatos, nin ke ai ke is tus eõnas ton eõnon.</td>
+        <td class="col-portuguese">E concede-nos que com uma só boca e um só coração. glorifiquemos e exaltemos o vosso venerabilissimo, e magestuosissimo nome. Pai. Filho e Espirito Santo, agora e sempre, pelos séculos dos séculos.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Αμήν.</td>
+        <td class="col-translit">Amin.</td>
+        <td class="col-portuguese">Amém</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Και έσταις τα ελέη του μεγάλου Θεού και Σωτήρος ημών Ιησού Χριστού μετά πάντων ημών</td>
+        <td class="col-translit">Ke éste ta elei tu meghálu Theú ke Sotiros imon Isů Xristú metá pandon imôn.</td>
+        <td class="col-portuguese">As misericordias do grande Deus e Salvador nosso, Jesus Cristo, estejam com todos vóς.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Και μετά του πνεύματός σου.</td>
+        <td class="col-translit">Ke meta tu pnevmatos su.</td>
+        <td class="col-portuguese">E com o Teu Espirito</td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit"><strong class="liturgy-strong">LITANIA DOS SANTOS DONS</strong></td>
+        <td class="col-portuguese"></td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Πάντων των αγίων μνημονεύσαντες, έτι και έτι εν ειρήνη του Κυρίου δεηθώμεν.</td>
+        <td class="col-translit">Pandon ton aghion mnimonefsandes, êti ke éti en irini tu Kiriu deithōmen.</td>
+        <td class="col-portuguese">Tendo comemorado todos os santos, ainda e ainda em paz, oremos ao Senhor</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Κύριε ελέησον.</td>
+        <td class="col-translit">Kirie elĉison.</td>
+        <td class="col-portuguese">Tende piedade, Senhor</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Υπέρ των προσκομισθέντων και αγιασθέντων τιμιων Δώρων, του Κυρίου δεηθώμεν.</td>
+        <td class="col-translit">Ipêr ton proskomisthéndon ke aghiasthenton timion Doron, tu Kiriu deithömen</td>
+        <td class="col-portuguese">Pelos venerados dons, já ofertados e santificados. roguemos ao Senhor.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Κύριε ελέησον.</td>
+        <td class="col-translit">Kirie eleison.</td>
+        <td class="col-portuguese">Tende piedade. Senhor.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Όπως ο φιλάνθρωπος Θεός ημών, ο προσδεξαμενος αυτά εις το αγιον και υπερουράνιον και νοερόν αυτού θυσιαστήριον, εις οσμην ευωδίας πνευματικής, αντικαταπέμψη ημίν την θείαν χάριν και την δωρεάν του Αγίου Πνευματος δεηθώμεν</td>
+        <td class="col-translit">Õpos o filanthropos Theôs imôn, o prosdeksamenos aftá is to aghion ke iperuranion ke noeron aftú thisiastirion, is osmin evodias pnevmatikis, antikatapempsi imin tin theian xarın ke tin dorean tu Aghiu Pnevmatos, deithömen</td>
+        <td class="col-portuguese">Para que nosso Deus misericordioso, que nos recebeu no seu santuário celestial, mistico, com aroma de suavidade espiritual, nos derrame a divina graça e o dom do Espirito Santo. oremos ao Senhor</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Κύριε ελετισον</td>
+        <td class="col-translit">Kine eleison.</td>
+        <td class="col-portuguese">Tende piedade. Senhor</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Αντιλαβού, σώσου ελέησον και διαφύλαξον ημας ο Θεος, τη Ση χάριτι</td>
+        <td class="col-translit">Antilavu, sóson, eleison ke diafilakson imas. o Theos, ti Si xariti</td>
+        <td class="col-portuguese">Ampara-nos, salva-nos. tende piedade de nos e guarda-nos, ó Deus, pela Tua graça.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Παράσχου Κύριε</td>
+        <td class="col-translit">Parasxu Kiric.</td>
+        <td class="col-portuguese">Atende Senhor.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Την ημέραν πάσαν, τελείαν, αγίαν, ειρηνικήν και αναμάρτητον παρα του Κυρίου αιτησώμεθα.</td>
+        <td class="col-translit">Tin iméran pasan. telian, aghian, irinikin ke anamartiton para tu Kiriu etisômetha</td>
+        <td class="col-portuguese">Que todo este dia seja perfeito, santo, pacifico e sem pecado, peçamos ac Senhor</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Παράσχου Κύριε</td>
+        <td class="col-translit">Parasxu Kirie</td>
+        <td class="col-portuguese">Atende Senhor</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Άγγελον ειρήνης πιστόν οδηγόν, φύλακα των ψυχών και των σωμάτων ημών, παρό του Κυρίου απησώμεθα.</td>
+        <td class="col-translit">Anguelon irinis, pistón odighön, filaka ton psixon ke ton somáton imôn, pará tu Kiriu etisômetha.</td>
+        <td class="col-portuguese">Im anjo de paz, guia fiel e guarda de nossas almas e corpos, peçamos ao Senhor</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Παράσχου Κύριε.</td>
+        <td class="col-translit">l'arasxu Kirie.</td>
+        <td class="col-portuguese">Atende Senhor</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Συγγνώμην και άφεσιν των αμαρτιών και των πλημμελημάτων ημών, παρά του Κυρίου αιτησώμεθα</td>
+        <td class="col-translit">Sighnömin ke afesin ton amartion ke ton plimelimáton imôn, pará tu Kiriu etisômetha.</td>
+        <td class="col-portuguese">() perdão e a remissão de nossos pecados e culpas. peçamos ao Senhor</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Παράσχου Κύριε.</td>
+        <td class="col-translit">Parásxu Kirie.</td>
+        <td class="col-portuguese">Atende o Senhor.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Τα καλά και συμφέροντα ταις ψυχαίς ημών, και ειρήνην, τω κόσμω, παρά του Κυρίου αιτησώμεθα.</td>
+        <td class="col-translit">Tå kalá ke simferonda tes psixés imôn, ke irinin to kōsmo, para tu Kiriu etisõmetha,</td>
+        <td class="col-portuguese">Que tudo o que é de bom e útil és nossas almas. e a paz para o mundo, peçamos ao Senhor.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Παράσχου Κύριε.</td>
+        <td class="col-translit">Parásxu Kirie.</td>
+        <td class="col-portuguese">Atende Senhor</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Τον υπόλοιπον χρόνον της ζωής ημών, εν ειρήνη και μετανοία εκτελέσαι παρά του Κυρίου αιτησώμεθα.</td>
+        <td class="col-translit">Ton ipolipon xronon tis zois imón, en irini ke metania ektelėse, pará tu Kiriu etisômetha.</td>
+        <td class="col-portuguese">Passar o resto da nossa vida na paz e na penitencia, peçamos ao Senhor</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Παράσχου Κύριε</td>
+        <td class="col-translit">Parasxu Kirie.</td>
+        <td class="col-portuguese">Atende o Senhor</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Χριστιανά τα τέλη της ζωής ημών, ανώδυνα, ανεπαίσχυντα ειρηνικά και καλήν απολογίαν την επί του φοβερού βήματος του Χριστού, αιτησώμεθα.</td>
+        <td class="col-translit">Xristiana ta tēli tis zois imon, anódina, anepësxinta irinika, ke kalin apologian tin epi tu foverú vimatos tu Xristu, exisōmetha</td>
+        <td class="col-portuguese">Que o fim de nossa vida seja cristão, tranquilo. sem dores, irrepreensivel e tenha uma boa defesz no temivel tribunal de Cristo. peçamos ao Senhor.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Παράσχου Κύριε.</td>
+        <td class="col-translit">Parasxu Kirie.</td>
+        <td class="col-portuguese">Atende Senhor.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Την ενότητα της πίστεως, και την κοινωνίαν του Αγίου Πνεύματος αιτησάμενοι εαυτούς και αλλήλους και πάσαν την ζωήν ημών Χριστώ τω Θεώ παραθώμεθα.</td>
+        <td class="col-translit">Tin enotita tis pisteos, ke tin kinonian tu Aghiu Pnevmatos etisameni, eaftús ke alilus ke pásan tin zoin imòn Xristo to Theo parathometha,</td>
+        <td class="col-portuguese">Suplicando a união da fé e a comunhão do Espirito Santo, encomendemo-nos mutuamente uns aos outros, e toda a nossa vida, a Cristo Deus.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Σοι Κύριε.</td>
+        <td class="col-translit">Si Kirie.</td>
+        <td class="col-portuguese">A Ti. Senhor</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el"><span class="rubric">(Εκφώνως)</span> Και καταξίωσον ημάς. Δέσποτα μετά παρρησίας, ακατακρίτως τολμάν επικαλείσθαι Σε τον επουράνιον Θεόν Πατέρα και λέγειν.</td>
+        <td class="col-translit"><span class="rubric">(Ekfonos)</span> Ke kataksioson imás, Despota meta parrisias, akatakritos tolman epikalisthe Se ton epuranion Theôn Patêra ke Jeghein</td>
+        <td class="col-portuguese">Torna-nos dignos, o Senhor. Deus Pai celestial. para que ousadamente e sem condenação te invoquemos, dizendo (de pé)</td>
+      </tr>
+      <tr class="section-banner-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit"><strong class="liturgy-strong">ORAÇÃO DOMINICAL</strong></td>
+        <td class="col-portuguese"></td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Πατερ ημών, ο εν τοις ουρανους αγιασθήτω το όνομά σου ελθέτω η βασιλεία σου. γενηθήτω το θέλημά σου, ως εν ουρανώ και επί της γης. Τον όρτον ημών τον επιούσιον δὸς ημίν σήμερον. Και άφες ημίν τα οφειλήματα ημών, ως και ημείς αφίεμεν τους οφειλέταις ημών. Και μη εισενέγκης ημάς εις πειρασμόν, αλλά ρύσαι ημας από του πονηρού.</td>
+        <td class="col-translit">Páter imón, o en tis uranís aghiasthito to onomá su, eltheto i vasilia su. ghenithito to thelima su, os en urano ke epi tis ghis. Ton arton imon ton epiusion dõs imin simeron Ke afes imin ta ofilimata imón, os ke imis afiemen tis ofilétes imôn Ke mi isenēguis imás is pirasmón, alá rise imas apó tu poniri</td>
+        <td class="col-portuguese">Pai nosso que estais nos ceus, santificado seja o vos50 nome venha o Teu reino, seja feita a Tua vontade, assim na terra como no céu. O pão nosso suprasubstancial dar-nos hoje e perdoa as nossas dividas, assim como nos perdoamos aos nossos devedores, e não nos deixeis cair em tentação, mas livra nos do mal.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Ότι σου εστιν η βασιλεία και η δύναμις και η δόξα, του Πατρός και του Υιού και του Αγίου Πνεύματος, νυν και αει και εις τους αιώνας των ακονών</td>
+        <td class="col-translit">Oti su éstin i vasilia ke i dinamis ke i dõksa, tu Patrós ke tu lu ke tu Aghiu Pnevmatos, nin ke ai ke is tus eõnas ton eonon</td>
+        <td class="col-portuguese">Porque Teu e o remo. o poder, e a gloria. Pai, Filho. e Espirito Santo, agora e sempre, pelos séculos dos séculos</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Αμήν.</td>
+        <td class="col-translit">Amin</td>
+        <td class="col-portuguese">Amem</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Ειρήνη πάσι</td>
+        <td class="col-translit">Irini pasi.</td>
+        <td class="col-portuguese">A paz esteja com todos vos</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">και τω πνεύματί σου.</td>
+        <td class="col-translit">Ke to pnevmati su.</td>
+        <td class="col-portuguese">E com Teu Espirito</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Τας κεφαλάς ημών τω Κυρίω κλινώμεν.</td>
+        <td class="col-translit">Tás kefalas imôn to Kirio klinomen</td>
+        <td class="col-portuguese">Inclinemos as nossas cabeças perante o Senhor</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Σοι Κύριε</td>
+        <td class="col-translit">Si Kirie.</td>
+        <td class="col-portuguese">A Ti Senhor</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el"><span class="rubric">(Εκφώνως)</span> Χάριτι και οικτιρμοίς και φιλανθρωπία του μονογενούς σου Υιού, μεθ' ου ευλογητός ει, συν τω παναγίω και αγαθώ και ζωοποιώ σου Πνεύματι, νυν και αει και εις τους αιώνας των αιώνων.</td>
+        <td class="col-translit"><span class="rubric">(Ekfonos)</span> Xariti ke iktirmis ke filanthropia tu monoghenus su Iú, meth' u evloghitos i, sin to panaghio ke aghathő ke zoopió su Pnevmati, nin ke ai ke is tus eõnas ton eonon.</td>
+        <td class="col-portuguese">(E em voz alta) Pela graça, pelas misericordias, pela benevolência de Teu Filho unigenito, com o qual sois bendito, juntamente com o Teu santissimo, bom e vivificante espirito, agora e sempre, pelos seculos dos séculos.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Αμήν.</td>
+        <td class="col-translit">Amin</td>
+        <td class="col-portuguese">Amem</td>
+      </tr>
+      <tr class="section-banner-row">
+        <td class="col-greek" lang="el"><strong class="liturgy-strong">ΘΕΙΑ ΚΟΙΝΩΝΙΑ</strong></td>
+        <td class="col-translit"><strong class="liturgy-strong">THIA KINONIA</strong></td>
+        <td class="col-portuguese"><strong class="liturgy-strong">SANTA COMUNHÃO</strong></td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">(Εκφωνει) προσχωμεν</td>
+        <td class="col-translit"><span class="rubric">(Ekfoni)</span> Präsxomen.</td>
+        <td class="col-portuguese"></td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Τα Άγια τους αγίοις</td>
+        <td class="col-translit">Ta Aghia tis aghiis</td>
+        <td class="col-portuguese">santos Os santos dons para os</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Εις Άγιος εις Κύριος Ιησούς Χριστός εις δόξαν Θεού Πατρός. Αμην</td>
+        <td class="col-translit">Is Aghios is Kirnos, Isus Xristos, is doksan Theu Panos Amin</td>
+        <td class="col-portuguese">I'm so e Santo, um so e o Senhor. Jesus Cristo, na glória de Deus Pai. Amem</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Εινείτε τον Κύριον εκ των σηρανών. Αίληκονια</td>
+        <td class="col-translit">Enite ton Kirion ek ton uranón. Alihuna.</td>
+        <td class="col-portuguese">1.ouvai o Senhor dos Ceus, louvai-o nas alturas Aleluia</td>
+      </tr>
+      <tr class="section-banner-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit"><strong class="liturgy-strong">COMUNHÃO</strong> / <strong class="liturgy-strong">ORAÇÃO PREPARATORIA</strong></td>
+        <td class="col-portuguese"></td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Πιστεύω. Κύριε, και ομολογώ, ότι συ ει αληθώς ο Χριστός, ο Υιός του Θεού του ζώντος, ο ελθών εις τον κόσμον αμαρτωλούς σωσται των πρώτος είμι εγώ. Έτι πιστεύω, ότι τουτο αυτό έστη το αχραντον Σώμα σου και τουτο αυτό έστη το τίμιον Αϊμά σου. Δέομαι ουν σου ελέησόν με και συγχωρησόν και τα παραπτωματά μου, τα εκούκης και τα ακούσια, τα εν λόγω, τα εν έργω, τα εν γνώσει και αγνοία και αξίωσόν με ακατακρίτως μετάσχειν των αχράντων σου μυστηρίων, εις άφεσιν αμαρτιών και εις ζωήν αιώνιον Αμήν</td>
+        <td class="col-translit">Pistėvo, Kirie, ke omologho, oti si i alithos o Xristos, o los tu Theủ tụ zôndos, o elthôn is ton kösmon amartolús sõse, on prōtōs imi egho. Eti pistėvo, ôti tūto afto esti to axrandon Soma su ke tuto aftő esti to timion Emá su. Dêome un su eleisön me ke sighxörisõn mi ta paraptómata mu, ta ekúsia ke ta akúsia, ta en lögho, ta en êrgho, ta en ghnósi ke aghnia ke aksiosõn me akatakritos metasxin ton axrandon su mistirion, is afesin amartion ke is zoin eonion. Amin</td>
+        <td class="col-portuguese">Creio, Senhor, e confesso que Tu es, em verdade, o Cristo, Filho de Deus vivo, que viestes ao mundo para salvar os pecadores, dos quais eu sou o primeiro, creio também, que este é o Teu puro e verdadeiro Corpo, e este Teu próprio e precioso Sangue. Suplico-te, pois, tende piedade de min, e perdoa as minhas faltas voluntarizs ou involuntárias, cometidas por palavras ou ação, com conhecimento ou por ignorância e dignifica-me para a prática, sem condenação dos Teus puros misterios para a remissão dos pecados e para a vida eterna. Amém.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Ιδού βαδίζω προς θείαν κοινωνίαν Πλαστουργέ μη φλέξης με τη μετουσία Πυρ γαρ υπάρχεις τους αναξίους φλέγον Αλλ' ουν κάθαρον εκ πάσης με κηλίδος.</td>
+        <td class="col-translit">Idú vadizo pros thian kinonian Plasturghë mi fleksis me ti metusia Pir ghar iparxis tus anaksius fléghon Al' un katharon ek pásis me kilidos</td>
+        <td class="col-portuguese">Estou caminhando para a Santa Comunhão. Criador, não me queimes com a Transformação Santa, porque sois fogo que queima os indignos. Rogo-te que apagues meus pecados.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Του δείπνου σου του μυστικού, σήμερον γιε Θεού κοινωνόν με παραλαβε ου μη γαρ τους εχθροις σου το μυστήριον είπω ου φίλημά σοι δώσω, καθάπερ ο Ιούδας αλλ' ως ο ληστής ομολογω σοι Μνήσθητί μου Κύριε εν τη βασίλεια σου</td>
+        <td class="col-translit">Tu dipnu su tu mistiku, simeron lẽ Theu kinonon me parálave u mi ghar tis extiris su to mistirion ipo u filima si doso, kathaper o lúdas al' os o listis omologho si Mnisthiti mu Kirie en ti vasilia su</td>
+        <td class="col-portuguese">Da Tua ceia mistica aceita-me hoje como participante. Filho de Deus. pois não direi Teu segredo aos Teus inimigos, nem Te darei o beijo como Judas, mas confesso-me a Ti como o ladrão, dizendo: Lembra-te de min, Senhor, no Teu Reino.</td>
+      </tr>
+      <tr class="section-banner-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit"><strong class="liturgy-strong">COMUNHÃO DOS FIEIS</strong></td>
+        <td class="col-portuguese"></td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">(Εκφωνεί) Μετα φοβους Θεου, πίστεως και αγάπης προσέλθετε</td>
+        <td class="col-translit"><span class="rubric">(Ekfoni)</span> Meta Fovu Theu, pisteos ke aghapis prosëlthete</td>
+        <td class="col-portuguese">Com temor a Deus com fe e amor, aproximar-vos</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Αμήν, αμήν, αμήν.</td>
+        <td class="col-translit">Amin, amin amin</td>
+        <td class="col-portuguese">Amem, amem, amem</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Σώσον ο Θεος τον λαον σου, και ευλόγησον την κληρονομίαν σου</td>
+        <td class="col-translit">Soson o Theos ton laon su, ke evlöghison 'tin klironomian su.</td>
+        <td class="col-portuguese">Salva, o Deus, o Teu povo, e abençoa a vossa herança</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Ειδόμενό το φως το αληθινόν, ελάβομεν Πνεύμα επουράνιον, εύρομεν πίστιν αληθή, αδιαιρετον Τριάδα προσκυνούντες, αύτη γαρ ημάς έσωσεν.</td>
+        <td class="col-translit">idomen to fos to alithinon, elávomen Pnevma epuranion, evromen pistin alithi, adiereton Triáda proskinündes, äfti ghar imas esosen.</td>
+        <td class="col-portuguese">Vimos a luz verdadeira, recebemos o Espirito celeste, encontramos a fé justa adorando a indivisivel Trindade, porque ela nos salvou</td>
+      </tr>
+      <tr class="section-banner-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit"><strong class="liturgy-strong">LITANIA DE AÇÃO DE GRAÇAS APOS A COMUNHÃO</strong></td>
+        <td class="col-portuguese"></td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Ορθοί Μεταλαβόντες των θείων, αγίων, αχράντων, αθανάτων, επουρανίων και ζωοποιών, φρικτών του Χριστού μυστηρίων, αξίως ευχαριστήσωμεν τω Κυρίω</td>
+        <td class="col-translit">Orthi. Metalavõndes ton thion, aghion, axrandon, athanaton, epuranion ke zoopión, friktôn tu Xristú mistirion, aksios efxaristisomen to Kirio</td>
+        <td class="col-portuguese">Tendo comungado os divinos santos, purissimos e imortais, celestiais e vivificantes misterios de Cristo, demos condignamente graças ao Senhor</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Κύριε ελέησ</td>
+        <td class="col-translit">Kirie eleison.</td>
+        <td class="col-portuguese">A Ti, Senhor</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Αντιλαβού, σώσον, ελέησον και διαφύλαξον ημάς, ο Θεός, τη Ση χάριτι</td>
+        <td class="col-translit">Antilavú, sõson, eleison ke diafilakson imas, o Theos. tí Si xariti</td>
+        <td class="col-portuguese">Ampara-nos, salva-nos, tende piedade de nós e guarda- nos, ó Deus, pela Tua graça</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Κύριε ελέησον.</td>
+        <td class="col-translit">Kirie eleison.</td>
+        <td class="col-portuguese">A Ti, Senhor</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Την ημέραν πάσαν, τελείαν, αγίαν, ειρηνικήν και αναμάρτητον απησάμενοι, εαυτούς και αλλήλους, και πάσαν την ζωήν ημών, Χριστώ τω Θεώ παραθώμεθα</td>
+        <td class="col-translit">Tin imêran pasan, telian aghian, irinikin ke anamartiton etisameni, eaftús ke alilus, ke pásan tin zoin imôn, Xristo to Theo parathometha</td>
+        <td class="col-portuguese">Para que seja um dia todo perfeito, sagrado, pacifico e sem pecado, encomendemo- nos mutuamente, uns aos outros, e toda a nossa vida, a Cristo Deus.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Σοι Κύριε.</td>
+        <td class="col-translit">Si Kirie.</td>
+        <td class="col-portuguese">A Ti, Senhor</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el"><span class="rubric">(Εκφώνως)</span> Ότι συ ει ο αγιασμός ημών, και σοι την δόξαν αναπέμπομεν, τω Πατρί και τω Υιώ και τω Αγίω Πνεύματι, νυν και αει και εις τους αιώνας των αιώνων.</td>
+        <td class="col-translit"><span class="rubric">(Ekfōnos)</span> Őti si i o aghiasmos imōn, ke si tin dõksan anapēmbomen, to Patri ke to lô ke to Aghio Pnevmati, nin ke ai ke is tus eonas ton eonon.</td>
+        <td class="col-portuguese">Porque Tu es a nossa santificação e a Ti rendemos glória: Pai, Filho, e Espirito Santo, agora e sempre, pelos seculos dos séculos</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Αμήν,</td>
+        <td class="col-translit">Amin</td>
+        <td class="col-portuguese">Amém.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  <!-- ==========================================================================
+       ORAÇÕES FINAIS E AÇÃO DE GRAÇAS APÓS A COMUNHÃO (PÁGINA 40)
+       ========================================================================== -->
+  <section class="full-width-section post-communion-section">
+    <div class="byzantine-divider" aria-hidden="true">
+  <svg width="340" height="26" viewBox="0 0 340 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 13h135M195 13h135" stroke="#A68A56" stroke-width="1.2" stroke-linecap="round"/>
+    <circle cx="20" cy="13" r="2.5" fill="#7A0C0C"/>
+    <circle cx="135" cy="13" r="2" fill="#A68A56"/>
+    <circle cx="205" cy="13" r="2" fill="#A68A56"/>
+    <circle cx="320" cy="13" r="2.5" fill="#7A0C0C"/>
+    <!-- Central Byzantine Cross -->
+    <path d="M170 2v22M158 9h24M162 19h16" stroke="#7A0C0C" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="170" cy="2" r="2" fill="#A68A56"/>
+    <circle cx="170" cy="24" r="2" fill="#A68A56"/>
+    <circle cx="158" cy="9" r="1.8" fill="#A68A56"/>
+    <circle cx="182" cy="9" r="1.8" fill="#A68A56"/>
+  </svg>
+</div>
+    <h3 class="section-title">ORAÇÕES FINAIS</h3>
+    <h4 class="section-subtitle">45. AÇÃO DE GRAÇAS APOS A COMUNHÃO</h4>
+    <p><strong class="actor-tag">C.:</strong> AGRADECEMO-TE, O SENHOR MISERICORDIOSO, BENFEITOR DE NOSSAS ALMAS, PORQUE NO PRESENTE DIA, TE DIGNASTE FAZER-NOS PARTICIPANTES DE TEUS MISTERIOS CELESTES E IMORTAIS. ENDIREITA O NOSSO CAMINHO CONFIRMA-NOS TODOS EM TEU TEMOR GUARDA A NOSSA VIDA; ASSEGURA OS NOSSOS PASSOS PELAS ORAÇÕES E SUPLICAS DA GLORIOSA MAE DE DEUS E SEMPRE VIRGEM MARIA E DE TODOS OS SANTOS.</p>
+    <p><span class="rubric">No Natal canta-se:</span> SEU NATAL Ó CRISTO NOSSO DEUS/ FEZ RAIAR A LUZ DO SABER DO MUNDO/ OS ADORADORES DAS ESTRE-LAS/APRENDERAM DA ESTRELA ADORAR-TE O SOL DA JUSTIÇA/E SABER QUE TU DAS ALTAS NASCENTES VIESTES/ SE-NHOR GLORIA A TI.</p>
+    <p><span class="rubric">Na Páscoa canta-se:</span> CRISTO RESSUSCITOU DOS MORTOS, PISANDO A MORTE COM A MORTE. E DANDO A VIDA AOS SEPULTADOS.</p>
+    <p><strong class="actor-tag">SACERDOTE:</strong> <span class="rubric">Dobra o antimisio. Levanta o Santo Evangelho, faz com ele o sinal da cruz, coloca-o sobre o antimisio, dobrado antes e exclama:</span><br>PORQUE TU ÉS A NOSSA SANTIFICAÇÃO A TI RENDEMOS GLÓRIA, PAI FILHO E ESPÍRITO SANTO. AGORA E SEMPRE E PELOS SÉCULOS DOS SÉCULOS.</p>
+    <p><strong class="actor-tag">CORO.</strong> AMÉM.</p>
+    <div class="byzantine-divider" aria-hidden="true">
+  <svg width="340" height="26" viewBox="0 0 340 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 13h135M195 13h135" stroke="#A68A56" stroke-width="1.2" stroke-linecap="round"/>
+    <circle cx="20" cy="13" r="2.5" fill="#7A0C0C"/>
+    <circle cx="135" cy="13" r="2" fill="#A68A56"/>
+    <circle cx="205" cy="13" r="2" fill="#A68A56"/>
+    <circle cx="320" cy="13" r="2.5" fill="#7A0C0C"/>
+    <!-- Central Byzantine Cross -->
+    <path d="M170 2v22M158 9h24M162 19h16" stroke="#7A0C0C" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="170" cy="2" r="2" fill="#A68A56"/>
+    <circle cx="170" cy="24" r="2" fill="#A68A56"/>
+    <circle cx="158" cy="9" r="1.8" fill="#A68A56"/>
+    <circle cx="182" cy="9" r="1.8" fill="#A68A56"/>
+  </svg>
+</div>
+  </section>
+
+  <!-- ==========================================================================
+       TABELA 6: RITO FINAL, APÓLYSIS, BÊNÇÃO FINAL, DESPEDIDA E ANTIDORON (PÁGINAS 41 A 43)
+       ========================================================================== -->
+  <div class="table-wrapper">
+  <table class="liturgy-table">
+    <colgroup>
+      <col class="col-greek">
+      <col class="col-translit">
+      <col class="col-portuguese">
+    </colgroup>
+    <thead>
+      <tr>
+        <th class="col-greek" lang="el">Grego Original</th>
+        <th class="col-translit">Transliteração Fonética</th>
+        <th class="col-portuguese">Tradução em Português</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="section-banner-row">
+        <td class="col-greek" lang="el"><strong class="liturgy-strong">RITO FINAL</strong></td>
+        <td class="col-translit"><strong class="liturgy-strong">ΑΠΟΛΥΣΗ</strong></td>
+        <td class="col-portuguese"><strong class="liturgy-strong">APOLISI</strong></td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Εν ειρηνη προέλθωμεν</td>
+        <td class="col-translit">En irini proëkhomen</td>
+        <td class="col-portuguese">Retiremo-nos em paz</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Εν ονόματι Κυρίου,</td>
+        <td class="col-translit">En onomati Kiriu</td>
+        <td class="col-portuguese">Em nome do Senhor</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Του Κυρίου δεηθώμεν</td>
+        <td class="col-translit">Tu Kitnu deithömen</td>
+        <td class="col-portuguese">Oremos ao Senhor</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Κύριε ελέησον</td>
+        <td class="col-translit">Kirie eleison</td>
+        <td class="col-portuguese">Tende piedade. Senhor</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Ο ευλογών τους ευλογουντάς Σε. Κύριε, και αγιάζων τους επί Σοι πεποιθότας, σώσον τον λαόν Σου και ευλόγησον την κληρονομίαν Σου. Το πλήρωμα της Εκκλησίας Σου φύλαξον, αγίασον τους αγαπώντας την ευπρέπειαν του οίκου Σου. Συ αυτούς αντιδόξασον τη θεϊκή Σου δυνάμει, και μη εγκαταλίπης ημάς τους ελπίζοντας επί Σε. Ειρήνην τω κόσμω Σου δώρησαι, ταις Εκκλησίαις Σου, τοις Ιερεύσι τοις Βασιλεύσιν ημών, τω στρατώ και παντί τω λαώ Σου Ότι πάσα δόσις αγαθή και πάν δώρημα τέλειον ανωθέν έστη καταβαίνον, εκ Σου του Πατρός των φώτων. Και Σοι την δόξαν και ευχαριστίαν και προσκύνησιν αναπέμπομεν, τω Πατρί και τω Υιώ και τω Αγίω Πνεύματι, νυν και αει και εις τους αιώνας των αιώνων.</td>
+        <td class="col-translit">O evloghön tus' evloghúndás Se. Kirie, ke aghiazon tus epi Si pepithotas. soson ton laôn Su ke evlöghison tin klironomian Su To pliroma tis Eklisias Su filakson, aghiason tus aghapõndas tin efprėpian tu iku Su Si aftús antidõksason ti theiki Su dhinami, ke mi egatalipis imás tus elpizondas epi Se. Irinin 10 kosmo Su dorise, les Eklisies Su, tis lerëfsi, tis Vasilēfsin imôn, 10 strató ke pandi to lao Su. Ôti pasa dosis agathi ke pan dorima télion anothén esti katavénon, ek Su tu Patros ton foton. Ke Si tin dõksan ke efxaristian ke proskinisin anapémbomen, to Patri ke to lô ke to Aghio Pnevmati, nin ke ai ke is tus eõnas ton eonon.</td>
+        <td class="col-portuguese">Senhor, Tu que abençoas os que Te bendizem. e santificas os que confiam em Ti, salva o Teu povo, e abençoa a Tua herança, conserva a plenitude da Tua Igreja, santifica aqueles que amam o esplendor da Tua casa glorifica-os com o Teu divino poder, e não nos abandones a nos, que em Ti confiamos. Da a paz ao Teu mundo, ás Tuas Igrejas, aos Sacerdotes, aos nossos governantes, ao exército e a todo o Teu povo. Porque toda excelente dádiva e dom perfeito vem do alto, procedentes de Ti, o Pai das luzes, e a Ti rendemos glória, graça e adoração, Pai, Filho e Espirito Santo, agora e sempre, pelos séculos dos séculos</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Αμήν.</td>
+        <td class="col-translit">Amin</td>
+        <td class="col-portuguese">Amem.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Δ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">D:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">D:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Του Κυρίου δεηθώμεν</td>
+        <td class="col-translit">Tu Kiriu deithōmen.</td>
+        <td class="col-portuguese">Oremos ao Senhor</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Κύριε ελέησον.</td>
+        <td class="col-translit">Kirie eleison.</td>
+        <td class="col-portuguese">Tende piedade, Senhor</td>
+      </tr>
+      <tr class="section-banner-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="liturgy-strong">BENÇÃO FINAL</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Ευλογία Κυρίου και έλεος αυτου έλθοι εφ' υμάς, τη αυτού θεία χάριτι και φιλανθρωπία, πάντοτε, νυν και αει και εις τους αιώνας των αιώνων</td>
+        <td class="col-translit">Evloghia Kiriu ke eleos aftú élthi ef imas. ti aftú thia xariti ke filanthropia, pantote, nin ke ai ke is tus conas ton cónon</td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong> A benção e a misericórdia do Senhor, desçam sobre vos, pela graça divina e filantropia, perpetuamente, agora e sempre, pelos seculos dos seculos</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Αμην</td>
+        <td class="col-translit">Amin</td>
+        <td class="col-portuguese">Amem</td>
+      </tr>
+      <tr class="section-banner-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit"></td>
+        <td class="col-portuguese"><strong class="liturgy-strong">DESPEDIDA</strong></td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Δόξα σοι. Χριστε ο Θεος, η ελπις ημών, δόξα σοι</td>
+        <td class="col-translit">Dóksa si. Xriste o Theos, i elpis imôn, döksa si</td>
+        <td class="col-portuguese">Glona a Ti. o cristo Deus, esperança nossa glóna a Ti. ó Cristo nosso Deus verdadeiro, que ressuscitasies dos mortas. pelas intercessões de Tua purissima e irrepreensível santa Mãe, pelo poder da santa e vivificante Cruz: pelas pretensões das veneráveis potências celestiais e incorporais, pelas súplicas do grande veneravel profeta e precursor João Batista, dos excelsos santos e vitoriosos mártires, de nos50 pai João Crisostomo, Arcebispo de Constantinopla autor desta liturgia, dos excelsos santos e elogiados apóstolos, do santo n.. (ou da santa), que comemoramos hoje, dos santos justos, progenitores de Cristo, Joaquim e Ana, e de todos os santos, tende piedade de nós, e salva-nos, pois Tu es bondoso e misericordioso</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Λόξα Πατρί Και νυν Κύριε ελέησον <span class="rubric">(γ)</span></td>
+        <td class="col-translit">Doksa Patri Ke nin Kirie eleison (g).</td>
+        <td class="col-portuguese"></td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">ο αναστας εκ νεκρων (ει δε μη απλώς ) Χριστός ο αληθινός Θεός ημών, ταις πρεσβείαις της αναχράντου και παναμώμου αγίας αυτού Μητρός δυνάμει του τιμίου και ζωοποιου Σταύρου προστασίαις των τιμίων επουρανίων Δυνάμεων Ασωμάτων ικεσίαις του τιμίου, νδόξου, Προφήτου, Προδρόμου και Βαπτιστού Ιωάννου των αγίων ενδόξων και πανευφήμων Αποστόλων των αγίων ενδόξων και καλλινίκων μαρτύρων των οσίων και θεοφόρων Πατέρων ημών, του αγίου (του Ναού), των αγίων και δικαίων Θεοπατόρων Ιωακείμ και Άννης, του αγίου (της ημέρας), ου και την μνήμην επιτελούμεν, και πάντων των Αγίων, ελεήσαι και σώσαι ημάς, ως αγαθός και κάνθρωπος και ελεήμων Θεός. Δι' ευχών των αγίων Πατέρων ημών. Κύριε Ιησού Χριστέ, ο Θεός, ελέησον και σώσον ημάς</td>
+        <td class="col-translit">() anastas ek nekrón <span class="rubric">(1 de mi, aplós)</span> Xristos o alithinos Theōs imòn tes presvies tis panaxrandu ke panamómu aghias aftú Mitros dinami tu timiu ke zoopiu Stavri prostasies ton timion epuranion Dinameon Asomaton ikesies tu timiu, endõksu, Profitu, Prodromu ke Vaptistú loánu ton aghion endõkson ke panevfimon Apostolon ton aghion endõkson ke kalinikon martiron ton osion ke theoforon Pateron imôn, tu aghiu <span class="rubric">(tu Naú)</span>, ton aghion ke dikeon Theopatoron Joakim ke Anis, tu aghiu <span class="rubric">(tis iméras)</span>, u ke tin mnimin epitelúmen, ke pandon ton Aghion, eieise ke sõse imás, os aghathos ke filanthropos ke eleimon Theos. Di' evxôn ton aghion Pateron imôn. Kirie Isú Xriste, o Theos, eleison ke sõson imás.</td>
+        <td class="col-portuguese">Pelas orações de nossos santos padres, Senhor Jesus Cristo Deus nosso, tende piedade de nos e salva-nos. Amem. Ao sacerdote que nos abençoa e santifica. protege-o por todo o sempre. Senhor</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Αμήν. Τον ευλογούντα και αγιάζοντα ημάς. Κύριε, φύλαττε εις πολλά έτη</td>
+        <td class="col-translit">Amin Ton evloghunda ke aghiazonda imas, Kirie, filate is polá ěti.</td>
+        <td class="col-portuguese"></td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Ι:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">I:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">S:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Φυλάξαι Κύριος ο Θεός πάντας υμάς τη αυτού χάριτι και φιλανθρωπία, πάντοτε νυν και αει και εις τους αιώνας των αιώνων.</td>
+        <td class="col-translit">Filákse Kirios o Theōs pantas imás ti afrú xariti ke filanthropia, pantote nin ke ai ke is tus conas ton cônon</td>
+        <td class="col-portuguese">A benção e a misericórdia do Senhor desçam sobre vós, pela graça divina e filantropia, perpetuamente, agora e Sempre, pelos séculos dos séculos.</td>
+      </tr>
+      <tr class="actor-row">
+        <td class="col-greek" lang="el"><strong class="actor-tag">Λ:</strong></td>
+        <td class="col-translit"><strong class="actor-tag">L:</strong></td>
+        <td class="col-portuguese"><strong class="actor-tag">C:</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Άμην</td>
+        <td class="col-translit">Amin</td>
+        <td class="col-portuguese">Amem</td>
+      </tr>
+      <tr class="section-banner-row">
+        <td class="col-greek" lang="el"><strong class="liturgy-strong">Αντισωρός</strong></td>
+        <td class="col-translit"><strong class="liturgy-strong">Antidoros</strong></td>
+        <td class="col-portuguese"><strong class="liturgy-strong">Pão Bento</strong></td>
+      </tr>
+      <tr class="liturgy-row">
+        <td class="col-greek" lang="el">Ευλόγια Κυρίου και έλεος έλθοι επι σε</td>
+        <td class="col-translit">Evloghia Kirið ke eleos elthi epi se</td>
+        <td class="col-portuguese">A bẽnção e a misericordia do Senhor Deus desça sobre Ti</td>
+      </tr>
+      <tr class="section-banner-row">
+        <td class="col-greek" lang="el"></td>
+        <td class="col-translit"></td>
+        <td class="col-portuguese"><strong class="liturgy-strong">Apolisis <span class="rubric">(Encerramento da Missa)</span></strong></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  <footer style="text-align: center; margin-top: 30px; font-family: 'Cardo', serif; font-size: 9pt; color: var(--gold-accent); letter-spacing: 0.15em;">
+    ☩ ΔΟΞΑ ΤΩ ΘΕΩ ΠΑΝΤΩΝ ΕΝΕΚΕΝ ☩
+  </footer>
+
+</div>
+
+</body>
+</html>
