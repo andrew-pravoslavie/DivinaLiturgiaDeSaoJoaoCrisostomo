@@ -33,7 +33,7 @@ banner_titles = [
     'PROCISSÃO DO SANTO EVANGELHO',
     'ΕΙΣΟΔΟΣ ΤΟΥ ΕΥΑΓΓΕΛΙΟΥ ΚΑΙ ΙΕΡΑ ΑΝΑΓΝΩΣΜΑΤΑ', 'ISODOS TU EVANGUELIU KE IERA ANAGHNOSMATA', 'PROCISSÃO DO EVANGELHO E LEITURAS SAGRADAS',
     'Τρισάγιος', 'Trisághios',
-    'LITANIA PELA IGREJA',
+    'LITANIA PELA IGREJA', 'ΕΚΤΕΝΗΣ ΔΕΗΣΙΣ', 'EKTENIS DEISIS',
     'ΕΚΤΕΝΗΣ ΚΑΙ ΜΕΓΑΛΗ ΕΙΣΟΔΟΣ', 'EKTENIS KE MEGALI ISODOS', 'SUPLICA E GRANDE ENTRADA', 'SÚPLICA E GRANDE ENTRADA',
     'PROCISSÃO DAS OFERENDAS', 'Μεγαλη Είσοδος:', 'Megháli Isodos:', 'Grande Entrada',
     'ΕΚΤΕΝΗΣ ΤΗΣ ΠΡΟΣΚΟΜΙΔΗΣ ΚΑΙ ΤO ΣΥΜΒΟΛΟ ΤΗΣ ΠΙΣΤΕΩΣ', 'EKTENIS TIS PROSKOMIDIS KE TO SİMVOLO TIS PÍSTEOS', 
@@ -93,7 +93,7 @@ def format_cell_content(cell_text, col_idx):
         content = match.group(0)
         return f'<span class="rubric">{content}</span>'
     
-    formatted = re.sub(r'\((?:sentados|em pé|de pé|Εκφώνως|Ekfōnos|Ekfonos|Ekfoni|Em voz alta|τρις|tris|3x|γ|três vezes|δεινος|tu dínos|varia de acordo com calendário litúrgico|Repete o apolitikion de domingo|Leitura da Epístola \+ do Apóstolo São\.\.\.\.\.|Encerramento da Missa|tis iméras|tu Naú|i de mi, aplós|1 de mi, aplós|του δείνος|τη ση χάριτι|ει δε μη απλώς)\)', replace_rubric, formatted)
+    formatted = re.sub(r'\((?:sentados|em pé|de pé|ὀρθοί|orthi|Εκφώνως|Ekfōnos|Ekfonos|Ekfoni|Em voz alta|τρις|tris|3x|γ|três vezes|δεινος|tu dínos|varia de acordo com calendário litúrgico|Repete o apolitikion de domingo|Leitura da Epístola \+ do Apóstolo São\.\.\.\.\.|Encerramento da Missa|tis iméras|tu Naú|i de mi, aplós|1 de mi, aplós|του δείνος|τη ση χάριτι|ει δε μη απλώς)\)', replace_rubric, formatted)
     
     return formatted
 
@@ -109,12 +109,12 @@ def parse_page_table_rows(page_content):
     rows = []
     while i < len(lines):
         line = lines[i]
-        if '|' in line:
+        if '|' in line and line.strip() != '|':
             accum = line
             while accum.count('|') < 4 and i + 1 < len(lines):
                 i += 1
                 accum += ' ' + lines[i].strip()
-            if not ('| --- |' in accum) and not ('| Grego Original |' in accum):
+            if not ('| --- |' in accum) and not ('| Grego Original |' in accum) and accum.count('|') >= 4:
                 cells = [clean_cell(c) for c in accum.split('|')[1:4]]
                 rows.append(cells)
         i += 1
@@ -858,9 +858,6 @@ html_doc = f'''<!DOCTYPE html>
        NOTA EDITORIAL E TABELA 4: LITANIA PELA IGREJA, GRANDE ENTRADA,
        OFERTÓRIO, CREDO, SANTA ANÁFORA E INSTITUIÇÃO (PÁGINAS 10 A 23)
        ========================================================================== -->
-  <div class="editorial-note">
-    *(Nota: O trecho em grego correspondente a esta página não consta na digitalização original, sendo preservadas apenas a transliteração e a tradução conforme a regra de fidelidade ao documento)*
-  </div>
 
   {render_table(tbl4_rows)}
 

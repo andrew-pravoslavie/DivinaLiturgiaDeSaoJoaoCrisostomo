@@ -329,7 +329,7 @@ EXALTAÇÃO DA SANTA CRUZ:...que foste crucificado na carne, a nós que a ti sal
 | Σώσον ημάς Υιέ Θεού, ο αναστάς εκ νεκρών (...), ψάλλοντας σοι Αλληλούϊα. | Sôson imás Iê Theú, o anastás ek nekrôn (...), psállonstás si Allilúia. | Salva-nos, ó Filho de Deus, que ressuscitaste dos mortos, a nós que Te salmodiamos: Aleluia!
 
  |
-|  |  | **S:** (Repete o apolitikion de domingo)
+| **Ι:** (Ἐπαναλαμβάνεται τὸ ἀπολυτίκιον) | **S:** (Repete o apolitikion) | **S:** (Repete o apolitikion de domingo) |
 
  |
 
@@ -351,7 +351,7 @@ EXALTAÇÃO DA SANTA CRUZ:...que foste crucificado na carne, a nós que a ti sal
 
  |
 | **Δ:** | **D:** | **D:**<br> |
-|  |  | E pelos séculos dos séculos.
+| Καὶ εἰς τοὺς αἰῶνας τῶν αἰώνων. | Ke is tus eõnas ton eonon. | E pelos séculos dos séculos.
 
  |
 | **Ι:** | **I:** | **C:**<br> |
@@ -426,75 +426,39 @@ EXALTAÇÃO DA SANTA CRUZ:...que foste crucificado na carne, a nós que a ti sal
  |
 
 --- PÁGINA 10 ---
-*(Nota: O trecho em grego correspondente a esta página não consta na digitalização original, sendo preservadas apenas a transliteração e a tradução conforme a regra de fidelidade ao documento)*
 
 | Grego Original | Transliteração | Português |
 | --- | --- | --- |
-|  | **S:** | **S:**<br> |
-|  | Ípomen pántes ex ólis tis psihís, que ex ólis tis dianías imôn ípomen. | Digamos com toda a nossa alma e com todo nosso espírito.
+| **ΕΚΤΕΝΗΣ ΔΕΗΣΙΣ** | **EKTENIS DEISIS** | **LITANIA PELA IGREJA**<br> |
+| **Ι:** | **S:** | **S:**<br> |
+| Εἴπωμεν πάντες ἐξ ὅλης τῆς ψυχῆς καὶ ἐξ ὅλης τῆς διανοίας ἡμῶν εἴπωμεν. | Ípomen pántes ex ólis tis psihís, que ex ólis tis dianías imôn ípomen. | Digamos com toda a nossa alma e com todo nosso espírito.
+| **Λ:** | **C:** | **C:**<br> |
+| Κύριε, ἐλέησον. | Kýrie, eléison! | Senhor, tende piedade.
+| **Ι:** | **S:** | **S:**<br> |
+| Κύριε παντοκράτορ, ὁ Θεὸς τῶν πατέρων ἡμῶν, δεόμεθά σου, ἐπάκουσον καὶ ἐλέησον. | Kírie, Pantokrátor, Theós ton Patéron imôn, deómethá sou, epákuson que eléison. | Senhor Todo-Poderoso, Deus de nossos pais, nós Te pedimos: escuta-nos e tem piedade de nós.
+| **Λ:** | **C:** | **C:**<br> |
+| Κύριε, ἐλέησον. | Kýrie, eléison! | Senhor, tende piedade.
+| **Ι:** | **S:** | **S:**<br> |
+| Ἔτι δεόμεθα ὑπὲρ τῶν εὐσεβῶν καὶ ὀρθοδόξων χριστιανῶν. | Éti deómetha ypér ton efsevôn que orthodóxon christianôn. | Oremos também pelos devotos cristãos ortodoxos.
+| **Λ:** | **C:** | **C:**<br> |
+| Κύριε, ἐλέησον. | Kýrie, eléison! | Senhor, tende piedade.
+| **Ι:** | **S:** | **S:**<br> |
+| Ἔτι δεόμεθα ὑπὲρ τοῦ Ἀρχιεπισκόπου ἡμῶν... καὶ τοῦ Ἐπισκόπου ἡμῶν... | Éti deómetha ypér tu Arhiepiscópu imôn... Tu Episcópu... | Oremos também por nosso Arcebispo e nosso Bispo.
+| **Λ:** | **C:** | **C:**<br> |
+| Ἔτι δεόμεθα ὑπὲρ τῶν ἀδελφῶν ἡμῶν, τῶν ἱερέων, ἱερομονάχων, ἱεροδιακόνων καὶ μοναχῶν, καὶ πάσης τῆς ἐν Χριστῷ ἡμῶν ἀδελφότητος. | Éti deómetha ypér ton adelfôn imôn, ton Ieréon, Ieromonáhon, Ierodiakónon que Monahôn, que pásis tis en Hristó imô adelfótitos. | Oremos pela venerável ordem dos Presbíteros e diáconos em Cristo, pelos monges e por todos os fiéis Ortodoxos.
+| **Ι:** | **S:** | **S:**<br> |
+| Ἔτι δεόμεθα ὑπὲρ ἐλέους, ζωῆς, εἰρήνης, ὑγείας, σωτηρίας, ἐπισκέψεως, συγχωρήσεως καὶ ἀφέσεως τῶν ἁμαρτιῶν τῶν δούλων τοῦ Θεοῦ, πάντων τῶν εὐσεβῶν καὶ ὀρθοδόξων χριστιανῶν, τῶν κατοικούντων καὶ παροικούντων ἐν τῇ πόλει καὶ ἐνορίᾳ ταύτῃ, τῶν ἐπιτρόπων καὶ συνδρομητῶν τῆς ἁγίας Ἐκκλησίας ταύτης, σὺν γυναιξὶ καὶ τέκνοις αὐτῶν. | Éti deómetha ypér eléus, zois, irínis, igías, sotirías, episképseos, sinhoríseos que aféseos ton amartión ton dúlon tu Theú, pánton ton efsevôn que orthodóxon christianôn ton katikúnton que parikúnton en ti póli... que enoría táfti, ton epitrópon que sindromitôn tis ierás Ekklisías táftis, sin ginexí que teknís aftôn. Ke ton dúlon aftú. | Peçamos, também, misericórdia, vida, paz, saúde e salvação para os servos de Deus os cristãos ortodoxos que habitam nesta cidade, aos contribuintes e benfeitores desta Santa Igreja.
+| **Λ:** | **C:** | **C:**<br> |
+| Κύριε, ἐλέησον. | Kýrie, eléison! | Senhor, tende piedade.
+| **Ι:** | **S:** | **S:**<br> |
+| Ἔτι δεόμεθα ὑπὲρ τῶν καρποφορούντων καὶ καλλιεργούντων ἐν τῷ ἁγίῳ καὶ πανσέπτῳ ναῷ τούτῳ, κοπιώντων, ψαλλόντων καὶ ὑπὲρ τοῦ περιεστῶτος λαοῦ, τοῦ ἀπεκδεχομένου τὸ παρὰ σοῦ μέγα καὶ πλούσιον ἔλεος. | Éti deómetha ypér ton karpoforúnton que kaliergúnton en to agío que pansépto náo túto, kopiónton, psallónton que ypér ton periestótos laú tu apekdehómenu to pará su méga que plúsion éleos. | Oremos ainda por aqueles que oferecem os seus dons e os seus bens a esta santa e venerável Igreja, por todos aqueles que nela desempenham uma função, por todos aqueles que nela cantam, e por todo o Povo presente que confia na Tua imensa misericórdia.
+| **Λ:** | **C:** | **C:**<br> |
+| Κύριε, ἐλέησον. | Kýrie, eléison! | Senhor, tende piedade.
+| **Ι:** | **S:** | **S:**<br> |
+| Ἔτι δεόμεθα ὑπὲρ τῶν μακαρίων καὶ ἀειμνήστων κτιτόρων τῆς ἁγίας Ἐκκλησίας ταύτης, καὶ ὑπὲρ πάντων τῶν προαναπαυσαμένων πατέρων καὶ ἀδελφῶν ἡμῶν, τῶν ἐνθάδε εὐσεβῶς κειμένων, καὶ τῶν ἁπανταχοῦ ὀρθοδόξων. | Éti deómetha ypér ton makárion que aimníston ktitóron tis agías Ekklisías táftis, que ypér pánton ton proanapafsaménon Patéron que adelfôn imôn, ton entháde efsevós kiménon, que apantahú orthodóxon. Ke ton dúlon aftú. | Oremos também, pelos fundadores desta Santa Casa, por todos os nossos pais e irmãos ortodoxos já falecidos.
+| **Λ:** | **C:** | **C:**<br> |
+| Κύριε, ἐλέησον. | Kýrie, eléison! | Senhor, tende piedade.
 
- |
-|  | **LITANIA PELA IGREJA** | **LITANIA PELA IGREJA**<br> |
-|  | **S:** | **S:**<br> |
-|  | Kýrie, eléison! | Senhor Todo-Poderoso, Deus de nossos pais, nós Te pedimos: escuta-nos e tem piedade de nós.
-
- |
-|  | **C:** | **C:**<br> |
-|  | Kýrie, eléison! | Kýrie, eléison!
-
- |
-|  | **S:** |  |
-|  | Kírie, Pantokrátor. Theós ton Patéron imôn, deómethá sou, epákuson que eléison. |  |
-|  | **C:** | **C:**<br> |
-|  | Kýrie, eléison! | Kýrie, eléison!
-
- |
-|  | **S:** | **S:**<br> |
-|  | Éti deómetha ypér ton efsevôn que orthodóxon christianôn. | Oremos também pelos devotos cristãos ortodoxos.
-
- |
-|  | **C:** | **C:**<br> |
-|  | Kýrie, eléison! | Kýrie, eléison!
-
- |
-|  | **S:** | **S:**<br> |
-|  | Éti deómetha ypér tu Arhiepiscópu imôn... Tu Episcópu... | Oremos também por nosso Arcebispo e nosso Bispo.
-
- |
-|  | **C:** | **C:**<br> |
-|  | Éti deómetha ypér ton adelfôn imôn, ton Ieréon, Ieromonáhon, Ierodiakónon que Monahôn, que pásis tis en Hristó imô adelfótitos. | Oremos pela venerável ordem dos Presbíteros e diáconos em Cristo, pelos monges e por todos os fiéis Ortodoxos.
-
- |
-|  | **S:** | **C:**<br> |
-|  | Éti deómetha ypér eléus, zois, irínis, igías, sotirías, episképseos, sinhoríseos que aféseos ton amartión ton dúlon tu Theú, pánton ton efsevôn que orthodóxon christianôn ton katikúnton que parikúnton en ti póli...que enoría táfti, ton epitrópon que sindromitôn tis ierás Ekklisías táftis, sin ginexí que teknís aftôn. Ke ton dúlon aftú. | Kýrie, eléison!
-
- |
-|  |  | **S:**<br> |
-|  |  | Peçamos, também, misericórdia, vida, paz, saúde e salvação para os servos de Deus os cristãos ortodoxos que habitam nesta cidade, aos contribuintes e benfeitores desta Santa Igreja.
-
- |
-|  | **C:** | **C:**<br> |
-|  | Kýrie, eléison! | Kýrie, eléison!
-
- |
-|  | **S:** | **S:**<br> |
-|  | Éti deómetha ypér ton karpoforúnton que kaliergúnton en to agío que pansépto náo túto, kopiónton, psallónton que ypér ton periestótos laú tu apekdehómenu to pará su méga que plúsion éleos. | Oremos ainda por aqueles que oferecem os seus dons e os seus bens a esta santa e venerável Igreja, por todos aqueles que nela desempenham uma função, por todos aqueles que nela cantam, e por todo o Povo presente que confia na Tua imensa misericórdia.
-
- |
-|  | **C:** | **C:**<br> |
-|  | Kýrie, eléison! | Kýrie, eléison!
-
- |
-|  | **S:** | **S:**<br> |
-|  | Éti deómetha ypér ton makárion que aimníston ktitóron tis agías Ekklisías táftis, que ypér pánton ton proanapafsaménon Patéron que adelfôn imôn, ton entháde efsevós kiménon, que apantahú orthodóxon. Ke ton dúlon aftú. | Oremos também, pelos fundadores desta Santa Casa, por todos os nossos pais e irmãos ortodoxos já falecidos.
-
- |
-|  | **C:** | **C:**<br> |
-|  | Kýrie, eléison! | Kýrie, eléison!
-
- |
- 
- 
 --- PÁGINA 11 ---
 
 | Grego Original | Transliteração | Português |
@@ -519,8 +483,8 @@ EXALTAÇÃO DA SANTA CRUZ:...que foste crucificado na carne, a nós que a ti sal
 
 | Grego Original | Transliteração | Português |
 | --- | --- | --- |
-|  |  | **PROCISSÃO DAS OFERENDAS**<br> |
-|  |  | (em pé)
+| **ΜΕΓΑΛΗ ΕΙΣΟΔΟΣ** | **MEGALI ISODOS** | **PROCISSÃO DAS OFERENDAS**<br> |
+| (ὀρθοί) | (orthí) | (em pé) |
 
  |
 | **Μεγαλη Είσοδος:** | **Megháli Isodos:** | **Grande Entrada**<br> |
@@ -653,7 +617,7 @@ EXALTAÇÃO DA SANTA CRUZ:...que foste crucificado na carne, a nós que a ti sal
 | Αμην | Amin | Amém
 
  |
-|  |  | (em pé)
+| (ὀρθοί) | (orthí) | (em pé) |
 
  |
 | **Ι:** | **I:** | **S:**<br> |
@@ -770,7 +734,7 @@ EXALTAÇÃO DA SANTA CRUZ:...que foste crucificado na carne, a nós que a ti sal
 | Άγιος, άγιος, άγιος Κύριος Σαβαώθ πλήρης ο ουρανος και η γη της δόξης σου, ωσαννά εν τοις υψίστοις. Ευλογημένος ο ερχόμενος εν ονόματι Κυρίου. Ωσαννά ο εν τοις υψίστοις. | Aghios, ághios, ághios Kirios Savaōth pliris o uranôs ke i ghi tis dõksis su, osaná en tis ipsistis. Evloghimēnos o erxomenos en onomati Kirju. Osana o en tis ipsistis. | Santo, Santo, Santo é o Senhor dos Exércitos (Sabaoth); o Céu e a Terra estão cheios de Tua glória. Hosana nas alturas. Bendito o que vem em nome do Senhor. Hosana nas alturas.
 
  |
-|  | **MEMORIAL** |  |
+| **ΑΝΑΜΝΗΣΙΣ** | **ANAMNISIS** | **MEMORIAL** |
 | **Ι:** | **I:** | **S:**<br> |
 | (Εκφώνως) Λάβετε, φάγετε, τουτό μου έστη το σώμα, το υπέρ ημών κλώμενον, εις άφεσιν αμαρτιών, | (Ekfonos) Lávete, fäghete, tuto mu esti to soma, to ipêr imön klomenon, is afesin amartion. | Tomai e comei, isto é o Meu Corpo, que é partido por vós para a remissão dos pecados.
 
@@ -843,7 +807,7 @@ Oferecemo-vos esta oblação racional também por aqueles que descansam na fé, 
 | (Εκφώνως) Εξαιρέτως της Παναγίας, αχράντου, υπερευλογημένης, ενδόξου, Δεσποίνης ημών Θεοτόκου και αειπαρθένου Μαρίας. | (Ekfonos) Ekserêtos tis Panaghias, axrandu. iperevloghimēnis, endõksu. Despinis imôn Theotoku ke iparthênu Marias. | E, especialmente, pela Santíssima, Puríssima, Bendita e Gloriosa Senhora nossa, Mãe de Deus, e sempre Virgem Maria.
 
  |
-|  | **HINO SANTA MÃE DE DEUS** |  |
+| **ΕΙΣ ΤΗΝ ΥΠΕΡΑΓΙΑΝ ΘΕΟΤΟΚΟΝ** | **IS TIN YPERAGHIAN THEOTOKON** | **HINO À SANTA MÃE DE DEUS** |
 | **Λ:** | **L:** | **C:**<br> |
 | Αξιόν ἐστιν ως αληθώς μακαρίζειν σε την Θεοτόκον, την αειμακαριστον και παναμώμητον και μητέρα του Θεού ημών. Την τιμιωτέραν των Χερουβείμ και ενδοξοτέραν ασυγκρίτως των Σεραφείμ την αδιαφθόρως Θεόν Λόγον τεκούσαν, την όντως Θεοτόκον, σε μεγαλύνομεν. | Aksion êstin os alithos makarizin se tin Theotokon, tin aimakáriston ke panamõmiton ke mitēra tu Theu imôn. Tin timioteran ton Xeruvim ke endoksotèran asingritos ton Serafim tin adiafthoros Theon Lôghon tekusan, tirt ōndos Theotokon, se meghalinomen. | É justo em verdade glorificar-te, Mãe de Deus, sempre bem-aventurada e imaculada Mãe do nosso Deus. Mais venerável que os Querubins e incomparavelmente mais gloriosa que os Serafins, que sem corrupção destes à luz o Verbo de Deus, verdadeiramente Mãe de Deus, nós Te glorificamos.
 
@@ -882,7 +846,7 @@ Oferecemo-vos esta oblação racional também por aqueles que descansam na fé, 
 | Και μετά του πνεύματός σου. | Ke meta tu pnevmatos su. | E com o teu espírito.
 
  |
-|  | **LITANIA DOS SANTOS DONS** |  |
+| **ΠΛΗΡΩΤΙΚΑ** | **PLIROTIKA** | **LITANIA DOS SANTOS DONS** |
 | **Δ:** | **D:** | **D:**<br> |
 | Πάντων των αγίων μνημονεύσαντες, έτι και έτι εν ειρήνη του Κυρίου δεηθώμεν. | Pandon ton aghion mnimonefsandes, êti ke éti en irini tu Kiriu deithōmen. | Tendo comemorado todos os santos, ainda e ainda em paz, oremos ao Senhor
 
@@ -990,7 +954,7 @@ Oferecemo-vos esta oblação racional também por aqueles que descansam na fé, 
 
 | Grego Original | Transliteração | Português |
 | --- | --- | --- |
-|  | **ORAÇÃO DOMINICAL** |  |
+| **ΚΥΡΙΑΚΗ ΠΡΟΣΕΥΧΗ** | **KYRIAKI PROSEVXI** | **ORAÇÃO DOMINICAL** |
 | **Λ:** | **L:** | **C:**<br> |
 | Πατερ ημών, ο εν τοις ουρανους αγιασθήτω το όνομά σου ελθέτω η βασιλεία σου. γενηθήτω το θέλημά σου, ως εν ουρανώ και επί της γης. Τον όρτον ημών τον επιούσιον δὸς ημίν σήμερον. Και άφες ημίν τα οφειλήματα ημών, ως και ημείς αφίεμεν τους οφειλέταις ημών. Και μη εισενέγκης ημάς εις πειρασμόν, αλλά ρύσαι ημας από του πονηρού. | Páter imón, o en tis uranís aghiasthito to onomá su, eltheto i vasilia su. ghenithito to thelima su, os en urano ke epi tis ghis. Ton arton imon ton epiusion dõs imin simeron Ke afes imin ta ofilimata imón, os ke imis afiemen tis ofilétes imôn Ke mi isenēguis imás is pirasmón, alá rise imas apó tu poniri | Pai nosso que estás nos céus, santificado seja o Teu nome; venha a nós o Teu reino; seja feita a Tua vontade, assim na terra como no céu. O pão nosso de cada dia nos dá hoje; e perdoa-nos as nossas dívidas, assim como nós perdoamos aos nossos devedores; e não nos deixes cair em tentação, mas livra-nos do mal.
 
@@ -1052,7 +1016,7 @@ Oferecemo-vos esta oblação racional também por aqueles que descansam na fé, 
 | Εινείτε τον Κύριον εκ των σηρανών. Αίληκονια | Enite ton Kirion ek ton uranón. Alihuna. | Louvai o Senhor dos Céus, louvai-o nas alturas. Aleluia.
 
  |
-|  | **COMUNHÃO** / **ORAÇÃO PREPARATORIA** |  |
+| **Η ΘΕΙΑ ΚΟΙΝΩΝΙΑ** / **ΠΡΟΠΑΡΑΣΚΕΥΑΣΤΙΚΗ ΕΥΧΗ** | **I THIA KINONIA** / **PROPARASKEVASTIKI EVXI** | **COMUNHÃO** / **ORAÇÃO PREPARATÓRIA** |
 | **Ι:** | **I:** | **S:**<br> |
 | Πιστεύω. Κύριε, και ομολογώ, ότι συ ει αληθώς ο Χριστός, ο Υιός του Θεού του ζώντος, ο ελθών εις τον κόσμον αμαρτωλούς σωσται των πρώτος είμι εγώ. Έτι πιστεύω, ότι τουτο αυτό έστη το αχραντον Σώμα σου και τουτο αυτό έστη το τίμιον Αϊμά σου. Δέομαι ουν σου ελέησόν με και συγχωρησόν και τα παραπτωματά μου, τα εκούκης και τα ακούσια, τα εν λόγω, τα εν έργω, τα εν γνώσει και αγνοία και αξίωσόν με ακατακρίτως μετάσχειν των αχράντων σου μυστηρίων, εις άφεσιν αμαρτιών και εις ζωήν αιώνιον Αμήν | Pistėvo, Kirie, ke omologho, oti si i alithos o Xristos, o los tu Theủ tụ zôndos, o elthôn is ton kösmon amartolús sõse, on prōtōs imi egho. Eti pistėvo, ôti tūto afto esti to axrandon Soma su ke tuto aftő esti to timion Emá su. Dêome un su eleisön me ke sighxörisõn mi ta paraptómata mu, ta ekúsia ke ta akúsia, ta en lögho, ta en êrgho, ta en ghnósi ke aghnia ke aksiosõn me akatakritos metasxin ton axrandon su mistirion, is afesin amartion ke is zoin eonion. Amin | Creio, Senhor, e confesso que Tu és, em verdade, o Cristo, Filho de Deus vivo, que vieste ao mundo para salvar os pecadores, dos quais eu sou o primeiro. Creio também que este é o Teu puro e verdadeiro Corpo, e este o Teu próprio e precioso Sangue. Suplico-te, pois: tem piedade de mim e perdoa as minhas faltas, voluntárias ou involuntárias, cometidas por palavras ou ações, com conhecimento ou por ignorância; e torna-me digno de comungar, sem condenação, os Teus puros mistérios, para a remissão dos pecados e para a vida eterna. Amém.
 
@@ -1070,7 +1034,7 @@ Oferecemo-vos esta oblação racional também por aqueles que descansam na fé, 
 
 | Grego Original | Transliteração | Português |
 | --- | --- | --- |
-|  | **COMUNHÃO DOS FIEIS** |  |
+| **ΚΟΙΝΩΝΙΑ ΤΩΝ ΠΙΣΤΩΝ** | **KINONIA TON PISTON** | **COMUNHÃO DOS FIÉIS** |
 | **Δ:** | **D:** | **D:**<br> |
 | (Εκφωνεί) Μετα φοβους Θεου, πίστεως και αγάπης προσέλθετε | (Ekfoni) Meta Fovu Theu, pisteos ke aghapis prosëlthete | Com temor de Deus, com fé e amor, aproximai-vos!
 
@@ -1087,7 +1051,7 @@ Oferecemo-vos esta oblação racional também por aqueles que descansam na fé, 
 | Ειδόμενό το φως το αληθινόν, ελάβομεν Πνεύμα επουράνιον, εύρομεν πίστιν αληθή, αδιαιρετον Τριάδα προσκυνούντες, αύτη γαρ ημάς έσωσεν. | idomen to fos to alithinon, elávomen Pnevma epuranion, evromen pistin alithi, adiereton Triáda proskinündes, äfti ghar imas esosen. | Vimos a luz verdadeira, recebemos o Espírito celeste, encontramos a verdadeira fé, adorando a Trindade indivisível, que nos salvou.
 
  |
-|  | **LITANIA DE AÇÃO DE GRAÇAS APOS A COMUNHÃO** |  |
+| **ΕΥΧΑΡΙΣΤΙΑ ΜΕΤΑ ΤΗΝ ΘΕΙΑΝ ΜΕΤΑΛΗΨΙΝ** | **EFXARISTIA META TIN THIAN METALIPSIN** | **LITANIA DE AÇÃO DE GRAÇAS APÓS A COMUNHÃO** |
 | **Δ:** | **D:** | **D:**<br> |
 | Ορθοί Μεταλαβόντες των θείων, αγίων, αχράντων, αθανάτων, επουρανίων και ζωοποιών, φρικτών του Χριστού μυστηρίων, αξίως ευχαριστήσωμεν τω Κυρίω | Orthi. Metalavõndes ton thion, aghion, axrandon, athanaton, epuranion ke zoopión, friktôn tu Xristú mistirion, aksios efxaristisomen to Kirio | Tendo comungado os divinos, santos, puríssimos, imortais, celestiais e vivificantes mistérios de Cristo, demos condignamente graças ao Senhor.
 
@@ -1189,7 +1153,7 @@ PORQUE TU ÉS A NOSSA SANTIFICAÇÃO E A TI RENDEMOS GLÓRIA, AO PAI, AO FILHO E
 
 | Grego Original | Transliteração | Português |
 | --- | --- | --- |
-|  |  | **DESPEDIDA**<br> |
+| **ΑΠΟΛΥΣΙΣ** | **APOLISIS** | **DESPEDIDA**<br> |
 | **Ι:** | **I:** | **S:**<br> |
 | Δόξα σοι. Χριστε ο Θεος, η ελπις ημών, δόξα σοι | Dóksa si. Xriste o Theos, i elpis imôn, döksa si | Glória a Ti, ó Cristo Deus, esperança nossa, glória a Ti! Ó Cristo, nosso Deus verdadeiro, que ressuscitaste dos mortos, pelas intercessões de Tua puríssima e irrepreensível Santa Mãe; pelo poder da preciosa e vivificante Cruz; pela proteção das veneráveis potestades celestiais e incorpóreas; pelas súplicas do venerável e glorioso profeta, precursor e Batista João; dos santos, gloriosos e ilustres apóstolos; dos santos, gloriosos e vitoriosos mártires; de nosso pai entre os santos, João Crisóstomo, Arcebispo de Constantinopla, autor desta liturgia; dos santos justos progenitores de Deus, Joaquim e Ana; do santo (da igreja ou do dia) cuja memória celebramos hoje, e de todos os santos: tem piedade de nós e salva-nos, porque és bom e amigo dos homens.
 
@@ -1219,4 +1183,4 @@ PORQUE TU ÉS A NOSSA SANTIFICAÇÃO E A TI RENDEMOS GLÓRIA, AO PAI, AO FILHO E
 | Ευλόγια Κυρίου και έλεος έλθοι επι σε | Evloghia Kirið ke eleos elthi epi se | A bênção e a misericórdia do Senhor Deus desçam sobre ti.
 
  |
-|  |  | **Apolisis (Encerramento da Missa)**<br> |
+| **Ἀπόλυσις** | **Apolisis** | **Apolisis (Encerramento da Missa)**<br> |
