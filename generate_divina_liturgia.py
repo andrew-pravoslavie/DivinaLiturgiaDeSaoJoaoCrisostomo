@@ -279,7 +279,6 @@ html_doc = f'''<!DOCTYPE html>
       padding: 0;
       background-color: #EFECE6;
       font-family: 'Cormorant Garamond', 'Cormorant', Georgia, serif;
-      font-size: 11.5pt;
       color: var(--text-main);
       font-size: 11pt;
       line-height: 1.5;

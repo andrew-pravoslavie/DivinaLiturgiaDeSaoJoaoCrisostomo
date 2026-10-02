@@ -192,7 +192,7 @@ Enquanto o Diácono recita a Grande Ladainha, o Sacerdote reza em voz baixa a or
 
  |
 | **Ι:** | **I:** | **S:**<br> |
-| (Εκφώνως) 'Ότι πρέπει σοι πάσα δόξα, τιμή και προσκύνησις, τω Πατρί και τω Υιώ και τω Αγίω Πνεύματι, νυν και αει και εις τους αιώνας των αιώνων. | (Ekfōnos) Óti prépi si pása dôksa, timí ke proskínisis, to Patrí ke to Iô ke to Aghío Pneúmati, nin ke aí ke is tus eõnas ton eônon. | (Em voz alta) Porque a Vós se deve toda glória, honra e adoração, ó Pai, Filho e Espírito Santo, agora e sempre, pelos séculos dos séculos.
+| (Εκφώνως) Ότι πρέπει σοι πάσα δόξα, τιμή και προσκύνησις, τω Πατρί και τω Υιώ και τω Αγίω Πνεύματι, νυν και αει και εις τους αιώνας των αιώνων. | (Ekfōnos) Óti prépi si pása dôksa, timí ke proskínisis, to Patrí ke to Iô ke to Aghío Pneúmati, nin ke aí ke is tus eõnas ton eônon. | (Em voz alta) Porque a Vós se deve toda glória, honra e adoração, ó Pai, Filho e Espírito Santo, agora e sempre, pelos séculos dos séculos.
 
  |
 | **Λ:** | **L:** | **C:**<br> |
@@ -465,7 +465,7 @@ EXALTAÇÃO DA SANTA CRUZ:...que foste crucificado na carne, a nós que a ti sal
 | --- | --- | --- |
 | **ΕΚΤΕΝΗΣ ΚΑΙ ΜΕΓΑΛΗ ΕΙΣΟΔΟΣ** | **EKTENIS KE MEGALI ISODOS** | **SÚPLICA E GRANDE ENTRADA**<br> |
 | **Ι:** | **I:** | **S:**<br> |
-| Όπως υπό του κράτους Σου πάντοτε φυλαττόμενοι Σοι δόξαν αναπέμπωμεν, τω Πατρί και τω Υιώ και τω Αγίω Πνευματι, νυν και αει και εις τους αιώνας των αιώνων | Õpos, ipo tu kratus Su pándote filatomeni. Si dõksan anapėmbomen to Patri ke to Iô ke to Aghío Pneúmati, nin ke ai ke is tus eónas ton eonon. | Para que sendo sempre guardados pelo Teu poder, a Vós rendamos glória, ó Pai, Filho e Espírito Santo, agora e sempre, pelos séculos dos séculos.
+| Όπως υπό του κράτους Σου πάντοτε φυλαττόμενοι Σοι δόξαν αναπέμπωμεν, τω Πατρί και τω Υιώ και τω Αγίω Πνεύματι, νυν και αει και εις τους αιώνας των αιώνων | Õpos, ipo tu kratus Su pándote filatomeni. Si dõksan anapėmbomen to Patri ke to Iô ke to Aghío Pneúmati, nin ke ai ke is tus eónas ton eonon. | Para que sendo sempre guardados pelo Teu poder, a Vós rendamos glória, ó Pai, Filho e Espírito Santo, agora e sempre, pelos séculos dos séculos.
 
  |
 | **Λ:** | **L:** | **C:**<br> |
@@ -487,7 +487,7 @@ EXALTAÇÃO DA SANTA CRUZ:...que foste crucificado na carne, a nós que a ti sal
 | (ὀρθοί) | (orthí) | (em pé) |
 
  |
-| **Μεγαλη Είσοδος:** | **Megháli Isodos:** | **Grande Entrada**<br> |
+| **Μεγάλη Είσοδος:** | **Megháli Isodos:** | **Grande Entrada**<br> |
 | **Ι:** | **I:** | **S:**<br> |
 | Πάντων υμών, (και πάντων των ευσεβών και ορθοδόξων χριστιανών), μνησθείη Κύριος ο Θεός εν τη βασιλεία αυτού πάντοτε νυν και αει και εις τους αιώνας των αιώνων. | Påndon imôn, ke pandon ton evsevõn ke orthodokson xristianôn, mnisthii Kirios o Theōs en ti vasilía aftú pándote nin ke aí ke is tus eônas ton eônon. | De todos nós lembre-se o Senhor Deus em Seu Reino, agora e sempre, pelos séculos dos séculos.
 
@@ -497,7 +497,7 @@ EXALTAÇÃO DA SANTA CRUZ:...que foste crucificado na carne, a nós que a ti sal
 
  |
 | **Ι:** | **I:** | **S:**<br> |
-| Ο Ιερεύς μνημονεύει ουτώ | O ierêfs mnimonėvi úto: |  |
+| Ο Ιερεύς μνημονεύει ούτω: | O ierêfs mnimonėvi úto: | O Sacerdote comemora assim: |
 | Του αρχιεπισκόπου ημών. | Tu arxiepiskopu imôn... | Do nosso Pai Arcebispo...
 
  |
@@ -525,7 +525,7 @@ EXALTAÇÃO DA SANTA CRUZ:...que foste crucificado na carne, a nós que a ti sal
 
  |
 | **Δ:** | **D:** | **D:**<br> |
-| Υπέρ του αγίου οίκου τούτου και των μετά πιστεως, ευλαβείας και φόβου Θεού εισιόντων εν αυτώ, του Κυρίου δεηθώμεν. | Ipër tu aghiu iku tútu ke ton meta pisteos, evlabias ke fovu Theu isióndon en aftô, tu Kiriu deithömen. | Por esta Casa Santa e pelos que nela entram com fé, devoção e temor de Deus, oremos ao Senhor.
+| Υπέρ του αγίου οίκου τούτου και των μετά πίστεως, ευλαβείας και φόβου Θεού εισιόντων εν αυτώ, του Κυρίου δεηθώμεν. | Ipër tu aghiu iku tútu ke ton meta pisteos, evlabias ke fovu Theu isióndon en aftô, tu Kiriu deithömen. | Por esta Casa Santa e pelos que nela entram com fé, devoção e temor de Deus, oremos ao Senhor.
 
  |
 | **Λ:** | **L:** | **C:**<br> |
@@ -590,7 +590,7 @@ EXALTAÇÃO DA SANTA CRUZ:...que foste crucificado na carne, a nós que a ti sal
 | Grego Original | Transliteração | Português |
 | --- | --- | --- |
 | **Λ:** | **L:** | **C:**<br> |
-| Παράσχου Κυριε | Parásxu Kírie | Atende, ó Senhor.
+| Παράσχου Κύριε | Parásxu Kírie | Atende, ó Senhor.
 
  |
 | **Δ:** | **D:** | **D:**<br> |
@@ -647,7 +647,7 @@ EXALTAÇÃO DA SANTA CRUZ:...que foste crucificado na carne, a nós que a ti sal
 | --- | --- | --- |
 | **Πιστεύω** | **CREDO NICENO-CONSTANTINOPOLITANO** | **Profissão de Fé (Credo)**<br> |
 | **Λ:** | **L:** | **C:**<br> |
-| Πιστεύω εις ένα Θεόν, Πατερα. Παντοκράτορα, ποιητήν ουρανού και γης, ορατών τε πάντων και αοράτων | Pistėvo is ena Theón, Patera, Pandokrátora, piitín uranú ke ghis, oratôn te pándon ke aoráton | Creio em um só Deus, Pai Todo-Poderoso, Criador do céu e da terra, e de todas as coisas visíveis e invisíveis.
+| Πιστεύω εις ένα Θεόν, Πατέρα, Παντοκράτορα, ποιητήν ουρανού και γης, ορατών τε πάντων και αοράτων | Pistėvo is ena Theón, Patera, Pandokrátora, piitín uranú ke ghis, oratôn te pándon ke aoráton | Creio em um só Deus, Pai Todo-Poderoso, Criador do céu e da terra, e de todas as coisas visíveis e invisíveis.
 
  |
 | Και εις ένα Κύριον Ιησουν Χριστόν, τον Υιόν του Θεού τον μονογενή, τον εκ του Πατρός γεννηθέντα πρό πάντων των αιώνων φώς εκ φωτός, Θεόν αληθινόν εκ Θεού αληθινού, γεννηθέντα ου ποιηθέντα, ομοούσιον τω Πατρί, δι' ου τα πάντα εγένετο. | Ke is éna Kirion Isün Xriston, ton Iôn tu Theú ton monogheni, ton ek tu Patrös ghenithénda prò pándon ton eônon, fos ek fotós, Theon alithinon ek Theú alithinu, ghenithenda u piithēnta, omoúsion to Patri, di' u ta panda eghéneto. | E em um só Senhor Jesus Cristo, Filho Unigênito de Deus, nascido do Pai antes de todos os séculos: Luz da Luz, Deus verdadeiro de Deus verdadeiro, gerado, não criado, consubstancial ao Pai, por quem todas as coisas foram feitas.
@@ -659,7 +659,7 @@ EXALTAÇÃO DA SANTA CRUZ:...que foste crucificado na carne, a nós que a ti sal
 | Σταυρωθέντα τε υπέρ ημών επί Ποντίου Πιλάτου, και παθόντα και ταφέντα | Stavrothenda te ipër imôn epi Pontiu Pilátu, ke pathonda ke tafenda | Por nós foi crucificado sob Pôncio Pilatos, padeceu e foi sepultado.
 
  |
-| Και αναστάντα τη τρίτη ημέρα κατά τας Γραφάς Και ανελθόντα εις τους ουρανούς και καθεζόμενον εκ δεξιών του Πατρός | Ke anastánda ti triti imêra kata tas Ghrafas. Ke anelthônda is tus uranús ke kathezômenon ek deksion tu Patros. | E ressuscitou ao terceiro dia, segundo as escrituras. Subiu aos céus e sentou-se à direita do Pai.
+| Και αναστάντα τη τρίτη ημέρα κατά τας Γραφάς. Και ανελθόντα εις τους ουρανούς και καθεζόμενον εκ δεξιών του Πατρός | Ke anastánda ti triti imêra kata tas Ghrafas. Ke anelthônda is tus uranús ke kathezômenon ek deksion tu Patros. | E ressuscitou ao terceiro dia, segundo as escrituras. Subiu aos céus e sentou-se à direita do Pai.
 
  |
 | Και πάλιν ερχόμενον μετά δόξης κρίναι ζώντας και νεκρούς, ου της βασιλείας ουκ έσται τέλος. | Ke pålin erxomenon metá döksis krine zōndas ke nekrús, u tis vasilías uk éste télos. | E novamente virá com glória para julgar os vivos e os mortos, e o seu reino não terá fim.
@@ -671,7 +671,7 @@ EXALTAÇÃO DA SANTA CRUZ:...que foste crucificado na carne, a nós que a ti sal
 | Εις μίαν, Αγίαν, Καθολικήν και Αποστολικήν Εκκλησίαν. | Is mian, Aghian, Katholikin ke Apostolikin Eklisian. | E na Igreja, Una, Santa, Católica e Apostólica.
 
  |
-| Ομολογώ εν βάπτισμα εις αφεσιν αμαρτιών. | Omologho en váptisma is afesin amartion | Professo um só batismo, para remissão dos pecados.
+| Ομολογώ εν βάπτισμα εις άφεσιν αμαρτιών. | Omologho en váptisma is afesin amartion | Professo um só batismo, para remissão dos pecados.
 
  |
 | Προσδοκώ ανάστασιν νεκρών | Prosdoko anastasin nekrön | Espero a ressurreição dos mortos.
@@ -690,7 +690,7 @@ EXALTAÇÃO DA SANTA CRUZ:...que foste crucificado na carne, a nós que a ti sal
 | --- | --- | --- |
 | **Η ΑΓΙΑ ΑΝΑΦΟΡΑ** | **HAGHIA ANAFORA** | **SACRIFÍCIO EUCARÍSTICO**<br> |
 | **Δ:** | **D:** | **D:**<br> |
-| Στώμεν καλώς στώμεν μετα φόβου πρόσχωμεν την αγίαν Αναφοραν εν ειρήνη προσφέρειν. | Stómen kalős stömen meta fõvu prósxomen tin aghian Anaforan en irini prosferin | Estejamos devotadamente de pé, estejamos com temor, estejamos atentos, para oferecer em paz a santa Oblação.
+| Στώμεν καλώς, στώμεν μετά φόβου, πρόσχωμεν την αγίαν Αναφοράν εν ειρήνη προσφέρειν. | Stómen kalős stömen meta fõvu prósxomen tin aghian Anaforan en irini prosferin | Estejamos devotadamente de pé, estejamos com temor, estejamos atentos, para oferecer em paz a santa Oblação.
 
  |
 | **Λ:** | **L:** | **C:**<br> |
@@ -706,7 +706,7 @@ EXALTAÇÃO DA SANTA CRUZ:...que foste crucificado na carne, a nós que a ti sal
 
  |
 | **Ι:** | **I:** | **S:**<br> |
-| Άνω σχωμεν τας καρδίας | Ano sxômen tas kardias. | Tenhamos no alto os corações.
+| Άνω σχώμεν τας καρδίας | Ano sxômen tas kardias. | Tenhamos no alto os corações.
 
  |
 | **Λ:** | **L:** | **C:**<br> |
@@ -731,7 +731,7 @@ EXALTAÇÃO DA SANTA CRUZ:...que foste crucificado na carne, a nós que a ti sal
 | Grego Original | Transliteração | Português |
 | --- | --- | --- |
 | **Λ:** | **L:** | **C:**<br> |
-| Άγιος, άγιος, άγιος Κύριος Σαβαώθ πλήρης ο ουρανος και η γη της δόξης σου, ωσαννά εν τοις υψίστοις. Ευλογημένος ο ερχόμενος εν ονόματι Κυρίου. Ωσαννά ο εν τοις υψίστοις. | Aghios, ághios, ághios Kirios Savaōth pliris o uranôs ke i ghi tis dõksis su, osaná en tis ipsistis. Evloghimēnos o erxomenos en onomati Kirju. Osana o en tis ipsistis. | Santo, Santo, Santo é o Senhor dos Exércitos (Sabaoth); o Céu e a Terra estão cheios de Tua glória. Hosana nas alturas. Bendito o que vem em nome do Senhor. Hosana nas alturas.
+| Άγιος, άγιος, άγιος Κύριος Σαβαώθ πλήρης ο ουρανός και η γη της δόξης σου, ωσαννά εν τοις υψίστοις. Ευλογημένος ο ερχόμενος εν ονόματι Κυρίου. Ωσαννά ο εν τοις υψίστοις. | Aghios, ághios, ághios Kirios Savaōth pliris o uranôs ke i ghi tis dõksis su, osaná en tis ipsistis. Evloghimēnos o erxomenos en onomati Kirju. Osana o en tis ipsistis. | Santo, Santo, Santo é o Senhor dos Exércitos (Sabaoth); o Céu e a Terra estão cheios de Tua glória. Hosana nas alturas. Bendito o que vem em nome do Senhor. Hosana nas alturas.
 
  |
 | **ΑΝΑΜΝΗΣΙΣ** | **ANAMNISIS** | **MEMORIAL** |
@@ -796,11 +796,11 @@ Oferecemo-vos esta oblação racional também por aqueles que descansam na fé, 
 | Grego Original | Transliteração | Português |
 | --- | --- | --- |
 | **Ι:** | **I:** | **S:**<br> |
-| Έκφώνως τα σα εκ των σων σοι προσφέρομεν κατά πάντα και δια παντα | (Ekfónos) Ta sa ek ton son si prosferomen kata panda ke dia panda | EPICLESE (INVOCAÇÃO DO ESPÍRITO SANTO) ... "TRANSMUTAÇÃO" ... Os Teus dons a Ti oferecemos, em tudo e por tudo.
+| (Εκφώνως) Τα σα εκ των σων σοι προσφέρομεν κατά πάντα και δια παντα | (Ekfónos) Ta sa ek ton son si prosferomen kata panda ke dia panda | EPICLESE (INVOCAÇÃO DO ESPÍRITO SANTO) ... "TRANSMUTAÇÃO" ... Os Teus dons a Ti oferecemos, em tudo e por tudo.
 
  |
 | **Λ:** | **L:** | **C:**<br> |
-| Σε υμνούμεν, σε ευλογούμεν, σοι ευχαριστουμεν. Κύριε, και δεόμεθά σου, ο Θεός ημών | Se imnumen, se evloghúmen, si efxaristumen. Kirie, ke deõmetha su o Theōs imon. | Nós Vos louvamos, nós Vos bendizemos, nós Vos agradecemos, Senhor, e Vos invocamos, Deus nosso. (sentados)
+| Σε υμνούμεν, σε ευλογούμεν, σοι ευχαριστούμεν, Κύριε, και δεόμεθά σου, ο Θεός ημών | Se imnumen, se evloghúmen, si efxaristumen. Kirie, ke deõmetha su o Theōs imon. | Nós Vos louvamos, nós Vos bendizemos, nós Vos agradecemos, Senhor, e Vos invocamos, Deus nosso. (sentados)
 
  |
 | **Ι:** | **I:** | **S:**<br> |
@@ -809,7 +809,7 @@ Oferecemo-vos esta oblação racional também por aqueles que descansam na fé, 
  |
 | **ΕΙΣ ΤΗΝ ΥΠΕΡΑΓΙΑΝ ΘΕΟΤΟΚΟΝ** | **IS TIN YPERAGHIAN THEOTOKON** | **HINO À SANTA MÃE DE DEUS** |
 | **Λ:** | **L:** | **C:**<br> |
-| Αξιόν ἐστιν ως αληθώς μακαρίζειν σε την Θεοτόκον, την αειμακαριστον και παναμώμητον και μητέρα του Θεού ημών. Την τιμιωτέραν των Χερουβείμ και ενδοξοτέραν ασυγκρίτως των Σεραφείμ την αδιαφθόρως Θεόν Λόγον τεκούσαν, την όντως Θεοτόκον, σε μεγαλύνομεν. | Aksion êstin os alithos makarizin se tin Theotokon, tin aimakáriston ke panamõmiton ke mitēra tu Theu imôn. Tin timioteran ton Xeruvim ke endoksotéran asingrítos ton Serafím tin adiafthoros Theon Lôghon tekusan, tin óndos Theotókon, se meghalínomen. | É justo em verdade glorificar-te, Mãe de Deus, sempre bem-aventurada e imaculada Mãe do nosso Deus. Mais venerável que os Querubins e incomparavelmente mais gloriosa que os Serafins, que sem corrupção destes à luz o Verbo de Deus, verdadeiramente Mãe de Deus, nós Te glorificamos.
+| Αξιόν ἐστιν ως αληθώς μακαρίζειν σε την Θεοτόκον, την αειμακάριστον και παναμώμητον και μητέρα του Θεού ημών. Την τιμιωτέραν των Χερουβείμ και ενδοξοτέραν ασυγκρίτως των Σεραφείμ την αδιαφθόρως Θεόν Λόγον τεκούσαν, την όντως Θεοτόκον, σε μεγαλύνομεν. | Aksion êstin os alithos makarizin se tin Theotokon, tin aimakáriston ke panamõmiton ke mitēra tu Theu imôn. Tin timioteran ton Xeruvim ke endoksotéran asingrítos ton Serafím tin adiafthoros Theon Lôghon tekusan, tin óndos Theotókon, se meghalínomen. | É justo em verdade glorificar-te, Mãe de Deus, sempre bem-aventurada e imaculada Mãe do nosso Deus. Mais venerável que os Querubins e incomparavelmente mais gloriosa que os Serafins, que sem corrupção destes à luz o Verbo de Deus, verdadeiramente Mãe de Deus, nós Te glorificamos.
 
  |
 
@@ -819,7 +819,7 @@ Oferecemo-vos esta oblação racional também por aqueles que descansam na fé, 
 | --- | --- | --- |
 | **ΔΙΠΤΥΧΑ ΚΑΙ ΔΕΗΣΕΙΣ** | **DIPTINA KE DEISIS** | **INTENÇÕES E INTERCESSÕES**<br> |
 | **Ι:** | **I:** | **S:**<br> |
-| (Εκφώνως) Εν πρώτοις μνήσθητι, Κύριε, του Αρχιεπισκόπου ημών (...), ον χάρισαι ταις αγίαις σου Εκκλησίαις εν ειρήνη, σώον, έντιμον, υγιά, μακροημερεύοντα και ορθοτομούντα τον λόγον της σης αληθείας. | (Ekfōnos) En prótis mnísthiti, Kírie, tu Arxiepiskópu imôn (...), on xárise tes aghíes su Ekklisíes en iríni, sôon, éndimon, ighía, makroimerévonda ke orthotomúnda ton lógon tis sis alithías. | Primeiramente, recorda-te, ó Senhor, de nosso Pai e Arcebispo (...); conserva-o para as Tuas Igrejas em paz, são e salvo, honrado e com vida longa, a propagar com retidão a palavra de Tua verdade.
+| (Εκφώνως) Εν πρώτοις μνήσθητι, Κύριε, του Αρχιεπισκόπου ημών (...), ον χάρισαι ταις αγίαις σου Εκκλησίαις εν ειρήνη, σώον, έντιμον, υγιή, μακροημερεύοντα και ορθοτομούντα τον λόγον της σης αληθείας. | (Ekfōnos) En prótis mnísthiti, Kírie, tu Arxiepiskópu imôn (...), on xárise tes aghíes su Ekklisíes en iríni, sôon, éndimon, ighía, makroimerévonda ke orthotomúnda ton lógon tis sis alithías. | Primeiramente, recorda-te, ó Senhor, de nosso Pai e Arcebispo (...); conserva-o para as Tuas Igrejas em paz, são e salvo, honrado e com vida longa, a propagar com retidão a palavra de Tua verdade.
 
  |
 | **Δ:** | **D:** | **D:**<br> |
@@ -831,7 +831,7 @@ Oferecemo-vos esta oblação racional também por aqueles que descansam na fé, 
 
  |
 | **Ι:** | **I:** | **S:**<br> |
-| (Εκφώνως) και δός ημιν, εν ενί στόματι και μια καρδία, δοξάζειν και ανυμνείν το πάντιμον και μεγαλοπρεπές όνομά σου, του Πατρός και του Υιού και του Αγίου Πνεύματος, νυν και αει και εις τους αιώνας των αιώνων. | (Ekfonos) Ke dos imin, en eni stomati ke mia kardia, doksázin ke animnın to pándimon ke meghaloprepés onoma su, tu Patrös ke tu Iú ke tu Aghiu Pnevmatos, nin ke ai ke is tus eõnas ton eõnon. | E concede-nos que com uma só boca e um só coração glorifiquemos e exaltemos o Vosso venerabilíssimo e majestosíssimo nome, Pai, Filho e Espírito Santo, agora e sempre, pelos séculos dos séculos.
+| (Εκφώνως) και δός ημίν, εν ενί στόματι και μιά καρδία, δοξάζειν και ανυμνείν το πάντιμον και μεγαλοπρεπές όνομά σου, του Πατρός και του Υιού και του Αγίου Πνεύματος, νυν και αει και εις τους αιώνας των αιώνων. | (Ekfonos) Ke dos imin, en eni stomati ke mia kardia, doksázin ke animnın to pándimon ke meghaloprepés onoma su, tu Patrös ke tu Iú ke tu Aghiu Pnevmatos, nin ke ai ke is tus eõnas ton eõnon. | E concede-nos que com uma só boca e um só coração glorifiquemos e exaltemos o Vosso venerabilíssimo e majestosíssimo nome, Pai, Filho e Espírito Santo, agora e sempre, pelos séculos dos séculos.
 
  |
 | **Λ:** | **L:** | **C:**<br> |
@@ -839,7 +839,7 @@ Oferecemo-vos esta oblação racional também por aqueles que descansam na fé, 
 
  |
 | **Ι:** | **I:** | **S:**<br> |
-| Και έσταις τα ελέη του μεγάλου Θεού και Σωτήρος ημών Ιησού Χριστού μετά πάντων ημών | Ke éste ta elei tu meghálu Theú ke Sotiros imon Isů Xristú metá pandon imôn. | As misericórdias do grande Deus e Salvador nosso, Jesus Cristo, estejam com todos vós.
+| Και έσται τα ελέη του μεγάλου Θεού και Σωτήρος ημών Ιησού Χριστού μετά πάντων ημών | Ke éste ta elei tu meghálu Theú ke Sotiros imon Isů Xristú metá pandon imôn. | As misericórdias do grande Deus e Salvador nosso, Jesus Cristo, estejam com todos vós.
 
  |
 | **Λ:** | **L:** | **C:**<br> |
@@ -864,7 +864,7 @@ Oferecemo-vos esta oblação racional também por aqueles que descansam na fé, 
 
  |
 | **Δ:** | **D:** | **D:**<br> |
-| Όπως ο φιλάνθρωπος Θεός ημών, ο προσδεξαμενος αυτά εις το αγιον και υπερουράνιον και νοερόν αυτού θυσιαστήριον, εις οσμην ευωδίας πνευματικής, αντικαταπέμψη ημίν την θείαν χάριν και την δωρεάν του Αγίου Πνευματος δεηθώμεν | Õpos o filanthropos Theôs imôn, o prosdeksamenos aftá is to aghion ke iperuranion ke noeron aftú thisiastirion, is osmin evodias pnevmatikis, antikatapempsi imin tin theian xarın ke tin dorean tu Aghiu Pnevmatos, deithömen | Para que nosso Deus misericordioso, que nos recebeu no seu santuário celestial e místico, com aroma de suavidade espiritual, nos derrame a divina graça e o dom do Espírito Santo, oremos ao Senhor.
+| Όπως ο φιλάνθρωπος Θεός ημών, ο προσδεξαμενος αυτά εις το άγιον και υπερουράνιον και νοερόν αυτού θυσιαστήριον, εις οσμήν ευωδίας πνευματικής, αντικαταπέμψη ημίν την θείαν χάριν και την δωρεάν του Αγίου Πνεύματος, δεηθώμεν. | Õpos o filanthropos Theôs imôn, o prosdeksamenos aftá is to aghion ke iperuranion ke noeron aftú thisiastirion, is osmin evodias pnevmatikis, antikatapempsi imin tin theian xarın ke tin dorean tu Aghiu Pnevmatos, deithömen | Para que nosso Deus misericordioso, que nos recebeu no seu santuário celestial e místico, com aroma de suavidade espiritual, nos derrame a divina graça e o dom do Espírito Santo, oremos ao Senhor.
 
  |
 | **Λ:** | **L:** | **C:**<br> |
@@ -946,7 +946,7 @@ Oferecemo-vos esta oblação racional também por aqueles que descansam na fé, 
 
  |
 | **Ι:** | **I:** | **S:**<br> |
-| (Εκφώνως) Και καταξίωσον ημάς. Δέσποτα μετά παρρησίας, ακατακρίτως τολμάν επικαλείσθαι Σε τον επουράνιον Θεόν Πατέρα και λέγειν. | (Ekfonos) Ke kataksioson imás, Despota meta parrisias, akatakritos tolman epikalisthe Se ton epuranion Theôn Patêra ke Jeghein | Tornai-nos dignos, ó Senhor, Deus Pai celestial, para que ousadamente e sem condenação Vos invoquemos, dizendo: (de pé)
+| (Εκφώνως) Και καταξίωσον ημάς, Δέσποτα, μετά παρρησίας, ακατακρίτως τολμάν επικαλείσθαι Σε τον επουράνιον Θεόν Πατέρα και λέγειν. | (Ekfonos) Ke kataksioson imás, Despota meta parrisias, akatakritos tolman epikalisthe Se ton epuranion Theôn Patêra ke léghein | Tornai-nos dignos, ó Senhor, Deus Pai celestial, para que ousadamente e sem condenação Vos invoquemos, dizendo: (de pé)
 
  |
 
@@ -956,7 +956,7 @@ Oferecemo-vos esta oblação racional também por aqueles que descansam na fé, 
 | --- | --- | --- |
 | **ΚΥΡΙΑΚΗ ΠΡΟΣΕΥΧΗ** | **KYRIAKI PROSEVXI** | **ORAÇÃO DOMINICAL** |
 | **Λ:** | **L:** | **C:**<br> |
-| Πατερ ημών, ο εν τοις ουρανοίς αγιασθήτω το όνομά σου ελθέτω η βασιλεία σου. γενηθήτω το θέλημά σου, ως εν ουρανώ και επί της γης. Τον άρτον ημών τον επιούσιον δὸς ημίν σήμερον. Και άφες ημίν τα οφειλήματα ημών, ως και ημείς αφίεμεν τους οφειλέταις ημών. Και μη εισενέγκης ημάς εις πειρασμόν, αλλά ρύσαι ημας από του πονηρού. | Páter imón, o en tis uranís aghiasthito to onomá su, eltheto i vasilia su. ghenithito to thelima su, os en urano ke epi tis ghis. Ton arton imon ton epiusion dõs imin simeron Ke afes imin ta ofilimata imón, os ke imis afiemen tis ofilétes imôn Ke mi isenēguis imás is pirasmón, alá rise imas apó tu poniri | Pai nosso que estais nos céus, santificado seja o Vosso nome; venha a nós o Vosso reino; seja feita a Vossa vontade, assim na terra como no céu. O pão nosso de cada dia nos dai hoje; e perdoai-nos as nossas dívidas, assim como nós perdoamos aos nossos devedores; e não nos deixeis cair em tentação, mas livrai-nos do mal.
+| Πάτερ ημών, ο εν τοις ουρανοίς, αγιασθήτω το όνομά σου· ελθέτω η βασιλεία σου· γενηθήτω το θέλημά σου, ως εν ουρανώ και επί της γης. Τον άρτον ημών τον επιούσιον δος ημίν σήμερον· και άφες ημίν τα οφειλήματα ημών, ως και ημείς αφίεμεν τοις οφειλέταις ημών· και μη εισενέγκης ημάς εις πειρασμόν, αλλά ρύσαι ημάς από του πονηρού. | Páter imón, o en tis uranís aghiasthito to onomá su, eltheto i vasilia su. ghenithito to thelima su, os en urano ke epi tis ghis. Ton arton imon ton epiusion dõs imin simeron Ke afes imin ta ofilimata imón, os ke imis afiemen tis ofilétes imôn Ke mi isenēguis imás is pirasmón, alá rise imas apó tu poniri | Pai nosso que estais nos céus, santificado seja o Vosso nome; venha a nós o Vosso reino; seja feita a Vossa vontade, assim na terra como no céu. O pão nosso de cada dia nos dai hoje; e perdoai-nos as nossas dívidas, assim como nós perdoamos aos nossos devedores; e não nos deixeis cair em tentação, mas livrai-nos do mal.
 
  |
 | **Ι:** | **I:** | **S:**<br> |
@@ -1003,9 +1003,9 @@ Oferecemo-vos esta oblação racional também por aqueles que descansam na fé, 
 | --- | --- | --- |
 | **ΘΕΙΑ ΚΟΙΝΩΝΙΑ** | **THIA KINONIA** | **SANTA COMUNHÃO**<br> |
 | **Δ:** | **D:** | **D:**<br> |
-| (Εκφωνεί) Πρόσχωμεν | (Ekfoní) Prósxomen |  |
+| (Εκφωνεί) Πρόσχωμεν | (Ekfoní) Prósxomen | (Em voz alta) Estejamos atentos! |
 | **Ι:** | **I:** | **S:**<br> |
-| Τα Άγια τους αγίοις | Ta Aghia tis aghiis | Os Santos Dons para os santos!
+| Τα Άγια τοις αγίοις | Ta Ághia tis aghíis | Os Santos Dons para os santos!
 
  |
 | **Λ:** | **L:** | **C:**<br> |
@@ -1044,11 +1044,11 @@ Oferecemo-vos esta oblação racional também por aqueles que descansam na fé, 
 
  |
 | **Ι:** | **I:** | **S:**<br> |
-| Σώσον ο Θεος τον λαον σου, και ευλόγησον την κληρονομίαν σου | Soson o Theos ton laon su, ke evlöghison 'tin klironomian su. | Salva, ó Deus, o Teu povo e abençoa a Tua herança.
+| Σώσον, ο Θεός, τον λαόν σου, και ευλόγησον την κληρονομίαν σου | Sóson, o Theós, ton laón su, ke evlóghison tin klironomían su. | Salva, ó Deus, o Teu povo e abençoa a Tua herança.
 
  |
 | **Λ:** | **L:** | **C:**<br> |
-| Εἴδομεν το φως το αληθινόν, ελάβομεν Πνεύμα επουράνιον, εύρομεν πίστιν αληθή, αδιαιρετον Τριάδα προσκυνούντες, αύτη γαρ ημάς έσωσεν. | idomen to fos to alithinon, elávomen Pnevma epuranion, evromen pistin alithi, adiereton Triáda proskinündes, äfti ghar imas esosen. | Vimos a luz verdadeira, recebemos o Espírito celeste, encontramos a verdadeira fé, adorando a Trindade indivisível, que nos salvou.
+| Εἴδομεν το φως το αληθινόν, ελάβομεν Πνεύμα επουράνιον, εύρομεν πίστιν αληθή, αδιαίρετον Τριάδα προσκυνούντες, αύτη γαρ ημάς έσωσεν. | idomen to fos to alithinon, elávomen Pnevma epuranion, evromen pistin alithi, adiereton Triáda proskinündes, äfti ghar imas esosen. | Vimos a luz verdadeira, recebemos o Espírito celeste, encontramos a verdadeira fé, adorando a Trindade indivisível, que nos salvou.
 
  |
 | **ΕΥΧΑΡΙΣΤΙΑ ΜΕΤΑ ΤΗΝ ΘΕΙΑΝ ΜΕΤΑΛΗΨΙΝ** | **EFXARISTIA META TIN THIAN METALIPSIN** | **LITANIA DE AÇÃO DE GRAÇAS APÓS A COMUNHÃO** |
@@ -1125,7 +1125,7 @@ PORQUE VÓS SOIS A NOSSA SANTIFICAÇÃO E A VÓS RENDEMOS GLÓRIA, AO PAI, AO FI
 
  |
 | **Ι:** | **I:** | **S:**<br> |
-| Ο ευλογών τους ευλογουντάς Σε. Κύριε, και αγιάζων τους επί Σοι πεποιθότας, σώσον τον λαόν Σου και ευλόγησον την κληρονομίαν Σου. Το πλήρωμα της Εκκλησίας Σου φύλαξον, αγίασον τους αγαπώντας την ευπρέπειαν του οίκου Σου. Συ αυτούς αντιδόξασον τη θεϊκή Σου δυνάμει, και μη εγκαταλίπης ημάς τους ελπίζοντας επί Σε. Ειρήνην τω κόσμω Σου δώρησαι, ταις Εκκλησίαις Σου, τοις Ιερεύσι τοις Βασιλεύσιν ημών, τω στρατώ και παντί τω λαώ Σου Ότι πάσα δόσις αγαθή και πάν δώρημα τέλειον άνωθεν εστι καταβαίνον, εκ Σου του Πατρός των φώτων. Και Σοι την δόξαν και ευχαριστίαν και προσκύνησιν αναπέμπομεν, τω Πατρί και τω Υιώ και τω Αγίω Πνεύματι, νυν και αει και εις τους αιώνας των αιώνων. | O evloghön tus' evloghúndás Se. Kirie, ke aghiazon tus epi Si pepithotas. soson ton laôn Su ke evlöghison tin klironomian Su To pliroma tis Eklisias Su filakson, aghiason tus aghapõndas tin efprėpian tu iku Su Si aftús antidõksason ti theiki Su dhinami, ke mi egatalipis imás tus elpizondas epi Se. Irínin to kósmo Su dórise, tes Ekklisíes Su, tis Ieréfsi, tis Vasiléfsin imôn, to strató ke pandí to laó Su. Ôti pasa dosis agathi ke pan dorima télion anothén esti katavénon, ek Su tu Patros ton foton. Ke Si tin dõksan ke efxaristian ke proskinisin anapémbomen, to Patri ke to lô ke to Aghio Pnevmati, nin ke ai ke is tus eõnas ton eonon. | Senhor, Tu que abençoas os que Te bendizem e santificas os que confiam em Ti, salva o Teu povo e abençoa a Tua herança; conserva a plenitude da Tua Igreja; santifica aqueles que amam o esplendor da Tua casa; glorifica-os com o Teu divino poder e não nos abandones a nós, que em Ti confiamos. Dá a paz ao Teu mundo, às Tuas Igrejas, aos sacerdotes, aos nossos governantes, ao exército e a todo o Teu povo. Porque toda boa dádiva e todo dom perfeito vêm do alto, descendo de Ti, o Pai das luzes; e a Ti rendemos glória, ação de graças e adoração: Pai, Filho e Espírito Santo, agora e sempre, pelos séculos dos séculos.
+| Ο ευλογών τους ευλογούντας Σε, Κύριε, και αγιάζων τους επί Σοι πεποιθότας, σώσον τον λαόν Σου και ευλόγησον την κληρονομίαν Σου. Το πλήρωμα της Εκκλησίας Σου φύλαξον, αγίασον τους αγαπώντας την ευπρέπειαν του οίκου Σου. Συ αυτούς αντιδόξασον τη θεϊκή Σου δυνάμει, και μη εγκαταλίπης ημάς τους ελπίζοντας επί Σε. Ειρήνην τω κόσμω Σου δώρησαι, ταις Εκκλησίαις Σου, τοις Ιερεύσι τοις Βασιλεύσιν ημών, τω στρατώ και παντί τω λαώ Σου Ότι πάσα δόσις αγαθή και πάν δώρημα τέλειον άνωθεν εστι καταβαίνον, εκ Σου του Πατρός των φώτων. Και Σοι την δόξαν και ευχαριστίαν και προσκύνησιν αναπέμπομεν, τω Πατρί και τω Υιώ και τω Αγίω Πνεύματι, νυν και αει και εις τους αιώνας των αιώνων. | O evloghön tus' evloghúndás Se. Kirie, ke aghiazon tus epi Si pepithotas. soson ton laôn Su ke evlöghison tin klironomian Su To pliroma tis Eklisias Su filakson, aghiason tus aghapõndas tin efprėpian tu iku Su Si aftús antidõksason ti theiki Su dhinami, ke mi egatalipis imás tus elpizondas epi Se. Irínin to kósmo Su dórise, tes Ekklisíes Su, tis Ieréfsi, tis Vasiléfsin imôn, to strató ke pandí to laó Su. Ôti pasa dosis agathi ke pan dorima télion anothén esti katavénon, ek Su tu Patros ton foton. Ke Si tin dõksan ke efxaristian ke proskinisin anapémbomen, to Patri ke to lô ke to Aghio Pnevmati, nin ke ai ke is tus eõnas ton eonon. | Senhor, Tu que abençoas os que Te bendizem e santificas os que confiam em Ti, salva o Teu povo e abençoa a Tua herança; conserva a plenitude da Tua Igreja; santifica aqueles que amam o esplendor da Tua casa; glorifica-os com o Teu divino poder e não nos abandones a nós, que em Ti confiamos. Dá a paz ao Teu mundo, às Tuas Igrejas, aos sacerdotes, aos nossos governantes, ao exército e a todo o Teu povo. Porque toda boa dádiva e todo dom perfeito vêm do alto, descendo de Ti, o Pai das luzes; e a Ti rendemos glória, ação de graças e adoração: Pai, Filho e Espírito Santo, agora e sempre, pelos séculos dos séculos.
 
  |
 | **Λ:** | **L:** | **C:**<br> |
@@ -1141,7 +1141,7 @@ PORQUE VÓS SOIS A NOSSA SANTIFICAÇÃO E A VÓS RENDEMOS GLÓRIA, AO PAI, AO FI
 
  |
 | **Ι:** | **I:** | **BÊNÇÃO FINAL**<br> |
-| Ευλογία Κυρίου και έλεος αυτου έλθοι εφ' υμάς, τη αυτού θεία χάριτι και φιλανθρωπία, πάντοτε, νυν και αει και εις τους αιώνας των αιώνων | Evloghia Kiriu ke eleos aftú élthi ef imas. ti aftú thia xariti ke filanthropia, pantote, nin ke ai ke is tus conas ton cónon | **S:** A bênção e a misericórdia do Senhor desçam sobre vós, pela Sua graça divina e amor à humanidade, agora e sempre, e pelos séculos dos séculos.
+| Ευλογία Κυρίου και έλεος αυτού έλθοι εφ' υμάς, τη αυτού θεία χάριτι και φιλανθρωπία, πάντοτε, νυν και αει και εις τους αιώνας των αιώνων | Evloghia Kiriu ke eleos aftú élthi ef imas. ti aftú thia xariti ke filanthropia, pantote, nin ke ai ke is tus conas ton cónon | **S:** A bênção e a misericórdia do Senhor desçam sobre vós, pela Sua graça divina e amor à humanidade, agora e sempre, e pelos séculos dos séculos.
 
  |
 | **Λ:** | **L:** | **C:**<br> |
@@ -1155,13 +1155,13 @@ PORQUE VÓS SOIS A NOSSA SANTIFICAÇÃO E A VÓS RENDEMOS GLÓRIA, AO PAI, AO FI
 | --- | --- | --- |
 | **ΑΠΟΛΥΣΙΣ** | **APOLISIS** | **DESPEDIDA**<br> |
 | **Ι:** | **I:** | **S:**<br> |
-| Δόξα σοι. Χριστε ο Θεος, η ελπις ημών, δόξα σοι | Dóksa si. Xriste o Theos, i elpis imôn, döksa si | Glória a Ti, ó Cristo Deus, esperança nossa, glória a Ti! Ó Cristo, nosso Deus verdadeiro, que ressuscitaste dos mortos, pelas intercessões de Tua puríssima e irrepreensível Santa Mãe; pelo poder da preciosa e vivificante Cruz; pela proteção das veneráveis potestades celestiais e incorpóreas; pelas súplicas do venerável e glorioso profeta, precursor e Batista João; dos santos, gloriosos e ilustres apóstolos; dos santos, gloriosos e vitoriosos mártires; de nosso pai entre os santos, João Crisóstomo, Arcebispo de Constantinopla, autor desta liturgia; dos santos justos progenitores de Deus, Joaquim e Ana; do santo (da igreja ou do dia) cuja memória celebramos hoje, e de todos os santos: tem piedade de nós e salva-nos, porque és bom e amigo dos homens.
+| Δόξα σοι, Χριστέ ο Θεός, η ελπίς ημών, δόξα σοι. | Dóksa si. Xriste o Theos, i elpis imôn, döksa si | Glória a Ti, ó Cristo Deus, esperança nossa, glória a Ti! Ó Cristo, nosso Deus verdadeiro, que ressuscitaste dos mortos, pelas intercessões de Tua puríssima e irrepreensível Santa Mãe; pelo poder da preciosa e vivificante Cruz; pela proteção das veneráveis potestades celestiais e incorpóreas; pelas súplicas do venerável e glorioso profeta, precursor e Batista João; dos santos, gloriosos e ilustres apóstolos; dos santos, gloriosos e vitoriosos mártires; de nosso pai entre os santos, João Crisóstomo, Arcebispo de Constantinopla, autor desta liturgia; dos santos justos progenitores de Deus, Joaquim e Ana; do santo (da igreja ou do dia) cuja memória celebramos hoje, e de todos os santos: tem piedade de nós e salva-nos, porque és bom e amigo dos homens.
 
  |
 | **Λ:** | **L:** |  |
 | Δόξα Πατρί Και νυν Κύριε ελέησον (γ) | Dóksa Patrí. Ke nin. Kírie eléison (g). | Glória ao Pai... E agora... Senhor, tende piedade (3x). |
 | **Ι:** | **I:** |  |
-| Ὁ ἀναστὰς ἐκ νεκρῶν (εἰ δὲ μή, ἁπλῶς) Χριστός ο αληθινός Θεός ημών, ταις πρεσβείαις της αναχράντου και παναμώμου αγίας αυτού Μητρός δυνάμει του τιμίου και ζωοποιου Σταύρου προστασίαις των τιμίων επουρανίων Δυνάμεων Ασωμάτων ικεσίαις του τιμίου, ενδόξου, Προφήτου, Προδρόμου και Βαπτιστού Ιωάννου των αγίων ενδόξων και πανευφήμων Αποστόλων των αγίων ενδόξων και καλλινίκων μαρτύρων των οσίων και θεοφόρων Πατέρων ημών, του αγίου (του Ναού), των αγίων και δικαίων Θεοπατόρων Ιωακείμ και Άννης, του αγίου (της ημέρας), ου και την μνήμην επιτελούμεν, και πάντων των Αγίων, ελεήσαι και σώσαι ημάς, ως αγαθός και φιλάνθρωπος και ελεήμων Θεός. Δι' ευχών των αγίων Πατέρων ημών. Κύριε Ιησού Χριστέ, ο Θεός, ελέησον και σώσον ημάς | O anastás ek nekrôn (i de mi, aplós) Xristos o alithinos Theōs imòn tes presvies tis panaxrandu ke panamómu aghias aftú Mitros dinami tu timiu ke zoopiú Stavrú prostasies ton timion epuranion Dinameon Asomaton ikesies tu timiu, endõksu, Profitu, Prodromu ke Vaptistú Ioánu ton aghíon endõkson ke panevfimon Apostolon ton aghion endõkson ke kalinikon martiron ton osion ke theoforon Pateron imôn, tu aghiu (tu Naú), ton aghion ke dikeon Theopatoron Ioakím ke Ánnis, tu aghiu (tis iméras), u ke tin mnimin epitelúmen, ke pandon ton Aghion, eleíse ke sóse imás, os aghathos ke filanthropos ke eleimon Theos. Di' evxôn ton aghion Pateron imôn. Kírie Iisú Xristé, o Theos, eleison ke sõson imás. | Pelas orações de nossos santos pais, Senhor Jesus Cristo, Deus nosso, tende piedade de nós e salva-nos. Amém. Ao sacerdote que nos abençoa e santifica: protege-o por muitos anos, Senhor!
+| Ὁ ἀναστὰς ἐκ νεκρῶν (εἰ δὲ μή, ἁπλῶς) Χριστός ο αληθινός Θεός ημών, ταις πρεσβείαις της παναχράντου και παναμώμου αγίας αυτού Μητρός δυνάμει του τιμίου και ζωοποιού Σταυρού προστασίαις των τιμίων επουρανίων Δυνάμεων Ασωμάτων ικεσίαις του τιμίου, ενδόξου, Προφήτου, Προδρόμου και Βαπτιστού Ιωάννου των αγίων ενδόξων και πανευφήμων Αποστόλων των αγίων ενδόξων και καλλινίκων μαρτύρων των οσίων και θεοφόρων Πατέρων ημών, του αγίου (του Ναού), των αγίων και δικαίων Θεοπατόρων Ιωακείμ και Άννης, του αγίου (της ημέρας), ου και την μνήμην επιτελούμεν, και πάντων των Αγίων, ελεήσαι και σώσαι ημάς, ως αγαθός και φιλάνθρωπος και ελεήμων Θεός. Δι' ευχών των αγίων Πατέρων ημών. Κύριε Ιησού Χριστέ, ο Θεός, ελέησον και σώσον ημάς | O anastás ek nekrôn (i de mi, aplós) Xristos o alithinos Theōs imòn tes presvies tis panaxrandu ke panamómu aghias aftú Mitros dinami tu timiu ke zoopiú Stavrú prostasies ton timion epuranion Dinameon Asomaton ikesies tu timiu, endõksu, Profitu, Prodromu ke Vaptistú Ioánu ton aghíon endõkson ke panevfimon Apostolon ton aghion endõkson ke kalinikon martiron ton osion ke theoforon Pateron imôn, tu aghiu (tu Naú), ton aghion ke dikeon Theopatoron Ioakím ke Ánnis, tu aghiu (tis iméras), u ke tin mnimin epitelúmen, ke pandon ton Aghion, eleíse ke sóse imás, os aghathos ke filanthropos ke eleimon Theos. Di' evxôn ton aghion Pateron imôn. Kírie Iisú Xristé, o Theos, eleison ke sõson imás. | Pelas orações de nossos santos pais, Senhor Jesus Cristo, Deus nosso, tende piedade de nós e salva-nos. Amém. Ao sacerdote que nos abençoa e santifica: protege-o por muitos anos, Senhor!
 
  |
 | **Λ:** | **L:** | **C:**<br> |
