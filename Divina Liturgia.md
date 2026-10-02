@@ -553,7 +553,7 @@ EXALTAÇÃO DA SANTA CRUZ:...que foste crucificado na carne, a nós que a ti sal
 
  |
 | **Λ:** | **L:** | **C:**<br> |
-| Παράσχου Κύριε. | Parásxu Kirie. | Concede, ó Senhor.
+| Παράσχου Κύριε. | Parásxu Kirie. | Atende, ó Senhor.
 
  |
 | **Δ:** | **D:** | **D:**<br> |
@@ -561,7 +561,7 @@ EXALTAÇÃO DA SANTA CRUZ:...que foste crucificado na carne, a nós que a ti sal
 
  |
 | **Λ:** | **L:** | **C:**<br> |
-| Παράσχου Κύριε. | Parásxu Kirie. | Concede, ó Senhor.
+| Παράσχου Κύριε. | Parásxu Kirie. | Atende, ó Senhor.
 
  |
 | **Δ:** | **D:** | **D:**<br> |
@@ -569,7 +569,7 @@ EXALTAÇÃO DA SANTA CRUZ:...que foste crucificado na carne, a nós que a ti sal
 
  |
 | **Λ:** | **L:** | **C:**<br> |
-| Παράσχου Κύριε. | Parásxu Kirie. | Concede, ó Senhor.
+| Παράσχου Κύριε. | Parásxu Kirie. | Atende, ó Senhor.
 
  |
 | **Δ:** | **D:** | **D:**<br> |
@@ -577,7 +577,7 @@ EXALTAÇÃO DA SANTA CRUZ:...que foste crucificado na carne, a nós que a ti sal
 
  |
 | **Λ:** | **L:** | **C:**<br> |
-| Παράσχου Κύριε. | Parasxu Kirie. | Concede, ó Senhor.
+| Παράσχου Κύριε. | Parasxu Kirie. | Atende, ó Senhor.
 
  |
 | **Δ:** | **D:** | **D:**<br> |
@@ -590,7 +590,7 @@ EXALTAÇÃO DA SANTA CRUZ:...que foste crucificado na carne, a nós que a ti sal
 | Grego Original | Transliteração | Português |
 | --- | --- | --- |
 | **Λ:** | **L:** | **C:**<br> |
-| Παράσχου Κυριε | Parásxu Kírie | Concede, ó Senhor.
+| Παράσχου Κυριε | Parásxu Kírie | Atende, ó Senhor.
 
  |
 | **Δ:** | **D:** | **D:**<br> |
@@ -598,7 +598,7 @@ EXALTAÇÃO DA SANTA CRUZ:...que foste crucificado na carne, a nós que a ti sal
 
  |
 | **Λ:** | **L:** | **C:**<br> |
-| Παράσχου Κύριε | P'arásxu Kirie. | Concede, ó Senhor.
+| Παράσχου Κύριε | P'arásxu Kirie. | Atende, ó Senhor.
 
  |
 | **Δ:** | **D:** | **D:**<br> |
@@ -881,7 +881,7 @@ Oferecemo-vos esta oblação racional também por aqueles que descansam na fé, 
 
  |
 | **Λ:** | **L:** | **C:**<br> |
-| Παράσχου Κύριε | Parásxu Kírie. | Concede, ó Senhor.
+| Παράσχου Κύριε | Parásxu Kírie. | Atende, ó Senhor.
 
  |
 | **Δ:** | **D:** | **D:**<br> |
@@ -889,7 +889,7 @@ Oferecemo-vos esta oblação racional também por aqueles que descansam na fé, 
 
  |
 | **Λ:** | **L:** | **C:**<br> |
-| Παράσχου Κύριε | Parasxu Kirie | Concede, ó Senhor.
+| Παράσχου Κύριε | Parasxu Kirie | Atende, ó Senhor.
 
  |
 | **Δ:** | **D:** | **D:**<br> |
@@ -897,7 +897,7 @@ Oferecemo-vos esta oblação racional também por aqueles que descansam na fé, 
 
  |
 | **Λ:** | **L:** | **C:**<br> |
-| Παράσχου Κύριε. | Parásxu Kírie. | Concede, ó Senhor.
+| Παράσχου Κύριε. | Parásxu Kírie. | Atende, ó Senhor.
 
  |
 | **Δ:** | **D:** | **D:**<br> |
@@ -905,7 +905,7 @@ Oferecemo-vos esta oblação racional também por aqueles que descansam na fé, 
 
  |
 | **Λ:** | **L:** | **C:**<br> |
-| Παράσχου Κύριε. | Parásxu Kirie. | Concede, ó Senhor.
+| Παράσχου Κύριε. | Parásxu Kirie. | Atende, ó Senhor.
 
  |
 | **Δ:** | **D:** | **D:**<br> |
@@ -913,7 +913,7 @@ Oferecemo-vos esta oblação racional também por aqueles que descansam na fé, 
 
  |
 | **Λ:** | **L:** | **C:**<br> |
-| Παράσχου Κύριε. | Parásxu Kirie. | Concede, ó Senhor.
+| Παράσχου Κύριε. | Parásxu Kirie. | Atende, ó Senhor.
 
  |
 | **Δ:** | **D:** | **D:**<br> |
@@ -921,7 +921,7 @@ Oferecemo-vos esta oblação racional também por aqueles que descansam na fé, 
 
  |
 | **Λ:** | **L:** | **C:**<br> |
-| Παράσχου Κύριε | Parasxu Kirie. | Concede, ó Senhor.
+| Παράσχου Κύριε | Parasxu Kirie. | Atende, ó Senhor.
 
  |
 
@@ -934,7 +934,7 @@ Oferecemo-vos esta oblação racional também por aqueles que descansam na fé, 
 
  |
 | **Λ:** | **L:** | **C:**<br> |
-| Παράσχου Κύριε. | Parasxu Kirie. | Concede, ó Senhor.
+| Παράσχου Κύριε. | Parasxu Kirie. | Atende, ó Senhor.
 
  |
 | **Δ:** | **D:** | **D:**<br> |
